@@ -49,6 +49,14 @@ jobs:
     - name: Test with Maven
       run: mvn clean test
 
+    - name: Install Allure
+      if: runner.os == 'macOS'
+      run: brew install allure
+
+    - name: Install Allure
+      if: runner.os == 'Windows'
+      run: choco install allurecommandline
+
     - name: Load test report history
       uses: actions/checkout@v4
       if: always()
