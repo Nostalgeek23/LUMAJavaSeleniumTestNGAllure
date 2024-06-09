@@ -1,8 +1,11 @@
 name: Build Java with Maven
 
 on:
+  push:
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    types: [opened, synchronize]
+    branches: [main]
 
 permissions:
   contents: write
