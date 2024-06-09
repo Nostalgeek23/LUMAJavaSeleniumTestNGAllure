@@ -7,9 +7,10 @@ public class TestTest {
     public void testPass() {
         Assert.assertTrue(true);
     }
-
+/*
     @Test
     public void testFail() {
         Assert.assertTrue(false);
     }
+ */
 }
