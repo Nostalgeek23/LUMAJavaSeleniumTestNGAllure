@@ -1,1 +1,0 @@
-[{"uid":"daa2a4ffd6279242","name":"testPass","time":{"start":1717956759857,"stop":1717956759865,"duration":8},"status":"passed","severity":"normal"},{"uid":"fa1b80d8f89851f8","name":"testFail","time":{"start":1717956759719,"stop":1717956759721,"duration":2},"status":"unknown","severity":"normal"}]
