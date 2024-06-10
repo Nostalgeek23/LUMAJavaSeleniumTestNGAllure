@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.Map;
+
 public class DriverUtils {
-    private static ChromeOptions chromeOptions;
+    private static final ChromeOptions chromeOptions;
 
     static {
         chromeOptions = new ChromeOptions();
@@ -24,12 +26,17 @@ public class DriverUtils {
     }
 
     public static WebDriver createChromeDriver(WebDriver driver) {
-        if (driver == null) {
-            System.out.println("WebDriver session created");
-            return new ChromeDriver(chromeOptions);
-        } else {
+        if (driver != null) {
             driver.quit();
-            return new ChromeDriver(chromeOptions);
         }
+        ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
+        chromeDriver.executeCdpCommand("Network.enable", Map.of());
+        chromeDriver.executeCdpCommand(
+                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9"))
+        );
+
+        return chromeDriver ;
     }
+
+
 }
