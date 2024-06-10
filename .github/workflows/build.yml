@@ -48,15 +48,10 @@ jobs:
 
       - name: Set up ChromeDriver on Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb
-          sudo apt-get install -y google-chrome-stable
-          sudo apt-get install -y chromium-chromedriver
-          export CHROME_BIN=google-chrome
-          export DISPLAY=:99
-          Xvfb :99 -ac &
-
+        uses: browser-actions/setup-chrome@v1.7.1
+        with:
+          install-chromedriver: true
+      
       - name: Set up ChromeDriver on macOS
         if: ${{ matrix.os == 'macos-latest' }}
         run: |
@@ -75,9 +70,6 @@ jobs:
       - name: Test with Maven
         if: ${{ matrix.os == 'ubuntu-latest' }}
         run: mvn clean test
-        env:
-          CHROME_OPTIONS: --remote-allow-origins=*;--disable-gpu;--no-sandbox;--disable-dev-shm-usage;--headless=new;--window-size=1920,1080
-          CI_RUN: true
 
       - name: Test with Maven
         run: mvn clean test
