@@ -1,6 +1,7 @@
 package com.lumatest.base;
 
 //import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,7 +23,7 @@ public abstract class BaseTest {
     @BeforeMethod
     protected void setup() {
 //        WebDriverManager.chromedriver().setup();
-//        WebDriverManager.chromedriver().clearDriverCache().setup();
+        WebDriverManager.chromedriver().clearDriverCache().setup();
         createChromeDriver();
     }
 
