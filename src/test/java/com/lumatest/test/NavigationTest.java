@@ -17,7 +17,10 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
-    @Test(description = "TC-01.00 Open base URL")
+    @Test(
+            description = "TC-01.00 Open base URL",
+            groups = {"Smoke", "Regression"}
+    )
     @Severity(SeverityLevel.BLOCKER)
     @Story("Navigation")
     @Description("TC-01.00 Open base URL")
@@ -40,6 +43,7 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(
+            groups = {"Smoke", "Regression"},
             dataProvider = "navigationData",
             dataProviderClass = TestData.class,
             description = "TC-01.01 Open what's new URL"
