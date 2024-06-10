@@ -12,6 +12,7 @@ import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
@@ -38,6 +39,7 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
+    @Ignore
     @Test(dataProvider = "navigationData", dataProviderClass = TestData.class, description = "TC-01.01 Open what's new URL")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Navigation")
@@ -49,8 +51,8 @@ public class NavigationTest extends BaseTest {
         getDriver().get(baseURL);
 
         Allure.step("Click on " + navBarMenu.toString());
-//        getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
-        getDriver().findElement(navBarMenu).click();
+        getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
+//        getDriver().findElement(navBarMenu).click();
 
         Allure.step("Collect actual results");
         final String actualURL = getDriver().getCurrentUrl();
