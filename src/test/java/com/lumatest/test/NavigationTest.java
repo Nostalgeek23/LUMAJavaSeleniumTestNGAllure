@@ -39,8 +39,11 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-    @Ignore
-    @Test(dataProvider = "navigationData", dataProviderClass = TestData.class, description = "TC-01.01 Open what's new URL")
+    @Test(
+            dataProvider = "navigationData",
+            dataProviderClass = TestData.class,
+            description = "TC-01.01 Open what's new URL"
+    )
     @Severity(SeverityLevel.CRITICAL)
     @Story("Navigation")
     @Description("TC-01.01 Open what's new URL")

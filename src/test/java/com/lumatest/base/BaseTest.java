@@ -32,6 +32,11 @@ public abstract class BaseTest {
         if (this.driver != null) {
             getDriver().quit();
             this.driver = null;
+
+            wait2 = null;
+            wait5 = null;
+            wait10 = null;
+
             System.out.println("Webdriver quit");
         }
     }
