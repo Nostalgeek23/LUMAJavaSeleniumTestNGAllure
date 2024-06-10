@@ -21,11 +21,13 @@ public abstract class BaseTest {
     @BeforeSuite
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
+        System.out.println("Setup Webdriver manager");
     }
 
     @BeforeMethod
     protected void setupDriver() {
         this.driver = DriverUtils.createChromeDriver(getDriver());
+        System.out.println("Setup driver");
     }
 
     @AfterMethod(alwaysRun = true)

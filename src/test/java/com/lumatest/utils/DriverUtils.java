@@ -27,6 +27,7 @@ public class DriverUtils {
 
     public static WebDriver createChromeDriver(WebDriver driver) {
         if (driver != null) {
+            System.out.println("Driver quit");
             driver.quit();
         }
         ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
@@ -35,6 +36,7 @@ public class DriverUtils {
                 "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9"))
         );
 
+        System.out.println("Chromedriver create");
         return chromeDriver ;
     }
 
