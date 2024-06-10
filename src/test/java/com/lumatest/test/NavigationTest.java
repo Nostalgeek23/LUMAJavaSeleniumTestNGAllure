@@ -10,6 +10,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -48,7 +49,8 @@ public class NavigationTest extends BaseTest {
         getDriver().get(baseURL);
 
         Allure.step("Click on " + navBarMenu.toString());
-        getDriver().findElement(navBarMenu).click();
+        getWait2().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
+//        getDriver().findElement(navBarMenu).click();
 
         Allure.step("Collect actual results");
         final String actualURL = getDriver().getCurrentUrl();
