@@ -31,38 +31,36 @@ public abstract class BaseTest {
         if (this.driver != null) {
             getDriver().quit();
             this.driver = null;
+            System.out.println("Webdriver quit");
         }
     }
 
-   /*
    private void createChromeDriver() {
         if (this.driver == null) {
-            ChromeOptions options = new ChromeOptions();
-            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-            this.driver = new ChromeDriver(options);
+            this.driver = new ChromeDriver();
+            System.out.println("WebDriver session created");
         }
     }
-    */
-   private synchronized void createChromeDriver() {
-       if (this.driver == null) {
-           ChromeOptions options = new ChromeOptions();
-           options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-           this.driver = new ChromeDriver(options);
-           System.out.println("WebDriver session created");
-       }
-   }
 
-   /*
+//   private synchronized void createChromeDriver() {
+//       if (this.driver == null) {
+//           ChromeOptions options = new ChromeOptions();
+//           options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+//           this.driver = new ChromeDriver(options);
+//           System.out.println("WebDriver session created");
+//       }
+//   }
+
     public WebDriver getDriver() {
         return driver;
     }
-    */
-   public synchronized WebDriver getDriver() {
-       if (this.driver == null) {
-           throw new IllegalStateException("WebDriver has been quit and cannot be used anymore.");
-       }
-       return driver;
-   }
+
+//   public synchronized WebDriver getDriver() {
+//       if (this.driver == null) {
+//           throw new IllegalStateException("WebDriver has been quit and cannot be used anymore.");
+//       }
+//       return driver;
+//   }
 
     protected WebDriverWait getWait2() {
         if (wait2 == null) {

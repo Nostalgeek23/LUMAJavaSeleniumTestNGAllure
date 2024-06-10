@@ -49,8 +49,8 @@ public class NavigationTest extends BaseTest {
         getDriver().get(baseURL);
 
         Allure.step("Click on " + navBarMenu.toString());
-        getWait2().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
-//        getDriver().findElement(navBarMenu).click();
+//        getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
+        getDriver().findElement(navBarMenu).click();
 
         Allure.step("Collect actual results");
         final String actualURL = getDriver().getCurrentUrl();
