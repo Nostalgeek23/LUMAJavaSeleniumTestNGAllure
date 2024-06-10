@@ -1,14 +1,12 @@
 package com.lumatest.base;
 
-//import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.PageLoadStrategy;
+import com.lumatest.utils.DriverUtils;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
 
@@ -20,11 +18,14 @@ public abstract class BaseTest {
 
     private WebDriverWait wait10;
 
-    @BeforeMethod
-    protected void setup() {
-//        WebDriverManager.chromedriver().setup();
+    @BeforeSuite
+    protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
-        createChromeDriver();
+    }
+
+    @BeforeMethod
+    protected void setupDriver() {
+        this.driver = DriverUtils.createChromeDriver(getDriver());
     }
 
     @AfterMethod(alwaysRun = true)
@@ -41,32 +42,9 @@ public abstract class BaseTest {
         }
     }
 
-   private void createChromeDriver() {
-        if (this.driver == null) {
-            this.driver = new ChromeDriver();
-            System.out.println("WebDriver session created");
-        }
-    }
-
-//   private synchronized void createChromeDriver() {
-//       if (this.driver == null) {
-//           ChromeOptions options = new ChromeOptions();
-//           options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-//           this.driver = new ChromeDriver(options);
-//           System.out.println("WebDriver session created");
-//       }
-//   }
-
     public WebDriver getDriver() {
         return driver;
     }
-
-//   public synchronized WebDriver getDriver() {
-//       if (this.driver == null) {
-//           throw new IllegalStateException("WebDriver has been quit and cannot be used anymore.");
-//       }
-//       return driver;
-//   }
 
     protected WebDriverWait getWait2() {
         if (wait2 == null) {
