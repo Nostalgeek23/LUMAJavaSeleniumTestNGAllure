@@ -46,11 +46,11 @@ public class NavigationTest extends BaseTest {
             groups = {"Smoke", "Regression"},
             dataProvider = "navigationData",
             dataProviderClass = TestData.class,
-            description = "TC-01.01 Open what's new URL"
+            description = "TC-01.01 Check Nav menu URLs"
     )
     @Severity(SeverityLevel.CRITICAL)
     @Story("Navigation")
-    @Description("TC-01.01 Open what's new URL")
+    @Description("TC-01.01 Check Nav menu URLsmvn")
     @Link(TestData.WHATS_NEW_URL)
     public void navigationMenuTest(String baseURL, By navBarMenu, String expectedURL, String expectedTitle) {
 

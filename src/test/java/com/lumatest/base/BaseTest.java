@@ -17,26 +17,25 @@ public abstract class BaseTest {
     private WebDriverWait wait2;
     private WebDriverWait wait5;
     private WebDriverWait wait10;
-    private String browser = "firefox";
+//    private String browser = "chrome";
 
     @BeforeSuite
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
         WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.operadriver().setup();
+        WebDriverManager.chromiumdriver().setup();
 //        WebDriverManager.edgedriver().setup();
-//        WebDriverManager.operadriver().setup();
-//        WebDriverManager.chromiumdriver().setup();
 //        WebDriverManager.iedriver().setup();
         Reporter.log("INFO: Setup Webdriver manager", true);
     }
 
-//    @Parameters("browser")
-//String browser
+    @Parameters("browser")
     @BeforeMethod
-    protected void setupDriver() {
+    protected void setupDriver(String browser) {
         Reporter.log("_________________________________________________________", true);
 
-        this.driver = DriverUtils.createDriver(this.browser, this.driver);
+        this.driver = DriverUtils.createDriver(browser, this.driver);
 
         if (getDriver() == null) {
             Reporter.log("ERROR: unknown browser parameter" + browser, true);
@@ -44,14 +43,15 @@ public abstract class BaseTest {
             System.exit(1);
         }
 
-        Reporter.log("INFO: " + this.browser.toUpperCase() + " driver created", true);
+        Reporter.log("INFO: " + browser.toUpperCase() + " driver created", true);
     }
 
+    @Parameters("browser")
     @AfterMethod(alwaysRun = true)
-    protected void tearDown() {
+    protected void tearDown(String browser) {
         if (this.driver != null) {
             getDriver().quit();
-            Reporter.log("INFO: " + this.browser.toUpperCase() + " driver closed", true);
+            Reporter.log("INFO: " + browser.toUpperCase() + " driver closed", true);
 
             this.driver = null;
 
