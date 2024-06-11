@@ -1,6 +1,6 @@
 # LUMAJavaSeleniumTestNGAllure
 [![Build Java with Maven](https://github.com/Nostalgeek23/LUMAJavaSeleniumTestNGAllure/actions/workflows/build.yml/badge.svg)](https://github.com/Nostalgeek23/LUMAJavaSeleniumTestNGAllure/actions/workflows/build.yml)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/Nostalgeek23/Nostalgeek23%2FLUMAJavaSeleniumTestNGAllure)
+<a href="https://github.com/Nostalgeek23/LUMAJavaSeleniumTestNGAllure/pulls?q=+is%3Apr+author%3A%40me+"><img src="https://img.shields.io/github/issues-pr/Nostalgeek23/Nostalgeek23%2FLUMAJavaSeleniumTestNGAllure"/></a>
 
 
 ## Overview
