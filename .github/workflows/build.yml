@@ -49,8 +49,13 @@ jobs:
       - name: setup Firefox
         if: ${{ matrix.os == 'macos-latest' }}
         run: |
+          brew update
           brew install --cask firefox
           brew install geckodriver
+          
+      - name: Setup geckodriver
+        uses: browser-actions/setup-geckodriver@latest
+        if: ${{ matrix.os == 'macos-latest' }}
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
