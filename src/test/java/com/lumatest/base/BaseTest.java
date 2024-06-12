@@ -1,46 +1,71 @@
 package com.lumatest.base;
 
+import com.lumatest.utils.ReportUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import com.lumatest.utils.DriverUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 
 public abstract class BaseTest {
     private WebDriver driver;
     private WebDriverWait wait2;
-
     private WebDriverWait wait5;
-
     private WebDriverWait wait10;
 
     @BeforeSuite
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
-        System.out.println("Setup Webdriver manager");
+//        WebDriverManager.firefoxdriver().setup();
+//        WebDriverManager.operadriver().setup();
+//        WebDriverManager.chromiumdriver().setup();
+//        WebDriverManager.edgedriver().setup();
+//        WebDriverManager.iedriver().setup();
+        Reporter.log("INFO: Setup Webdriver manager", true);
     }
 
+    @Parameters("browser")
     @BeforeMethod
-    protected void setupDriver() {
-        this.driver = DriverUtils.createChromeDriver(getDriver());
-        System.out.println("Setup driver");
+    protected void setupDriver(@Optional("chrome") String browser, ITestResult result) {
+        Reporter.log("_________________________________________________________", true);
+        Reporter.log("Run " + result.getMethod().getMethodName() + ": " + ReportUtils.getTestStatus(result),
+                true);
+        this.driver = DriverUtils.createDriver(browser, this.driver);
+
+        if (getDriver() == null) {
+            Reporter.log("ERROR: unknown browser parameter" + browser, true);
+
+            System.exit(1);
+        }
+
+        Reporter.log("INFO: " + browser.toUpperCase() + " driver created", true);
     }
 
+    @Parameters("browser")
     @AfterMethod(alwaysRun = true)
-    protected void tearDown() {
+    protected void tearDown(@Optional("chrome") String browser, ITestResult result) {
+        Reporter.log(result.getMethod().getMethodName(),true);
+
         if (this.driver != null) {
             getDriver().quit();
+            Reporter.log("INFO: " + browser.toUpperCase() + " driver closed", true);
+
             this.driver = null;
 
             wait2 = null;
             wait5 = null;
             wait10 = null;
 
-            System.out.println("Webdriver quit");
+        } else {
+            Reporter.log("INFO: Driver is null", true);
         }
     }
 

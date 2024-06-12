@@ -17,7 +17,11 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
-    @Test(description = "TC-01.00 Open base URL")
+    @Test(
+            description = "TC-01.00 Open base URL",
+            groups = {"Smoke", "Regression"},
+            testName = "Navigation: open base URL"
+    )
     @Severity(SeverityLevel.BLOCKER)
     @Story("Navigation")
     @Description("TC-01.00 Open base URL")
@@ -40,13 +44,15 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(
+            groups = {"Smoke", "Regression"},
             dataProvider = "navigationData",
             dataProviderClass = TestData.class,
-            description = "TC-01.01 Open what's new URL"
+            description = "TC-01.01 Check Nav menu URLs",
+            testName = "Navigation: open URLs on nav panel"
     )
     @Severity(SeverityLevel.CRITICAL)
     @Story("Navigation")
-    @Description("TC-01.01 Open what's new URL")
+    @Description("TC-01.01 Check Nav menu URLsmvn")
     @Link(TestData.WHATS_NEW_URL)
     public void navigationMenuTest(String baseURL, By navBarMenu, String expectedURL, String expectedTitle) {
 
@@ -64,5 +70,16 @@ public class NavigationTest extends BaseTest {
         Allure.step("Verify actual results as expected");
         Assert.assertEquals(actualURL, expectedURL);
         Assert.assertEquals(actualTitle, expectedTitle);
+    }
+
+    @Test
+    public void testGoogle() {
+        final String expectedURL = "https://www.google.com/";
+
+        getDriver().get(expectedURL);
+
+        final String actualURL = getDriver().getCurrentUrl();
+
+        Assert.assertEquals(actualURL, expectedURL);
     }
 }
