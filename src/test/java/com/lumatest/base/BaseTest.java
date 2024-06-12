@@ -18,14 +18,13 @@ public abstract class BaseTest {
     private WebDriverWait wait2;
     private WebDriverWait wait5;
     private WebDriverWait wait10;
-//    private String browser = "chrome";
 
     @BeforeSuite
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
         WebDriverManager.firefoxdriver().setup();
 //        WebDriverManager.operadriver().setup();
-        WebDriverManager.chromiumdriver().setup();
+//        WebDriverManager.chromiumdriver().setup();
 //        WebDriverManager.edgedriver().setup();
 //        WebDriverManager.iedriver().setup();
         Reporter.log("INFO: Setup Webdriver manager", true);

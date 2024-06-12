@@ -4,7 +4,6 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.chromium.ChromiumOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Reporter;
@@ -14,7 +13,6 @@ import java.util.Map;
 public class DriverUtils {
     private static final ChromeOptions chromeOptions;
     private static final FirefoxOptions firefoxOptions;
-    private static final ChromiumOptions<ChromeOptions> chromiumOptions;
 
     static {
         chromeOptions = new ChromeOptions();
@@ -41,7 +39,6 @@ public class DriverUtils {
         firefoxOptions.addArguments("--allow-running-insecure-content");
         firefoxOptions.addArguments("--ignore-certificate-errors");
 
-        chromiumOptions = chromeOptions;
     }
 
     private static WebDriver createChromeDriver(WebDriver driver) {
@@ -60,20 +57,6 @@ public class DriverUtils {
         return chromeDriver ;
     }
 
-    private static WebDriver createChromiumDriver(WebDriver driver) {
-        if (driver != null) {
-            driver.quit();
-        }
-        ChromeDriver chromeDriver = new ChromeDriver((ChromeOptions) chromiumOptions);
-
-               /* only for Luma store
-        chromeDriver.executeCdpCommand("Network.enable", Map.of());
-        chromeDriver.executeCdpCommand(
-                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));
-            */
-        return chromeDriver ;
-    }
-
     private static WebDriver createFirefoxDriver(WebDriver driver) {
         if (driver != null) {
             driver.quit();
@@ -89,9 +72,6 @@ public class DriverUtils {
             }
             case "firefox" -> {
                 return createFirefoxDriver(driver);
-            }
-            case "chromium" -> {
-                return createChromiumDriver(driver);
             }
             default -> {
                 return null;
