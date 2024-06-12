@@ -16,7 +16,6 @@ public class DriverUtils {
 
     static {
         chromeOptions = new ChromeOptions();
-
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
         chromeOptions.addArguments("--incognito");
         chromeOptions.addArguments("--headless");
