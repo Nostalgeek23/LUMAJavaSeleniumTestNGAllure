@@ -52,10 +52,6 @@ jobs:
           brew update
           brew install --cask firefox
           brew install geckodriver
-          
-      - name: Setup geckodriver
-        uses: cclauss/install-geckodriver@v1
-        if: ${{ matrix.os == 'macos-latest' }}
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
