@@ -49,6 +49,7 @@ jobs:
       - name: setup Firefox
         if: ${{ matrix.os == 'macos-latest' }}
         run: |
+          brew update
           brew install --cask firefox
           brew install geckodriver
 
