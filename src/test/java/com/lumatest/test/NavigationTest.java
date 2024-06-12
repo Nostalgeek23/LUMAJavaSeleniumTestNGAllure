@@ -17,10 +17,10 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
-    @Ignore
     @Test(
             description = "TC-01.00 Open base URL",
-            groups = {"Smoke", "Regression"}
+            groups = {"Smoke", "Regression"},
+            testName = "Navigation: open base URL"
     )
     @Severity(SeverityLevel.BLOCKER)
     @Story("Navigation")
@@ -43,12 +43,12 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-    @Ignore
     @Test(
             groups = {"Smoke", "Regression"},
             dataProvider = "navigationData",
             dataProviderClass = TestData.class,
-            description = "TC-01.01 Check Nav menu URLs"
+            description = "TC-01.01 Check Nav menu URLs",
+            testName = "Navigation: open URLs on nav panel"
     )
     @Severity(SeverityLevel.CRITICAL)
     @Story("Navigation")
