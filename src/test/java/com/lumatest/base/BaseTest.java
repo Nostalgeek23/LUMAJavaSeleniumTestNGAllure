@@ -8,6 +8,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.time.Duration;
@@ -23,7 +24,7 @@ public abstract class BaseTest {
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
         WebDriverManager.firefoxdriver().setup();
-        WebDriverManager.operadriver().setup();
+//        WebDriverManager.operadriver().setup();
         WebDriverManager.chromiumdriver().setup();
 //        WebDriverManager.edgedriver().setup();
 //        WebDriverManager.iedriver().setup();
@@ -32,7 +33,7 @@ public abstract class BaseTest {
 
     @Parameters("browser")
     @BeforeMethod
-    protected void setupDriver(String browser) {
+    protected void setupDriver(@Optional("chrome") String browser) {
         Reporter.log("_________________________________________________________", true);
 
         this.driver = DriverUtils.createDriver(browser, this.driver);
@@ -48,7 +49,7 @@ public abstract class BaseTest {
 
     @Parameters("browser")
     @AfterMethod(alwaysRun = true)
-    protected void tearDown(String browser) {
+    protected void tearDown(@Optional("chrome") String browser) {
         if (this.driver != null) {
             getDriver().quit();
             Reporter.log("INFO: " + browser.toUpperCase() + " driver closed", true);

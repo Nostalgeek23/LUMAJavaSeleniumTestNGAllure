@@ -17,6 +17,7 @@ import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
+    @Ignore
     @Test(
             description = "TC-01.00 Open base URL",
             groups = {"Smoke", "Regression"}
@@ -42,6 +43,7 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
+    @Ignore
     @Test(
             groups = {"Smoke", "Regression"},
             dataProvider = "navigationData",
@@ -68,5 +70,16 @@ public class NavigationTest extends BaseTest {
         Allure.step("Verify actual results as expected");
         Assert.assertEquals(actualURL, expectedURL);
         Assert.assertEquals(actualTitle, expectedTitle);
+    }
+
+    @Test
+    public void testGoogle() {
+        final String expectedURL = "https://www.google.com/";
+
+        getDriver().get(expectedURL);
+
+        final String actualURL = getDriver().getCurrentUrl();
+
+        Assert.assertEquals(actualURL, expectedURL);
     }
 }

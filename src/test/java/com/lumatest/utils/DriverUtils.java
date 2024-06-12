@@ -50,10 +50,12 @@ public class DriverUtils {
             driver.quit();
         }
         ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
+
+       /* only for Luma store
         chromeDriver.executeCdpCommand("Network.enable", Map.of());
         chromeDriver.executeCdpCommand(
-                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9"))
-        );
+                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));
+        */
 
         return chromeDriver ;
     }
@@ -63,11 +65,12 @@ public class DriverUtils {
             driver.quit();
         }
         ChromeDriver chromeDriver = new ChromeDriver((ChromeOptions) chromiumOptions);
+
+               /* only for Luma store
         chromeDriver.executeCdpCommand("Network.enable", Map.of());
         chromeDriver.executeCdpCommand(
-                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9"))
-        );
-
+                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));
+            */
         return chromeDriver ;
     }
 
