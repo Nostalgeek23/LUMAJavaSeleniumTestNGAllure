@@ -54,7 +54,7 @@ jobs:
           brew install geckodriver
           
       - name: Setup geckodriver
-        uses: browser-actions/setup-geckodriver@latest
+        uses: cclauss/install-geckodriver@v1
         if: ${{ matrix.os == 'macos-latest' }}
 
       - name: Build with Maven
