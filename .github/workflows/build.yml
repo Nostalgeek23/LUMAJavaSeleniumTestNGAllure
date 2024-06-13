@@ -52,17 +52,18 @@ jobs:
 
       - name: Test with Maven - Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: mvn '-DsuiteXmlFile=src/test/resources/suites/testngubu.xml' clean test
+        run: mvn clean test -PUbuntuTest
 
       - name: Test with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
-        run: mvn '-DsuiteXmlFile=src/test/resources/suites/testngwin.xml' clean test
+        run: mvn clean test -PWindowsTest
 
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-latest' }}
         run: |
           safaridriver --enable
-          mvn '-DsuiteXmlFile=src/test/resources/suites/testngmac.xml' clean test
+          mvn clean test -PMacosTest
+
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1

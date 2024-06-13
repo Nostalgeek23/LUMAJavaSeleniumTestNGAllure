@@ -87,7 +87,7 @@
                                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                                 </argLine>
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>testngwin.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/suites/testngwin.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                             <dependencies>
@@ -126,7 +126,7 @@
                                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                                 </argLine>
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>testngubu.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/suites/testngubu.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                             <dependencies>
@@ -165,7 +165,7 @@
                                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                             </argLine>
                             <suiteXmlFiles>
-                                <suiteXmlFile>testngmac.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/suites/testngmac.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                         <dependencies>
