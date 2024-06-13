@@ -22,18 +22,6 @@ jobs:
       max-parallel: 4
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13]
-        browser: [edge, firefox, safari, chrome]
-        exclude:
-          - os: ubuntu-latest
-            browser: safari
-          - os: ubuntu-latest
-            browser: edge
-          - os: windows-latest
-            browser: safari
-          - os: macos-13
-            browser: edge
-          - os: macos-13
-            browser: firefox
 
 
     runs-on: ${{ matrix.os }}
@@ -62,21 +50,17 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Test with Maven - Chrome
-        if: matrix.browser == 'chrome'
-        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=chrome
+      - name: Test with Maven - Ubuntu
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: mvn '-DsuiteXmlFile=src/test/resources/testngUbuntu.xml' clean test
 
-      - name: Test with Maven - Firefox
-        if: matrix.browser == 'firefox'
-        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=firefox
+      - name: Test with Maven - Windows
+        if: ${{ matrix.os == 'windows-latest' }}
+        run: mvn '-DsuiteXmlFile=src/test/resources/testngWindows.xml' clean test
 
-      - name: Test with Maven - Edge
-        if: matrix.browser == 'edge'
-        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=edge
-
-      - name: Test with Maven - Safari
-        if: matrix.browser == 'safari'
-        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=safari
+      - name: Test with Maven - Ubuntu
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: mvn '-DsuiteXmlFile=src/test/resources/testngMacos.xml' clean test
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
