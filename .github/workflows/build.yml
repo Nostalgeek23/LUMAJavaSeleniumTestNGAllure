@@ -63,7 +63,16 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Test with Maven
-        run: mvn clean test
+        run: |
+          if [ "${{ matrix.browser }}" == "chrome" ]; then
+            mvn clean test -Dbrowser=chrome
+          elif [ "${{ matrix.browser }}" == "firefox" ]; then
+            mvn clean test -Dbrowser=firefox
+          elif [ "${{ matrix.browser }}" == "edge" ]; then
+            mvn clean test -Dbrowser=edge
+          elif [ "${{ matrix.browser }}" == "safari" ]; then
+            mvn clean test -Dbrowser=safari
+          fi
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
