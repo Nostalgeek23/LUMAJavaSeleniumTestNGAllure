@@ -61,7 +61,7 @@ jobs:
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
         run: |
-          safaridriver --enable
+          sudo safaridriver --enable
           mvn clean test -PMacosTest
 
       - name: Dorny Test Reporter
