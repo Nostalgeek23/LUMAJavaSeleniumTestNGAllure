@@ -62,17 +62,21 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Test with Maven
-        run: |
-          if [ "${{ matrix.browser }}" == "chrome" ]; then
-            mvn clean test -Dbrowser=chrome
-          elif [ "${{ matrix.browser }}" == "firefox" ]; then
-            mvn clean test -Dbrowser=firefox
-          elif [ "${{ matrix.browser }}" == "edge" ]; then
-            mvn clean test -Dbrowser=edge
-          elif [ "${{ matrix.browser }}" == "safari" ]; then
-            mvn clean test -Dbrowser=safari
-          fi
+      - name: Test with Maven - Chrome
+        if: matrix.browser == 'chrome'
+        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=chrome
+
+      - name: Test with Maven - Firefox
+        if: matrix.browser == 'firefox'
+        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=firefox
+
+      - name: Test with Maven - Edge
+        if: matrix.browser == 'edge'
+        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=edge
+
+      - name: Test with Maven - Safari
+        if: matrix.browser == 'safari'
+        run: mvn clean test -DsuiteXmlFile=testng.xml -Dbrowser=safari
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
