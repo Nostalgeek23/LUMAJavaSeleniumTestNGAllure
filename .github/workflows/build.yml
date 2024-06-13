@@ -61,13 +61,10 @@ jobs:
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
         run: |
-          # Workaround for `sudo safardriver --enable` not working:
-          # https://github.com/web-platform-tests/wpt/issues/19845
-          # https://github.com/web-platform-tests/wpt/blob/master/tools/ci/azure/install_safari.yml
-          mkdir -p ~/Library/WebDriver/
-          curl https://raw.githubusercontent.com/web-platform-tests/wpt/master/tools/ci/azure/com.apple.Safari.plist -o ~/Library/WebDriver/com.apple.Safari.plist
-          defaults write com.apple.Safari WebKitJavaScriptCanOpenWindowsAutomatically 1
-          # sudo safaridriver --enable
+          defaults write com.apple.Safari IncludeDevelopMenu YES
+          defaults write com.apple.Safari AllowRemoteAutomation 1
+          sudo safaridriver --enable
+          safaridriver -p 0 &
           mvn clean test -PMacosTest
 
       - name: Dorny Test Reporter
