@@ -24,7 +24,7 @@ public abstract class BaseTest {
     @BeforeSuite
     protected void setupWebDriverManager() {
         WebDriverManager.chromedriver().clearDriverCache().setup();
-//        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.firefoxdriver().setup();
 //        WebDriverManager.operadriver().setup();
 //        WebDriverManager.chromiumdriver().setup();
 //        WebDriverManager.edgedriver().setup();
