@@ -5,9 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.safari.SafariOptions;
 import org.testng.Reporter;
 
 import java.util.Map;
@@ -15,6 +17,7 @@ import java.util.Map;
 public class DriverUtils {
     private static final ChromeOptions chromeOptions;
     private static final FirefoxOptions firefoxOptions;
+    private static final EdgeOptions edgeOptions;
 
     static {
         chromeOptions = new ChromeOptions();
@@ -39,6 +42,17 @@ public class DriverUtils {
         firefoxOptions.addArguments("--disable-web-security");
         firefoxOptions.addArguments("--allow-running-insecure-content");
         firefoxOptions.addArguments("--ignore-certificate-errors");
+
+        edgeOptions = new EdgeOptions();
+        edgeOptions.addArguments("--incognito");
+        edgeOptions.addArguments("--headless");
+        edgeOptions.addArguments("--window-size=1920,1080");
+        edgeOptions.addArguments("--disable-gpu");
+        edgeOptions.addArguments("--no-sandbox");
+        edgeOptions.addArguments("--disable-dev-shm-usage");
+        edgeOptions.addArguments("--disable-web-security");
+        edgeOptions.addArguments("--allow-running-insecure-content");
+        edgeOptions.addArguments("--ignore-certificate-errors");
 
     }
 
@@ -79,7 +93,7 @@ public class DriverUtils {
             driver.quit();
         }
 
-        return new EdgeDriver();
+        return new EdgeDriver(edgeOptions);
     }
 
     public static WebDriver createDriver(String browser, WebDriver driver) {

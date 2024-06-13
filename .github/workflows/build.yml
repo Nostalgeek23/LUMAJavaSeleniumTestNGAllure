@@ -21,7 +21,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-13]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
 
     runs-on: ${{ matrix.os }}
@@ -52,15 +52,17 @@ jobs:
 
       - name: Test with Maven - Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: mvn '-DsuiteXmlFile=src/test/resources/testngUbuntu.xml' clean test
+        run: mvn '-DsuiteXmlFile=src/test/resources/suites/testngubu.xml' clean test
 
       - name: Test with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
-        run: mvn '-DsuiteXmlFile=src/test/resources/testngWindows.xml' clean test
+        run: mvn '-DsuiteXmlFile=src/test/resources/suites/testngwin.xml' clean test
 
-      - name: Test with Maven - Ubuntu
+      - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-latest' }}
-        run: mvn '-DsuiteXmlFile=src/test/resources/testngMacos.xml' clean test
+        run: |
+          safaridriver --enable
+          mvn '-DsuiteXmlFile=src/test/resources/suites/testngmac.xml' clean test
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
