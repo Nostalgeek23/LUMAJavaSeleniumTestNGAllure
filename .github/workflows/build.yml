@@ -22,6 +22,19 @@ jobs:
       max-parallel: 4
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13]
+        browser: [edge, firefox, safari, chrome]
+        exclude:
+          - os: ubuntu-latest
+            browser: safari
+          - os: ubuntu-latest
+            browser: edge
+          - os: windows-latest
+            browser: safari
+          - os: macos-13
+            browser: edge
+          - os: macos-13
+            browser: firefox
+
 
     runs-on: ${{ matrix.os }}
 
@@ -45,13 +58,6 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-    
-
-      - name: setup Firefox
-        if: ${{ matrix.os == 'macos-13' }}
-        run: |
-          brew update
-          brew install --cask firefox
-          brew install geckodriver
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml

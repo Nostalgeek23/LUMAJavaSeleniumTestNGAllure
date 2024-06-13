@@ -18,4 +18,20 @@
         </classes>
     </test>
 
+    <test name = "SafariTest" verbose="10">
+        <parameter name="browser" value="safari"/>
+        <classes>
+            <class name="FrameworkTest"/>
+            <class name="com.lumatest.test.NavigationTest"/>
+        </classes>
+    </test>
+
+    <test name = "EdgeTest" verbose="10">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="FrameworkTest"/>
+            <class name="com.lumatest.test.NavigationTest"/>
+        </classes>
+    </test>
+
 </suite>

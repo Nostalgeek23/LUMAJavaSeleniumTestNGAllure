@@ -4,8 +4,10 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Reporter;
 
 import java.util.Map;
@@ -64,6 +66,22 @@ public class DriverUtils {
         return new FirefoxDriver(firefoxOptions);
     }
 
+    private static WebDriver createSafariDriver(WebDriver driver) {
+        if (driver != null) {
+            driver.quit();
+        }
+
+        return new SafariDriver();
+    }
+
+    private static WebDriver createEdgeDriver(WebDriver driver) {
+        if (driver != null) {
+            driver.quit();
+        }
+
+        return new EdgeDriver();
+    }
+
     public static WebDriver createDriver(String browser, WebDriver driver) {
         switch(browser) {
             case "chrome" -> {
@@ -71,6 +89,12 @@ public class DriverUtils {
             }
             case "firefox" -> {
                 return createFirefoxDriver(driver);
+            }
+            case "safari" -> {
+                return createSafariDriver(driver);
+            }
+            case "edge" -> {
+                return createEdgeDriver(driver);
             }
             default -> {
                 return null;
