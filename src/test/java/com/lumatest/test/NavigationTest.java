@@ -66,8 +66,12 @@ public class NavigationTest extends BaseTest {
             getWait5().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
         } catch (Exception e) {
             WebElement element = getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu));
+            System.out.println("Element found using fallback method: " + element);
+            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
             ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click();", element);
         }
+
+        getWait10().until(ExpectedConditions.urlToBe(expectedURL));
 
         Allure.step("Collect actual results");
         final String actualURL = getDriver().getCurrentUrl();
