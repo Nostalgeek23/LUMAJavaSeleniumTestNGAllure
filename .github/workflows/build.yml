@@ -21,7 +21,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest, macos-13]
 
 
     runs-on: ${{ matrix.os }}
@@ -59,11 +59,10 @@ jobs:
         run: mvn clean test -PWindowsTest
 
       - name: Test with Maven - MacOs
-        if: ${{ matrix.os == 'macos-latest' }}
+        if: ${{ matrix.os == 'macos-13' }}
         run: |
           safaridriver --enable
           mvn clean test -PMacosTest
-
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
