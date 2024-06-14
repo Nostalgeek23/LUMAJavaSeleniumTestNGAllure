@@ -63,11 +63,11 @@ public class DriverUtils {
         }
         ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
 
-       /* only for Luma store
+       /* only for Luma store        */
         chromeDriver.executeCdpCommand("Network.enable", Map.of());
         chromeDriver.executeCdpCommand(
                 "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));
-        */
+
 
         return chromeDriver ;
     }

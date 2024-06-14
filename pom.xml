@@ -15,11 +15,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <allure.version>2.24.0</allure.version>
         <aspectj.version>1.9.20.1</aspectj.version>
-<!--        <suiteXml>src/test/resources/suites/testngDefault.xml</suiteXml>-->
-<!--        <defaultSuiteFiles>-->
-<!--            src/test/resources/suites/testngDefault.xml-->
-<!--        </defaultSuiteFiles>-->
-<!--        <suiteFile>${defaultSuiteFiles}</suiteFile>-->
     </properties>
 
     <dependencyManagement>
@@ -60,7 +55,7 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <scope>test</scope>
+<!--            <scope>test</scope>-->
         </dependency>
 
         <dependency>

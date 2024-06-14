@@ -7,7 +7,7 @@
         <classes>
             <class name="FrameworkTest"/>
             <class name="com.lumatest.test.NavigationTest"/>
-            <!--            <class name="com.lumatest.test.ProductPageTest"></class>-->
+            <class name="com.lumatest.test.ProductPageTest"/>
         </classes>
     </test>
 
@@ -15,7 +15,6 @@
         <parameter name="browser" value="safari"/>
         <classes>
             <class name="FrameworkTest"/>
-<!--            <class name="com.lumatest.test.NavigationTest"/>-->
         </classes>
         </test>
 </suite>
