@@ -10,6 +10,8 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
@@ -60,8 +62,16 @@ public class NavigationTest extends BaseTest {
         getDriver().get(baseURL);
 
         Allure.step("Click on " + navBarMenu.toString());
-        getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
-//        getDriver().findElement(navBarMenu).click();
+        try {
+            getWait5().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
+        } catch (Exception e) {
+            WebElement element = getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu));
+            System.out.println("Element found using fallback method: " + element);
+            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click();", element);
+        }
+
+        getWait10().until(ExpectedConditions.urlToBe(expectedURL));
 
         Allure.step("Collect actual results");
         final String actualURL = getDriver().getCurrentUrl();

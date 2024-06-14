@@ -23,6 +23,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13]
 
+
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -46,18 +47,25 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-    
 
-      - name: setup Firefox
-        if: ${{ matrix.os == 'macos-13' }}
-        run: |
-          brew update
-          brew install --cask firefox
-          brew install geckodriver
-
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Test with Maven
-        run: mvn clean test
+      - name: Test with Maven - Ubuntu
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: mvn clean test -PUbuntuTest
+
+      - name: Test with Maven - Windows
+        if: ${{ matrix.os == 'windows-latest' }}
+        run: mvn clean test -PWindowsTest
+
+      - name: Test with Maven - MacOs
+        if: ${{ matrix.os == 'macos-13' }}
+        run: |
+          defaults write com.apple.Safari IncludeDevelopMenu YES
+          defaults write com.apple.Safari AllowRemoteAutomation 1
+          sudo safaridriver --enable
+          safaridriver -p 0 &
+          mvn clean test -PMacosTest
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
