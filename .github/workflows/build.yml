@@ -59,7 +59,7 @@ jobs:
       - name: Test with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
         run: |
-          mvn clean -e install -Dmaven.test.skip=true
+          mvn clean -e install '-Dmaven.test.skip=true'
           mvn clean test -PWindowsTest
 
       - name: Test with Maven - MacOs
