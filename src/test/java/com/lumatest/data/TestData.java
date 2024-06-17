@@ -33,6 +33,11 @@ public class TestData {
     public static final String SALE_URL = BASE_URL + "/sale.html";
     public static final String SALE_TITLE = "Sale";
 
+    /*
+    For Product Pages
+    */
+    public static final String DRIVENBACKPACK_PRODUCT_NAME = "Driven Backpack";
+
 //            Allure.step("Set up expected results");
     @DataProvider(name = "navigationData")
     public static Object[][] getNavMenuData() {
