@@ -52,15 +52,20 @@ jobs:
 
       - name: Test with Maven - Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: mvn clean test -PUbuntuTest
+        run: |
+          mvn clean -e install -Dmaven.test.skip=true
+          mvn clean test -PUbuntuTest
 
       - name: Test with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
-        run: mvn clean test -PWindowsTest
+        run: |
+          mvn clean -e install -Dmaven.test.skip=true
+          mvn clean test -PWindowsTest
 
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
         run: |
+          mvn clean -e install -Dmaven.test.skip=true
           defaults write com.apple.Safari IncludeDevelopMenu YES
           defaults write com.apple.Safari AllowRemoteAutomation 1
           sudo safaridriver --enable

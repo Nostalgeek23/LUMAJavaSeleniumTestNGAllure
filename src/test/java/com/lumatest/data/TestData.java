@@ -36,6 +36,7 @@ public class TestData {
     /*
     For Product Pages
     */
+    public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
     public static final String DRIVENBACKPACK_PRODUCT_NAME = "Driven Backpack";
 
 //            Allure.step("Set up expected results");
