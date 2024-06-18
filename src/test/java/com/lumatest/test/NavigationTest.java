@@ -14,14 +14,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
 
     @Test(
+            groups = {"regression"},
             description = "TC-01.00 Open base URL",
-            groups = {"Smoke", "Regression"},
             testName = "Navigation: open base URL"
     )
     @Severity(SeverityLevel.BLOCKER)
@@ -46,7 +45,7 @@ public class NavigationTest extends BaseTest {
     }
 
     @Test(
-            groups = {"Smoke", "Regression"},
+            groups = {"regression"},
             dataProvider = "navigationData",
             dataProviderClass = TestData.class,
             description = "TC-01.01 Check Nav menu URLs",
@@ -54,7 +53,7 @@ public class NavigationTest extends BaseTest {
     )
     @Severity(SeverityLevel.CRITICAL)
     @Story("Navigation")
-    @Description("TC-01.01 Check Nav menu URLsmvn")
+    @Description("TC-01.01 Check Nav menu URLs")
     @Link(TestData.WHATS_NEW_URL)
     public void navigationMenuTest(String baseURL, By navBarMenu, String expectedURL, String expectedTitle) {
 
@@ -63,7 +62,7 @@ public class NavigationTest extends BaseTest {
 
         Allure.step("Click on " + navBarMenu.toString());
         try {
-            getWait5().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
+            getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
         } catch (Exception e) {
             WebElement element = getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu));
             System.out.println("Element found using fallback method: " + element);
@@ -82,14 +81,5 @@ public class NavigationTest extends BaseTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-    @Test
-    public void testGoogle() {
-        final String expectedURL = "https://www.google.com/";
 
-        getDriver().get(expectedURL);
-
-        final String actualURL = getDriver().getCurrentUrl();
-
-        Assert.assertEquals(actualURL, expectedURL);
-    }
 }

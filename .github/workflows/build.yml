@@ -47,30 +47,53 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-    
 
-#      - name: Build with Maven
-#        run: mvn -B package --file pom.xml
+#            UBUNTU JOBS
+
+      - name: Build with Maven - Ubuntu
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run:  mvn clean -e install -Dmaven.test.skip=true
 
       - name: Test with Maven - Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
         run: |
-          mvn clean -e install -Dmaven.test.skip=true
-          mvn clean test -PUbuntuTest
+          mvn test -PSmokeTest
+          mvn test -PRegressTest          
+          mvn test -PUbuntuTest
+
+#             WINDOWS JOBS
+
+      - name: Build with Maven - Windows
+        if: ${{ matrix.os == 'windows-latest' }}
+        run:  mvn clean -e install '-Dmaven.test.skip=true'
 
       - name: Test with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
         run: |
-          mvn clean -e install '-Dmaven.test.skip=true'
-          mvn clean test -PWindowsTest
+          mvn test -PSmokeTest
+          mvn test -PRegressTest         
+          mvn test -PWindowsTest
+
+#             MACOS JOBS
+
+      - name: Build with Maven - MacOs
+        if: ${{ matrix.os == 'macos-13' }}
+        run: |
+          mvn clean -e install -Dmaven.test.skip=true
+          brew install selenium-server-standalone
+          selenium-server -port 4444;
+          defaults write com.apple.Safari IncludeDevelopMenu YES
+          defaults write com.apple.Safari AllowRemoteAutomation 1
+          sudo safaridriver --enable
+          safaridriver -p 0 &          
 
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
         run: |
-          mvn clean -e install -Dmaven.test.skip=true
-          defaults write com.apple.Safari IncludeDevelopMenu YES
-          defaults write com.apple.Safari AllowRemoteAutomation 1
-          sudo safaridriver --enable
-          safaridriver -p 0 &
-          mvn clean test -PMacosTest
+          mvn test -PSmokeTest
+          mvn test -PRegressTest           
+          mvn test -PMacosTest
+
+#          Dorny Test Reporter
 
       - name: Dorny Test Reporter
         uses: dorny/test-reporter@v1.9.1
@@ -78,7 +101,9 @@ jobs:
         with:
           name: Test Report for ${{ matrix.os }}
           path: target/surefire-reports/TEST-*.xml
-          reporter: java-junit        
+          reporter: java-junit
+
+#          ALLURE
 
       - name: Load Allure test report history
         uses: actions/checkout@v4
@@ -103,6 +128,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+
+#          CODE-STYLE
 
   check-java-code-style:
     name: Check Java code style

@@ -38,9 +38,9 @@ public class DriverUtils {
         firefoxOptions.addArguments("--disable-gpu");
         firefoxOptions.addArguments("--no-sandbox");
         firefoxOptions.addArguments("--disable-dev-shm-usage");
-        firefoxOptions.addArguments("--disable-web-security");
-        firefoxOptions.addArguments("--allow-running-insecure-content");
-        firefoxOptions.addArguments("--ignore-certificate-errors");
+//        firefoxOptions.addArguments("--disable-web-security");
+//        firefoxOptions.addArguments("--allow-running-insecure-content");
+//        firefoxOptions.addArguments("--ignore-certificate-errors");
 
         edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("--incognito");
@@ -62,7 +62,7 @@ public class DriverUtils {
         }
         ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
 
-       /* only for Luma store        */
+       /* only for Luma store */
         chromeDriver.executeCdpCommand("Network.enable", Map.of());
         chromeDriver.executeCdpCommand(
                 "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));

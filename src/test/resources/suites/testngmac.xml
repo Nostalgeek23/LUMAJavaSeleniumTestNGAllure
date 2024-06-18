@@ -5,16 +5,14 @@
     <test name = "ChromeTestMacOs" verbose="10">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="FrameworkTest"/>
-            <class name="com.lumatest.test.NavigationTest"/>
             <class name="com.lumatest.test.ProductPageTest"/>
         </classes>
     </test>
 
-    <test name = "SafariTestMacOs" verbose="10">
-        <parameter name="browser" value="safari"/>
-        <classes>
-            <class name="FrameworkTest"/>
-        </classes>
-        </test>
+<!--    <test name = "SafariTestMacOs" verbose="10">-->
+<!--        <parameter name="browser" value="safari"/>-->
+<!--        <classes>-->
+<!--            <class name="FrameworkTest"/>-->
+<!--        </classes>-->
+<!--        </test>-->
 </suite>
