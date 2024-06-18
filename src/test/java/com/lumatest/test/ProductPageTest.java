@@ -34,14 +34,14 @@ public class ProductPageTest extends BaseTest {
         ProductPage productPage = new HomePage(getDriver())
                 .clickGearTopMenu()
                 .clickBagsSideMenu()
-                .clickProductImg(TestData.DRIVENBACKPACK_PRODUCT_NAME);
+                .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
 
         final String productName = productPage.getProductName();
         final List<String> breadcrumbsMenuText = productPage.getBreadcrumbsMenuText();
         System.out.println(breadcrumbsMenuText);
 
         Allure.step("Verify " + productName + " is on product page and in the breadcrumbs");
-        Assert.assertEquals(productName, TestData.DRIVENBACKPACK_PRODUCT_NAME);
-        Assert.assertTrue(breadcrumbsMenuText.contains(TestData.DRIVENBACKPACK_PRODUCT_NAME));
+        Assert.assertEquals(productName, TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
+        Assert.assertTrue(breadcrumbsMenuText.contains(TestData.DRIVEN_BACKPACK_PRODUCT_NAME));
     }
 }

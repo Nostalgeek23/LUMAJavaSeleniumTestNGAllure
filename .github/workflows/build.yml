@@ -53,7 +53,10 @@ jobs:
 
       - name: Test with Maven - Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: mvn clean test -PUbuntuTest
+        run: |
+          mvn clean test -PSmokeTest
+          mvn clean test -PRegressTest          
+          mvn clean test -PUbuntuTest
 
       - name: Build with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
