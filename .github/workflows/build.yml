@@ -68,7 +68,10 @@ jobs:
 
       - name: Test with Maven - Windows
         if: ${{ matrix.os == 'windows-latest' }}
-        run: mvn test -PWindowsTest
+        run: |
+          mvn test -PSmokeTest
+          mvn test -PRegressTest         
+          mvn test -PWindowsTest
 
 #             MACOS JOBS
 
@@ -83,7 +86,10 @@ jobs:
 
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
-        run: mvn test -PMacosTest
+        run: |
+          mvn test -PSmokeTest
+          mvn test -PRegressTest           
+          mvn test -PMacosTest
 
 #          Dorny Test Reporter
 
