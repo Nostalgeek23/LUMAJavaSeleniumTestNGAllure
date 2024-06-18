@@ -5,8 +5,6 @@
     <test name = "ChromeTestWindows" verbose="10">
         <parameter name="browser" value="chrome"/>
         <classes>
-<!--            <class name="FrameworkTest"/>-->
-<!--            <class name="com.lumatest.test.NavigationTest"/>-->
             <class name="com.lumatest.test.ProductPageTest"/>
         </classes>
     </test>
@@ -14,8 +12,6 @@
     <test name = "EdgeTestWindows" verbose="10">
         <parameter name="browser" value="edge"/>
         <classes>
-<!--            <class name="FrameworkTest"/>-->
-<!--            <class name="com.lumatest.test.NavigationTest"/>-->
             <class name="com.lumatest.test.ProductPageTest"/>
         </classes>
     </test>
@@ -23,8 +19,6 @@
     <test name = "FirefoxTestWindows" verbose="10">
         <parameter name="browser" value="firefox"/>
         <classes>
-<!--            <class name="FrameworkTest"/>-->
-<!--            <class name="com.lumatest.test.NavigationTest"/>-->
             <class name="com.lumatest.test.ProductPageTest"/>
         </classes>
     </test>
