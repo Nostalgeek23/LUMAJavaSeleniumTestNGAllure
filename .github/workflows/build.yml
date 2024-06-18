@@ -69,7 +69,7 @@ jobs:
       - name: Build with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
         run: |
-          mvn clean -e install -Dmaven.test.skip=true   
+          mvn clean -e install -Dmaven.test.skip=true
           defaults write com.apple.Safari IncludeDevelopMenu YES
           defaults write com.apple.Safari AllowRemoteAutomation 1
           sudo safaridriver --enable
