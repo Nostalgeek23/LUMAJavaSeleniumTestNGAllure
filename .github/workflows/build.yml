@@ -91,9 +91,9 @@ jobs:
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}
         run: |
-          mvn test -PSmokeTest
-          mvn test -PRegressTest           
-          mvn test -PMacosTest
+          mvn test -PSmokeTest -X
+          mvn test -PRegressTest -X   
+          mvn test -PMacosTest -X
 
 #          Dorny Test Reporter
 
