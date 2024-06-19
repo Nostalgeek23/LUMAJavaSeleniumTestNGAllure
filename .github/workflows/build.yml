@@ -23,7 +23,6 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-13]
 
-
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -79,11 +78,11 @@ jobs:
         if: ${{ matrix.os == 'macos-13' }}
         run: |
           mvn clean -e install -Dmaven.test.skip=true
-          brew install selenium-server-standalone
+          brew install selenium-server
           selenium-server -port 4444;
           defaults write com.apple.Safari IncludeDevelopMenu YES
           defaults write com.apple.Safari AllowRemoteAutomation 1
-          sudo safaridriver --enable
+          sudo /usr/bin/safaridriver --enable
           safaridriver -p 0 &          
 
       - name: Test with Maven - MacOs
@@ -105,6 +104,14 @@ jobs:
 
 #          ALLURE
 
+  allure-test-report:
+    name: publish Allure test report
+
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
       - name: Load Allure test report history
         uses: actions/checkout@v4
         if: always()
