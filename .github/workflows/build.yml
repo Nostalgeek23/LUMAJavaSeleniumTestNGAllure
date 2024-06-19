@@ -82,10 +82,11 @@ jobs:
           selenium-server -port 4444;
           defaults write com.apple.Safari IncludeDevelopMenu YES
           defaults write com.apple.Safari AllowRemoteAutomation 1
+          sudo /usr/bin/safaridriver --enable
+          safaridriver --version
+          safaridriver -p 0 &
           export PATH=$PATH:/usr/bin
           export SELENIUM_DRIVER_PATH=/usr/bin/safaridriver
-          sudo /usr/bin/safaridriver --enable
-          safaridriver -p 0 &          
 
       - name: Test with Maven - MacOs
         if: ${{ matrix.os == 'macos-13' }}

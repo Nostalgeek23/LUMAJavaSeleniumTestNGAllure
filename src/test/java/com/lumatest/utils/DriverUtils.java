@@ -83,7 +83,7 @@ public class DriverUtils {
         if (driver != null) {
             driver.quit();
         }
-
+        System.setProperty("webdriver.safari.driver", "/usr/bin/safaridriver");
         return new SafariDriver();
     }
 
