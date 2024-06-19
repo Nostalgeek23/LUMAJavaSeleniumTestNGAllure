@@ -85,9 +85,8 @@ public class DriverUtils {
             driver.quit();
         }
         SafariDriver safariDriver = new SafariDriver();
-
-        safariDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         System.setProperty("webdriver.safari.driver", "/usr/bin/safaridriver");
+        safariDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 
         return safariDriver;
     }
