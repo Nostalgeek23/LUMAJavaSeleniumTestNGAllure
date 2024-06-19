@@ -82,6 +82,9 @@ jobs:
           selenium-server -port 4444;
           defaults write com.apple.Safari IncludeDevelopMenu YES
           defaults write com.apple.Safari AllowRemoteAutomation 1
+        # Ensure Selenium is configured to use the correct driver
+          export PATH=$PATH:/usr/bin
+          export SELENIUM_DRIVER_PATH=/usr/bin/safaridriver
           sudo /usr/bin/safaridriver --enable
           safaridriver -p 0 &          
 
