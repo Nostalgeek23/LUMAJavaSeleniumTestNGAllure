@@ -8,4 +8,5 @@
             <class name="FrameworkTest"/>
         </classes>
         </test>
+
 </suite>
