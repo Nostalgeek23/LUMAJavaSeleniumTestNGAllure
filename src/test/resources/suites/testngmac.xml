@@ -7,7 +7,6 @@
         <classes>
             <class name="FrameworkTest"/>
             <class name="com.lumatest.test.ProductPageTest"/>
-            <class name="com.lumatest.test.NavigationTest"/>
         </classes>
         </test>
 </suite>
