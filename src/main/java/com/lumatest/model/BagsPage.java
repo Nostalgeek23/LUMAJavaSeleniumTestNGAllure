@@ -17,7 +17,7 @@ public class BagsPage extends SideMenu{
     public ProductPage clickProductImg(String productName) {
         String imgLocator = productNameLocator + productName + "']";
         getWait().until(ExpectedConditions
-                .elementToBeClickable(getDriver().findElement(By.cssSelector(imgLocator))))
+                .visibilityOfElementLocated(By.cssSelector(imgLocator)))
                 .click();
 
         return new ProductPage(getDriver());
