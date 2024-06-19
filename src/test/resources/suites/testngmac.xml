@@ -6,6 +6,7 @@
         <parameter name="browser" value="safari"/>
         <classes>
             <class name="FrameworkTest"/>
+            <class name="com.lumatest.test.ProductPageTest"/>
         </classes>
         </test>
 </suite>

@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Reporter;
 
+import java.time.Duration;
 import java.util.Map;
 
 public class DriverUtils {
@@ -68,7 +69,7 @@ public class DriverUtils {
                 "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));
 
 
-        return chromeDriver ;
+        return chromeDriver;
     }
 
     private static WebDriver createFirefoxDriver(WebDriver driver) {
@@ -83,8 +84,11 @@ public class DriverUtils {
         if (driver != null) {
             driver.quit();
         }
+        SafariDriver safariDriver = new SafariDriver();
         System.setProperty("webdriver.safari.driver", "/usr/bin/safaridriver");
-        return new SafariDriver();
+        safariDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
+        return safariDriver;
     }
 
     private static WebDriver createEdgeDriver(WebDriver driver) {
