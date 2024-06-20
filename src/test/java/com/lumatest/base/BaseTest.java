@@ -52,7 +52,7 @@ public abstract class BaseTest {
     @Parameters("browser")
     @AfterMethod(alwaysRun = true)
     protected void tearDown(@Optional("chrome") String browser, ITestResult result) {
-        Reporter.log("INFO: " + result.getMethod().getMethodName() + " :"+ ReportUtils.getTestStatus(result),
+        Reporter.log("INFO: " + result.getMethod().getMethodName() + ": "+ ReportUtils.getTestStatus(result),
                 true);
 
         if (getDriver() != null) {
