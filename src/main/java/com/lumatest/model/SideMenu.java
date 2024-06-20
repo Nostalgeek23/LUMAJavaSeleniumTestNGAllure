@@ -1,6 +1,7 @@
 package com.lumatest.model;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,7 +18,14 @@ public abstract class SideMenu extends BreadcrumbsMenu {
 
     @Step("Click on Bags in side menu")
     public BagsPage clickBagsSideMenu() {
-        getWait().until(ExpectedConditions.elementToBeClickable(bagsSideMenu)).click();
+        try {
+            getWait().until(ExpectedConditions.elementToBeClickable(bagsSideMenu)).click();
+        } catch (Exception e) {
+            getWait().until(ExpectedConditions.elementToBeClickable(bagsSideMenu));
+            System.out.println("Element found using fallback method: " + bagsSideMenu);
+            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", bagsSideMenu);
+            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click();", bagsSideMenu);
+        }
 
         return new BagsPage(getDriver());
     }
