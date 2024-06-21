@@ -2,8 +2,8 @@ package com.lumatest.model;
 
 import org.openqa.selenium.WebDriver;
 
-public class GearPage extends CategoryPage {
-    public GearPage(WebDriver driver) {
+public class CatalogPage extends CatalogFilter{
+    protected CatalogPage(WebDriver driver) {
         super(driver);
     }
 }

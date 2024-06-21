@@ -1,6 +1,7 @@
 package com.lumatest.model;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,5 +19,15 @@ public abstract class TopMenu extends BasePage {
         getWait().until(ExpectedConditions.elementToBeClickable(gearTopMenu)).click();
 
         return new GearPage(getDriver());
+    }
+
+    @Step("Click '{productName}' Img.")
+    public ProductPage clickProductImg(String productName) {
+        final String productNameLocator = "img[alt*='";
+        String imgLocator = productNameLocator + productName + "']";
+        getWait().until(ExpectedConditions.elementToBeClickable(getDriver().findElement(By.cssSelector(imgLocator))))
+                .click();
+
+        return new ProductPage(getDriver());
     }
 }

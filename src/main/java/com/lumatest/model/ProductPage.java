@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ProductPage extends BreadcrumbsMenu {
+public class ProductPage extends CatalogPage {
 
     @FindBy(css="h1 > span")
     WebElement productName;
