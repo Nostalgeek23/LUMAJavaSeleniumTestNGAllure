@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public abstract class TopMenu extends BasePage {
-    private final String productNameLocator = "img[alt*='";
     @FindBy(id = "ui-id-6")
     private WebElement gearTopMenu;
     protected TopMenu(WebDriver driver) {
@@ -24,6 +23,7 @@ public abstract class TopMenu extends BasePage {
 
     @Step("Click '{productName}' Img.")
     public ProductPage clickProductImg(String productName) {
+        final String productNameLocator = "img[alt*='";
         String imgLocator = productNameLocator + productName + "']";
         getWait().until(ExpectedConditions.elementToBeClickable(getDriver().findElement(By.cssSelector(imgLocator))))
                 .click();

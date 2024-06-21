@@ -16,9 +16,9 @@ public abstract class SideMenu extends BreadcrumbsMenu {
     }
 
     @Step("Click on Bags in side menu")
-    public BagsPage clickBagsSideMenu() {
+    public CatalogPage clickBagsSideMenu() {
         getWait().until(ExpectedConditions.elementToBeClickable(bagsSideMenu)).click();
 
-        return new BagsPage(getDriver());
+        return new CatalogPage(getDriver());
     }
 }
