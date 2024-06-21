@@ -8,10 +8,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public abstract class TopMenu extends BasePage {
+    @FindBy(css = "a.logo")
+    private WebElement logo;
+
     @FindBy(id = "ui-id-6")
     private WebElement gearTopMenu;
+
     protected TopMenu(WebDriver driver) {
         super(driver);
+    }
+
+    @Step("Click on logo")
+    public HomePage clickOnLogo() {
+        getWait().until(ExpectedConditions.elementToBeClickable(logo)).click();
+
+        return new HomePage(getDriver());
     }
 
     @Step("Click on Gear in the top menu")
@@ -29,5 +40,16 @@ public abstract class TopMenu extends BasePage {
                 .click();
 
         return new ProductPage(getDriver());
+    }
+
+    @Step("Click on subcategory menu")
+    public CatalogPage clickSubcategory(By navBarMenu, By subNavMenu) {
+        getWait().until(ExpectedConditions.elementToBeClickable(navBarMenu));
+        WebElement element = getDriver().findElement(navBarMenu);
+        hoverOverElement(element);
+
+        getWait().until(ExpectedConditions.elementToBeClickable(subNavMenu)).click();
+
+        return new CatalogPage(getDriver());
     }
 }

@@ -34,6 +34,41 @@ public class TestData {
     public static final String SALE_TITLE = "Sale";
 
     /*
+    Subcategory Navigation
+     */
+    public static final By WOMAN_TOPS_MENU = By.cssSelector("#ui-id-9");
+    public static final String WOMAN_TOPS_URL = BASE_URL + "/women/tops-women.html";
+    public static final String WOMAN_TOPS_TITLE = "Tops - Women";
+
+    public static final By WOMAN_BOTTOMS_MENU = By.cssSelector("#ui-id-10");
+    public static final String WOMAN_BOTTOMS_URL = BASE_URL + "/women/bottoms-women.html";
+    public static final String WOMAN_BOTTOMS_TITLE = "Bottoms - Women";
+
+    public static final By MAN_TOPS_MENU = By.cssSelector("#ui-id-17");
+    public static final String MAN_TOPS_URL = BASE_URL + "/men/tops-men.html";
+    public static final String MAN_TOPS_TITLE = "Tops - Men";
+
+    public static final By MAN_BOTTOMS_MENU = By.cssSelector("#ui-id-18");
+    public static final String MAN_BOTTOMS_URL = BASE_URL + "/men/bottoms-men.html";
+    public static final String MAN_BOTTOMS_TITLE = "Bottoms - Men";
+
+    public static final By GEAR_BAGS_MENU = By.cssSelector("#ui-id-25");
+    public static final String GEAR_BAGS_URL = BASE_URL + "/gear/bags.html";
+    public static final String GEAR_BAGS_TITLE = "Bags - Gear";
+
+    public static final By GEAR_FITNESS_MENU = By.cssSelector("#ui-id-26");
+    public static final String GEAR_FITNESS_URL = BASE_URL + "/gear/fitness-equipment.html";
+    public static final String GEAR_FITNESS_TITLE = "Fitness Equipment - Gear";
+
+    public static final By GEAR_WATCHES_MENU = By.cssSelector("#ui-id-27");
+    public static final String GEAR_WATCHES_URL = BASE_URL + "/gear/watches.html";
+    public static final String GEAR_WATCHES_TITLE = "Watches - Gear";
+
+    public static final By TRAINING_VIDEO_MENU = By.cssSelector("#ui-id-28");
+    public static final String TRAINING_VIDEO_URL = BASE_URL + "/training/training-video.html";
+    public static final String TRAINING_VIDEO_TITLE = "Video Download - Training";
+
+    /*
     For Product Pages
     */
     public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
@@ -49,6 +84,23 @@ public class TestData {
                 {BASE_URL, GEAR_MENU, GEAR_URL, GEAR_TITLE},
                 {BASE_URL, TRAINING_MENU, TRAINING_URL, TRAINING_TITLE},
                 {BASE_URL, SALE_MENU, SALE_URL, SALE_TITLE}
+        };
+    }
+
+    @DataProvider(name = "subNavigationData")
+    public static Object[][] getSubNavMenuData() {
+        return new Object[][] {
+                {WOMAN_MENU, WOMAN_TOPS_MENU, WOMAN_TOPS_URL, WOMAN_TOPS_TITLE},
+                {WOMAN_MENU, WOMAN_BOTTOMS_MENU, WOMAN_BOTTOMS_URL, WOMAN_BOTTOMS_TITLE},
+
+                {MAN_MENU, MAN_TOPS_MENU, MAN_TOPS_URL, MAN_TOPS_TITLE},
+                {MAN_MENU, MAN_BOTTOMS_MENU, MAN_BOTTOMS_URL, MAN_BOTTOMS_TITLE},
+
+                {GEAR_MENU, GEAR_BAGS_MENU, GEAR_BAGS_URL, GEAR_BAGS_TITLE},
+                {GEAR_MENU, GEAR_FITNESS_MENU, GEAR_FITNESS_URL, GEAR_FITNESS_TITLE},
+                {GEAR_MENU, GEAR_WATCHES_MENU, GEAR_WATCHES_URL, GEAR_WATCHES_TITLE},
+
+                {TRAINING_MENU, TRAINING_VIDEO_MENU, TRAINING_VIDEO_URL, TRAINING_VIDEO_TITLE}
         };
     }
 
