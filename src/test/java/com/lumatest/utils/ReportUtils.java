@@ -1,6 +1,7 @@
 package com.lumatest.utils;
 
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 public class ReportUtils {
     public static String getTestStatus(ITestResult result) {
@@ -11,5 +12,10 @@ public class ReportUtils {
         }
 
         return "UNKNOWN";
+    }
+
+    public static void logf(String str, Object... arr) {
+        String formattedMessage = String.format(str, arr);
+        Reporter.log(formattedMessage, true);
     }
 }
