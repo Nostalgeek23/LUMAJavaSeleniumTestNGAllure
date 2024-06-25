@@ -9,7 +9,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.testng.Reporter;
 
 import java.util.Map;
 
@@ -55,64 +54,13 @@ public class DriverUtils {
 
     }
 
-    private static WebDriver createChromeDriver(WebDriver driver) {
-        if (driver != null) {
-            Reporter.log("INFO: Driver quit", true);
-            driver.quit();
-        }
-        ChromeDriver chromeDriver = new ChromeDriver(chromeOptions);
-
-       /* only for Luma store */
-        chromeDriver.executeCdpCommand("Network.enable", Map.of());
-        chromeDriver.executeCdpCommand(
-                "Network.setExtraHTTPHeaders", Map.of("headers", Map.of("accept-language", "en-US,en;q=0.9")));
-
-
-        return chromeDriver ;
+    public static WebDriver createDriver(String browser) {
+       return switch(browser.toLowerCase()) {
+            case "chrome" -> new ChromeDriver(chromeOptions);
+            case "firefox" -> new FirefoxDriver(firefoxOptions);
+            case "safari" -> new SafariDriver();
+            case "edge" -> new EdgeDriver(edgeOptions);
+            default -> throw new IllegalArgumentException("Unknown browser: " + browser);
+        };
     }
-
-    private static WebDriver createFirefoxDriver(WebDriver driver) {
-        if (driver != null) {
-            driver.quit();
-        }
-
-        return new FirefoxDriver(firefoxOptions);
-    }
-
-    private static WebDriver createSafariDriver(WebDriver driver) {
-        if (driver != null) {
-            driver.quit();
-        }
-
-        return new SafariDriver();
-    }
-
-    private static WebDriver createEdgeDriver(WebDriver driver) {
-        if (driver != null) {
-            driver.quit();
-        }
-
-        return new EdgeDriver(edgeOptions);
-    }
-
-    public static WebDriver createDriver(String browser, WebDriver driver) {
-        switch(browser) {
-            case "chrome" -> {
-                return createChromeDriver(driver);
-            }
-            case "firefox" -> {
-                return createFirefoxDriver(driver);
-            }
-            case "safari" -> {
-                return createSafariDriver(driver);
-            }
-            case "edge" -> {
-                return createEdgeDriver(driver);
-            }
-            default -> {
-                return null;
-            }
-        }
-    }
-
 }
