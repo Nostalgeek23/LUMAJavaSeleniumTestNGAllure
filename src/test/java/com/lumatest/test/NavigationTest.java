@@ -3,7 +3,9 @@ package com.lumatest.test;
 import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.CatalogPage;
+import com.lumatest.model.CategoryPage;
 import com.lumatest.model.HomePage;
+import com.lumatest.model.ProductPage;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -77,7 +79,8 @@ public class NavigationTest extends BaseTest {
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
-  @Description("TC-01.02 Check Nav menu URLs")
+  @Description("Ensure that clicking on a category link in the navigation menu redirects the user to the " +
+          "corresponding category page.")
   @Link(TestData.WHATS_NEW_URL)
   public void testNavigationMenu(String baseURL, By navBarMenu, String expectedURL, String expectedTitle) {
 
@@ -124,9 +127,66 @@ public class NavigationTest extends BaseTest {
 
     String actualTitle = new HomePage(getDriver())
             .clickSubcategory(navBarMenu, subNavMenu)
-            .getPageTitle(pageURL);
+            .getPageTitleWithURL(pageURL);
 
     Allure.step("Verify actual results as expected");
     Assert.assertEquals(actualTitle, expectedTitle);
+  }
+
+  @Test(
+          groups = {"regression"},
+          description = "TC-01.04.01 Verify Breadcrumb Navigation to category page",
+          testName = "Navigation: Verify Breadcrumb Navigation to category page"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that the breadcrumb link are functional and navigate the user to the to category page.")
+  @Link(TestData.BASE_URL)
+  public void testBreadcrumbsNavigationToCategory() {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    ProductPage productPage = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
+
+    final String categoryName = productPage.getBreadcrumbsCategoryName();
+    System.out.println("categoryName " + categoryName);
+
+    final String categoryPageTitle = productPage.clickBreadcrumbsCategory().getPageTitle();
+    System.out.println("categoryPageTitle " + categoryPageTitle);
+
+    Allure.step("Verify that the user is redirected to the category page.");
+    Assert.assertEquals(categoryPageTitle, categoryName);
+  }
+
+  @Test(
+          groups = {"regression"},
+          description = "TC-01.04.02 Verify Breadcrumb Navigation to subcategory page",
+          testName = "Navigation: Verify Breadcrumb Navigation to subcategory page"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that the breadcrumb link are functional and navigate the user to the to subcategory page.")
+  @Link(TestData.BASE_URL)
+  public void testBreadcrumbsNavigationToSubCategory() {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    ProductPage productPage = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
+
+    final String subCategoryName = productPage.getBreadcrumbsSubCategoryName();
+    final String categoryName = productPage.getBreadcrumbsCategoryName();
+    final String expectedTitle = subCategoryName + " - " + categoryName;
+    System.out.println("subCategoryName " + subCategoryName);
+
+    final String subCategoryPageTitle = productPage.clickBreadcrumbsSubCategory().getPageTitle();
+
+    Allure.step("Verify that the user is redirected to the subcategory page.");
+    Assert.assertEquals(subCategoryPageTitle, expectedTitle);
   }
 }

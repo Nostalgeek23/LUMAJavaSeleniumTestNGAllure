@@ -16,6 +16,12 @@ abstract class BreadcrumbsMenu extends TopMenu {
   @FindBy(css = "ul[class='items'] > li")
   private List<WebElement> breadcrumbsList;
 
+  @FindBy(css = "ul[class='items'] li:nth-child(2) a")
+  private WebElement breadcrumbsCategory;
+
+  @FindBy(css = "ul[class='items'] li:nth-child(3) a")
+  private WebElement breadcrumbsSubCategory;
+
   protected BreadcrumbsMenu(WebDriver driver) {
     super(driver);
   }
@@ -28,5 +34,33 @@ abstract class BreadcrumbsMenu extends TopMenu {
             .stream()
             .map(WebElement::getText)
             .toList();
+  }
+
+  @Step("Click on category in breadcrumbs")
+  public CategoryPage clickBreadcrumbsCategory() {
+    getWait().until(ExpectedConditions.elementToBeClickable(breadcrumbsCategory)).click();
+
+    return new CategoryPage(getDriver());
+  }
+
+  @Step("Click on category in breadcrumbs")
+  public CatalogPage clickBreadcrumbsSubCategory() {
+    getWait().until(ExpectedConditions.elementToBeClickable(breadcrumbsSubCategory)).click();
+
+    return new CatalogPage(getDriver());
+  }
+
+  @Step("Get category name from breadcrumbs")
+  public String getBreadcrumbsCategoryName() {
+    getWait().until(ExpectedConditions.elementToBeClickable(breadcrumbsCategory));
+
+    return breadcrumbsCategory.getText();
+  }
+
+  @Step("Get subcategory name from breadcrumbs")
+  public String getBreadcrumbsSubCategoryName() {
+    getWait().until(ExpectedConditions.elementToBeClickable(breadcrumbsSubCategory));
+
+    return breadcrumbsSubCategory.getText();
   }
 }

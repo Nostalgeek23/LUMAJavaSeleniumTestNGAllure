@@ -20,7 +20,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Details",
           description = "TC-03 Verify Product Details on Product Page",
-          groups = {"regression"}
+          groups = {"functional"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)

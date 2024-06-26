@@ -45,12 +45,18 @@ public abstract class BasePage {
             .perform();
   }
 
-  @Step("Get page title")
-  public String getPageTitle(String url) {
+  @Step("Get page title with URL provided")
+  public String getPageTitleWithURL(String url) {
     getWait().until(ExpectedConditions.urlToBe(url));
 
     return getDriver().getTitle();
   }
 
+  @Step("Get page title")
+  public String getPageTitle() {
+    getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1")));
+
+    return getDriver().getTitle();
+  }
 
 }
