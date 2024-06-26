@@ -7,14 +7,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends CatalogPage {
 
-    @FindBy(css="h1 > span")
-    WebElement productName;
-    protected ProductPage(WebDriver driver) {
-        super(driver);
-    }
+  @FindBy(css = "h1 > span")
+  WebElement productName;
 
-    @Step("Collect actual product name text")
-    public String getProductName() {
-        return productName.getText();
-    }
+  protected ProductPage(WebDriver driver) {
+    super(driver);
+  }
+
+  @Step("Collect actual product name text")
+  public String getProductName() {
+    return productName.getText();
+  }
 }

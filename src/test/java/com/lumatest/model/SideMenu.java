@@ -8,17 +8,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public abstract class SideMenu extends BreadcrumbsMenu {
 
-    @FindBy(css = "dd a[href*='bags']")
-    private WebElement bagsSideMenu;
+  @FindBy(css = "dd a[href*='bags']")
+  private WebElement bagsSideMenu;
 
-    protected SideMenu(WebDriver driver) {
-        super(driver);
-    }
+  protected SideMenu(WebDriver driver) {
+    super(driver);
+  }
 
-    @Step("Click on Bags in side menu")
-    public CatalogPage clickBagsSideMenu() {
-        getWait().until(ExpectedConditions.elementToBeClickable(bagsSideMenu)).click();
+  @Step("Click on Bags in side menu")
+  public CatalogPage clickBagsSideMenu() {
+    getWait().until(ExpectedConditions.elementToBeClickable(bagsSideMenu)).click();
 
-        return new CatalogPage(getDriver());
-    }
+    return new CatalogPage(getDriver());
+  }
 }

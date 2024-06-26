@@ -84,9 +84,7 @@
                                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                                 </argLine>
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
-                                    <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
-                                    <suiteXmlFile>src/test/resources/suites/testngwin.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/xmlSuites/testngwin.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                             <dependencies>
@@ -127,9 +125,7 @@
                                     -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                                 </argLine>
                                 <suiteXmlFiles>
-                                    <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
-                                    <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
-                                    <suiteXmlFile>src/test/resources/suites/testngubu.xml</suiteXmlFile>
+                                    <suiteXmlFile>src/test/resources/xmlSuites/testngubu.xml</suiteXmlFile>
                                 </suiteXmlFiles>
                             </configuration>
                             <dependencies>
@@ -169,9 +165,7 @@
                                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                             </argLine>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
-                                <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
-                                <suiteXmlFile>src/test/resources/suites/testngmac.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/xmlSuites/testngmac.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                         <dependencies>
@@ -211,7 +205,7 @@
                                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                             </argLine>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/suites/smoke.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/xmlSuites/smoke.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                         <dependencies>
@@ -251,7 +245,7 @@
                                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                             </argLine>
                             <suiteXmlFiles>
-                                <suiteXmlFile>src/test/resources/suites/regression.xml</suiteXmlFile>
+                                <suiteXmlFile>src/test/resources/xmlSuites/regression.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                         <dependencies>

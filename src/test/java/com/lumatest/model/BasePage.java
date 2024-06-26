@@ -12,26 +12,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public abstract class BasePage {
-    private final WebDriver driver;
-    private WebDriverWait wait;
+  private final WebDriver driver;
+  private WebDriverWait wait;
 
-    protected BasePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+  protected BasePage(WebDriver driver) {
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+  }
+
+  public WebDriver getDriver() {
+    return this.driver;
+  }
+
+  public WebDriverWait getWait() {
+    if (wait == null) {
+      this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+    return wait;
+  }
 
-    public WebDriver getDriver() {
-        return this.driver;
-    }
-
-    public WebDriverWait getWait() {
-        if (wait == null) {
-            this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        }
-        return wait;
-    }
-
-    @Step("Hover on element")
+  @Step("Hover on element")
 //    public void hoverOverElementBy(By selector) {
 //        WebElement element = getDriver().findElement(selector);
 //
@@ -39,18 +39,18 @@ public abstract class BasePage {
 //                .moveToElement(element)
 //                .perform();
 //    }
-    public void hoverOverElement(WebElement element) {
-        new Actions(getDriver())
-                .moveToElement(element)
-                .perform();
-    }
+  public void hoverOverElement(WebElement element) {
+    new Actions(getDriver())
+            .moveToElement(element)
+            .perform();
+  }
 
-    @Step("Get page title")
-    public String getPageTitle(String url) {
-        getWait().until(ExpectedConditions.urlToBe(url));
+  @Step("Get page title")
+  public String getPageTitle(String url) {
+    getWait().until(ExpectedConditions.urlToBe(url));
 
-        return getDriver().getTitle();
-    }
+    return getDriver().getTitle();
+  }
 
 
 }

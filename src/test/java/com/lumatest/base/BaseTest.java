@@ -16,85 +16,85 @@ import org.testng.annotations.Parameters;
 import java.time.Duration;
 
 public abstract class BaseTest {
-    private WebDriver driver;
-    private WebDriverWait wait2;
-    private WebDriverWait wait5;
-    private WebDriverWait wait10;
+  private WebDriver driver;
+  private WebDriverWait wait2;
+  private WebDriverWait wait5;
+  private WebDriverWait wait10;
 
-    @BeforeSuite
-    protected void setupWebDriverManager() {
-        WebDriverManager.chromedriver().clearDriverCache().setup();
-        WebDriverManager.firefoxdriver().setup();
-        WebDriverManager.edgedriver().setup();
-        WebDriverManager.safaridriver().setup();
+  @BeforeSuite
+  protected void setupWebDriverManager() {
+    WebDriverManager.chromedriver().clearDriverCache().setup();
+    WebDriverManager.firefoxdriver().setup();
+    WebDriverManager.edgedriver().setup();
+    WebDriverManager.safaridriver().setup();
 //        WebDriverManager.operadriver().setup();
 //        WebDriverManager.chromiumdriver().setup();
 //        WebDriverManager.iedriver().setup();
-        Reporter.log("INFO: Setup Webdriver manager", true);
+    Reporter.log("INFO: Setup Webdriver manager", true);
+  }
+
+  @Parameters("browser")
+  @BeforeMethod(alwaysRun = true)
+  protected void setupDriver(@Optional("chrome") String browser, ITestResult result) {
+    Reporter.log("_________________________________________________________", true);
+    Reporter.log("Run " + result.getMethod().getMethodName(), true);
+    this.driver = DriverUtils.createDriver(browser, this.driver);
+
+    if (getDriver() == null) {
+      Reporter.log("ERROR: unknown browser parameter" + browser, true);
+
+      System.exit(1);
     }
 
-    @Parameters("browser")
-    @BeforeMethod(alwaysRun = true)
-    protected void setupDriver(@Optional("chrome") String browser, ITestResult result) {
-        Reporter.log("_________________________________________________________", true);
-        Reporter.log("Run " + result.getMethod().getMethodName(),true);
-        this.driver = DriverUtils.createDriver(browser, this.driver);
+    Reporter.log("INFO: " + browser.toUpperCase() + " driver created", true);
+  }
 
-        if (getDriver() == null) {
-            Reporter.log("ERROR: unknown browser parameter" + browser, true);
+  @Parameters("browser")
+  @AfterMethod(alwaysRun = true)
+  protected void tearDown(@Optional("chrome") String browser, ITestResult result) {
+    Reporter.log("INFO: " + result.getMethod().getMethodName() + " :" + ReportUtils.getTestStatus(result),
+            true);
 
-            System.exit(1);
-        }
+    if (getDriver() != null) {
+      getDriver().quit();
+      Reporter.log("INFO: " + browser.toUpperCase() + " driver closed", true);
 
-        Reporter.log("INFO: " + browser.toUpperCase() + " driver created", true);
+      this.driver = null;
+
+      wait2 = null;
+      wait5 = null;
+      wait10 = null;
+
+    } else {
+      Reporter.log("INFO: Driver is null", true);
+    }
+  }
+
+  public WebDriver getDriver() {
+    return driver;
+  }
+
+  protected WebDriverWait getWait2() {
+    if (wait2 == null) {
+      wait2 = new WebDriverWait(getDriver(), Duration.ofSeconds(2));
     }
 
-    @Parameters("browser")
-    @AfterMethod(alwaysRun = true)
-    protected void tearDown(@Optional("chrome") String browser, ITestResult result) {
-        Reporter.log("INFO: " + result.getMethod().getMethodName() + " :"+ ReportUtils.getTestStatus(result),
-                true);
+    return wait2;
+  }
 
-        if (getDriver() != null) {
-            getDriver().quit();
-            Reporter.log("INFO: " + browser.toUpperCase() + " driver closed", true);
-
-            this.driver = null;
-
-            wait2 = null;
-            wait5 = null;
-            wait10 = null;
-
-        } else {
-            Reporter.log("INFO: Driver is null", true);
-        }
+  protected WebDriverWait getWait5() {
+    if (wait5 == null) {
+      wait5 = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
     }
 
-    public WebDriver getDriver() {
-        return driver;
+    return wait5;
+  }
+
+  protected WebDriverWait getWait10() {
+    if (wait10 == null) {
+      wait10 = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
     }
 
-    protected WebDriverWait getWait2() {
-        if (wait2 == null) {
-            wait2 = new WebDriverWait(getDriver(), Duration.ofSeconds(2));
-        }
-
-        return wait2;
-    }
-
-    protected WebDriverWait getWait5() {
-        if (wait5 == null) {
-            wait5 = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
-        }
-
-        return wait5;
-    }
-
-    protected WebDriverWait getWait10() {
-        if (wait10 == null) {
-            wait10 = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-        }
-
-        return wait10;
-    }
+    return wait10;
+  }
 }

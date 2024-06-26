@@ -8,25 +8,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
-abstract class BreadcrumbsMenu extends TopMenu{
+abstract class BreadcrumbsMenu extends TopMenu {
 
-    @FindBy(css="ul[class='items']")
-    private WebElement breadcrumbsMenu;
+  @FindBy(css = "ul[class='items']")
+  private WebElement breadcrumbsMenu;
 
-    @FindBy(css="ul[class='items'] > li")
-    private List<WebElement> breadcrumbsList;
+  @FindBy(css = "ul[class='items'] > li")
+  private List<WebElement> breadcrumbsList;
 
-    protected BreadcrumbsMenu(WebDriver driver) {
-        super(driver);
-    }
+  protected BreadcrumbsMenu(WebDriver driver) {
+    super(driver);
+  }
 
-    @Step("Collect List of breadcrumbs items")
-    public List<String> getBreadcrumbsMenuText() {
-        getWait().until(ExpectedConditions.visibilityOf(breadcrumbsMenu));
+  @Step("Collect List of breadcrumbs items")
+  public List<String> getBreadcrumbsMenuText() {
+    getWait().until(ExpectedConditions.visibilityOf(breadcrumbsMenu));
 
-        return breadcrumbsList
-                .stream()
-                .map(WebElement::getText)
-                .toList();
-    }
+    return breadcrumbsList
+            .stream()
+            .map(WebElement::getText)
+            .toList();
+  }
 }
