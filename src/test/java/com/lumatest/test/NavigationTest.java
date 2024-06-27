@@ -189,4 +189,28 @@ public class NavigationTest extends BaseTest {
     Allure.step("Verify that the user is redirected to the subcategory page.");
     Assert.assertEquals(subCategoryPageTitle, expectedTitle);
   }
+
+  @Test(
+          groups = {"regression"},
+          description = "TC-01.04.03 Verify Breadcrumb Navigation to home page",
+          testName = "Navigation: Verify Breadcrumb Navigation to home page"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that the breadcrumb link are functional and navigate the user to the to home page.")
+  @Link(TestData.BASE_URL)
+  public void testBreadcrumbsNavigationToHomePage() {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    String actualResult = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
+            .clickBreadcrumbsHome()
+            .getPageTitle();
+
+    Allure.step("Verify that the user is redirected to the home page.");
+    Assert.assertEquals(TestData.BASE_URL_TITLE, actualResult);
+  }
 }

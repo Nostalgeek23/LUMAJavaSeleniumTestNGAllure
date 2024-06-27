@@ -10,8 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
-import java.util.Map;
-
 public class DriverUtils {
   private static final ChromeOptions chromeOptions;
   private static final FirefoxOptions firefoxOptions;

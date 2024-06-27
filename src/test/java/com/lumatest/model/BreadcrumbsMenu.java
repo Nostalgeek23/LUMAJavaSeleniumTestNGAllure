@@ -16,6 +16,9 @@ abstract class BreadcrumbsMenu extends TopMenu {
   @FindBy(css = "ul[class='items'] > li")
   private List<WebElement> breadcrumbsList;
 
+  @FindBy(css = "ul[class='items'] li:nth-child(1) a")
+  private WebElement breadcrumbsHome;
+
   @FindBy(css = "ul[class='items'] li:nth-child(2) a")
   private WebElement breadcrumbsCategory;
 
@@ -34,6 +37,13 @@ abstract class BreadcrumbsMenu extends TopMenu {
             .stream()
             .map(WebElement::getText)
             .toList();
+  }
+
+  @Step("Click on category in breadcrumbs")
+  public HomePage clickBreadcrumbsHome() {
+    getWait().until(ExpectedConditions.elementToBeClickable(breadcrumbsHome)).click();
+
+    return new HomePage(getDriver());
   }
 
   @Step("Click on category in breadcrumbs")
