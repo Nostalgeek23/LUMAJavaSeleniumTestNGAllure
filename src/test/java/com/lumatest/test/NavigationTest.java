@@ -2,8 +2,6 @@ package com.lumatest.test;
 
 import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
-import com.lumatest.model.CatalogPage;
-import com.lumatest.model.CategoryPage;
 import com.lumatest.model.HomePage;
 import com.lumatest.model.ProductPage;
 import io.qameta.allure.Allure;
@@ -212,5 +210,34 @@ public class NavigationTest extends BaseTest {
 
     Allure.step("Verify that the user is redirected to the home page.");
     Assert.assertEquals(TestData.BASE_URL_TITLE, actualResult);
+  }
+
+  @Test(
+          groups = {"regression"},
+          dataProviderClass = TestData.class,
+          dataProvider = "searchNavigationData",
+          description = "TC-005: Verify Search Result Navigation",
+          testName = "Navigation: TC-NAV-005: Verify Search Result Navigation"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that clicking on a product in the search results redirects the user to the correct product page.")
+  @Link(TestData.BASE_URL)
+  public void testSearchResultNavigation(String baseURL, String productName, String expectedURL) {
+    Allure.step("Open Base URL");
+    getDriver().get(baseURL);
+
+    ProductPage productPage = new HomePage(getDriver())
+            .searchProduct(productName)
+            .clickProductImg(productName);
+
+    final String actualProductName = productPage.getProductName();
+    final String actualURL = productPage.getCurrentUrl();
+    System.out.println(actualProductName);
+    System.out.println(actualURL);
+
+    Allure.step("Verify that the user is redirected to the " + productName + " page.");
+    Assert.assertEquals(actualProductName, productName);
+    Assert.assertEquals(actualURL, expectedURL);
   }
 }

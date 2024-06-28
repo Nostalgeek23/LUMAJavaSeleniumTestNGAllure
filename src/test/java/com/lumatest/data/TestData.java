@@ -104,4 +104,11 @@ public class TestData {
     };
   }
 
+  @DataProvider(name = "searchNavigationData")
+  public static Object[][] getSearchNavData() {
+    return new Object[][]{
+            {BASE_URL, DRIVEN_BACKPACK_PRODUCT_NAME, DRIVEN_BACKPACK_PRODUCT_URL}
+    };
+  }
+
 }

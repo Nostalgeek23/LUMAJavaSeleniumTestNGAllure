@@ -59,4 +59,7 @@ public abstract class BasePage {
     return getDriver().getTitle();
   }
 
+  public String getCurrentUrl() {
+    return getDriver().getCurrentUrl();
+  }
 }
