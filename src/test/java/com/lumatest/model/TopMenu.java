@@ -18,6 +18,9 @@ public abstract class TopMenu extends BasePage {
   @FindBy(id = "search")
   private WebElement searchInput;
 
+  @FindBy(css = "a[href*='/create/']")
+  private WebElement createAccountButton;
+
   protected TopMenu(WebDriver driver) {
     super(driver);
   }
@@ -62,5 +65,12 @@ public abstract class TopMenu extends BasePage {
     getWait().until(ExpectedConditions.elementToBeClickable(searchInput)).sendKeys(productName + Keys.ENTER);
 
     return new SearchResultsPage(getDriver());
+  }
+
+  @Step("Click on Create an Account")
+  public CreateAccountPage clickCreateAccountButton() {
+    getWait().until(ExpectedConditions.elementToBeClickable(createAccountButton)).click();
+
+    return new CreateAccountPage(getDriver());
   }
 }

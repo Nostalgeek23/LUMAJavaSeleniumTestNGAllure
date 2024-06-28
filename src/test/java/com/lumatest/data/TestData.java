@@ -74,6 +74,15 @@ public class TestData {
   public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
 
+  /*
+  For login
+   */
+  public static final String FIRST_NAME = "Harry";
+  public static final String LAST_NAME = "Potter";
+  public static final String EMAIL = "hp@gryffindor.hog";
+  public static final String PASSWORD = "DeathlyHallows321";
+  public static final String ACCOUNT_URL = BASE_URL + "/customer/account/";
+
   //            Allure.step("Set up expected results");
   @DataProvider(name = "navigationData")
   public static Object[][] getNavMenuData() {
@@ -108,6 +117,13 @@ public class TestData {
   public static Object[][] getSearchNavData() {
     return new Object[][]{
             {BASE_URL, DRIVEN_BACKPACK_PRODUCT_NAME, DRIVEN_BACKPACK_PRODUCT_URL}
+    };
+  }
+
+  @DataProvider(name = "loginData")
+  public static Object[][] getLoginData() {
+    return new Object[][]{
+            {FIRST_NAME, LAST_NAME, EMAIL, PASSWORD, ACCOUNT_URL}
     };
   }
 

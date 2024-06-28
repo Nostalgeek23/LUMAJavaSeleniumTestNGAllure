@@ -19,7 +19,7 @@ public class DriverUtils {
     chromeOptions = new ChromeOptions();
     chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
     chromeOptions.addArguments("--incognito");
-    chromeOptions.addArguments("--headless");
+//    chromeOptions.addArguments("--headless");
     chromeOptions.addArguments("--window-size=1920,1080");
     chromeOptions.addArguments("--disable-gpu");
     chromeOptions.addArguments("--no-sandbox");

@@ -15,6 +15,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
@@ -217,7 +218,7 @@ public class NavigationTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "searchNavigationData",
           description = "TC-005: Verify Search Result Navigation",
-          testName = "Navigation: TC-NAV-005: Verify Search Result Navigation"
+          testName = "Navigation: Verify Search Result Navigation"
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -239,5 +240,35 @@ public class NavigationTest extends BaseTest {
     Allure.step("Verify that the user is redirected to the " + productName + " page.");
     Assert.assertEquals(actualProductName, productName);
     Assert.assertEquals(actualURL, expectedURL);
+  }
+
+  @Ignore
+  @Test(
+          groups = {"regression"},
+          dataProviderClass = TestData.class,
+          dataProvider = "loginData",
+          description = "TC-01.06.02: Verify Navigation to Account page after account creation",
+          testName = "Navigation: Verify Navigation to Account page after account creation"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that Account page opens after clicking on the Create an Account button on Create Account page.")
+  @Link(TestData.BASE_URL)
+  public void testNavToAccPageByCreateAcc(String firstName, String lastName, String email, String password, String accLink) {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    boolean isAccountCreated = new HomePage(getDriver())
+            .clickCreateAccountButton()
+            .typeFirstName(firstName)
+            .typeLastName(lastName)
+            .typeEmail(email)
+            .typePassword(password)
+            .typeConfirmPassword(password)
+            .clickAccountSubmitButton()
+            .isAccountCreated(accLink);
+
+    Allure.step("Verify URL after create account");
+    Assert.assertTrue(isAccountCreated);
   }
 }
