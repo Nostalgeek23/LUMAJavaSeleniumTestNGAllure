@@ -16,6 +16,9 @@ public class CreateAccountPage extends Login<CreateAccountPage>{
 
   @FindBy(id = "password-confirmation")
   private WebElement confirmPasswordField;
+
+  @FindBy(css = "[data-ui-id='message-error']>div")
+  private WebElement errorMessage;
   protected CreateAccountPage(WebDriver driver) {
     super(driver);
   }
@@ -40,6 +43,11 @@ public class CreateAccountPage extends Login<CreateAccountPage>{
     confirmPasswordField.sendKeys(password);
 
     return this;
+  }
+
+  public String getErrorMessageText() {
+    getWait().until(ExpectedConditions.visibilityOf(errorMessage));
+    return errorMessage.getText();
   }
 
 }

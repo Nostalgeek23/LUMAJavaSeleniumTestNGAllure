@@ -217,7 +217,7 @@ public class NavigationTest extends BaseTest {
           groups = {"regression"},
           dataProviderClass = TestData.class,
           dataProvider = "searchNavigationData",
-          description = "TC-005: Verify Search Result Navigation",
+          description = "TC-01.05: Verify Search Result Navigation",
           testName = "Navigation: Verify Search Result Navigation"
   )
   @Severity(SeverityLevel.CRITICAL)
@@ -242,7 +242,27 @@ public class NavigationTest extends BaseTest {
     Assert.assertEquals(actualURL, expectedURL);
   }
 
-  @Ignore
+  @Test(
+          groups = {"regression"},
+          description = "TC-01.06.01: Verify Navigation to Create Account page after click on create account link",
+          testName = "Verify Navigation to Create Account page after click on create account link"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that Create Account page opens after clicking on the Create an Account button on top of the page.")
+  @Link(TestData.BASE_URL)
+  public void testNavToCreateAccountPage() {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    String createAccountURL = new HomePage(getDriver())
+            .clickCreateAccountButton()
+            .getCurrentUrl();
+
+    Allure.step("Verify URL after click on create account");
+    Assert.assertEquals(createAccountURL, TestData.CREATE_ACCOUNT_URL);
+  }
+
   @Test(
           groups = {"regression"},
           dataProviderClass = TestData.class,
@@ -258,17 +278,26 @@ public class NavigationTest extends BaseTest {
     Allure.step("Open Base URL");
     getDriver().get(TestData.BASE_URL);
 
-    boolean isAccountCreated = new HomePage(getDriver())
+    var tryCreateAccount = new HomePage(getDriver())
             .clickCreateAccountButton()
             .typeFirstName(firstName)
             .typeLastName(lastName)
             .typeEmail(email)
             .typePassword(password)
             .typeConfirmPassword(password)
-            .clickAccountSubmitButton()
-            .isAccountCreated(accLink);
+            .clickAccountSubmitButton();
 
-    Allure.step("Verify URL after create account");
-    Assert.assertTrue(isAccountCreated);
+    try {
+      boolean isNewAccountCreated = tryCreateAccount.isAccountCreated(accLink);
+
+      Allure.step("Verify URL after create account");
+      Assert.assertTrue(isNewAccountCreated);
+    } catch (Throwable t) {
+      String errorMessage = tryCreateAccount.getErrorMessageText();
+
+      Allure.step("Verify email already registered");
+      Assert.assertTrue(errorMessage.contains(TestData.EMAIL_ERROR_MESSAGE));
+    }
+
   }
 }

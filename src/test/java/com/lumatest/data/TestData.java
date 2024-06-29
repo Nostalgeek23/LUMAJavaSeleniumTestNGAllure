@@ -82,6 +82,8 @@ public class TestData {
   public static final String EMAIL = "hp@gryffindor.hog";
   public static final String PASSWORD = "DeathlyHallows321";
   public static final String ACCOUNT_URL = BASE_URL + "/customer/account/";
+  public static final String CREATE_ACCOUNT_URL = BASE_URL + "/customer/account/create/";
+  public static final String EMAIL_ERROR_MESSAGE = "There is already an account with this email address.";
 
   //            Allure.step("Set up expected results");
   @DataProvider(name = "navigationData")
