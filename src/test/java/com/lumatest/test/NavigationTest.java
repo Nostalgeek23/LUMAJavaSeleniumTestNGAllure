@@ -3,6 +3,7 @@ package com.lumatest.test;
 import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
+import com.lumatest.model.Login;
 import com.lumatest.model.ProductPage;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
@@ -278,7 +279,7 @@ public class NavigationTest extends BaseTest {
     Allure.step("Open Base URL");
     getDriver().get(TestData.BASE_URL);
 
-    var tryCreateAccount = new HomePage(getDriver())
+    Login<?> resultPage = new HomePage(getDriver())
             .clickCreateAccountButton()
             .typeFirstName(firstName)
             .typeLastName(lastName)
@@ -287,17 +288,7 @@ public class NavigationTest extends BaseTest {
             .typeConfirmPassword(password)
             .clickAccountSubmitButton();
 
-    try {
-      boolean isNewAccountCreated = tryCreateAccount.isAccountCreated(accLink);
-
-      Allure.step("Verify URL after create account");
-      Assert.assertTrue(isNewAccountCreated);
-    } catch (Throwable t) {
-      String errorMessage = tryCreateAccount.getErrorMessageText();
-
-      Allure.step("Verify email already registered");
-      Assert.assertTrue(errorMessage.contains(TestData.EMAIL_ERROR_MESSAGE));
-    }
-
+    resultPage.verifyAccountCreation();
   }
+
 }

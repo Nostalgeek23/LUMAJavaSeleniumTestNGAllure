@@ -1,10 +1,13 @@
 package com.lumatest.model;
 
+import com.lumatest.data.TestData;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 public class CreateAccountPage extends Login<CreateAccountPage>{
 
@@ -49,5 +52,7 @@ public class CreateAccountPage extends Login<CreateAccountPage>{
     getWait().until(ExpectedConditions.visibilityOf(errorMessage));
     return errorMessage.getText();
   }
+
+
 
 }
