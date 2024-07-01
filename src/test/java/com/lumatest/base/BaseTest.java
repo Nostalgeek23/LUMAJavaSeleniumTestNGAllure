@@ -64,16 +64,18 @@ public abstract class BaseTest {
             true);
 
     if (driver != null) {
-      driver.quit();
+      try {
+        driver.quit();
+        Reporter.log("INFO: " + browser.substring(0, 1).toUpperCase() + browser.substring(1) +
+                " driver closed", true);
+      } finally {
+        Reporter.log("After Test Thread ID: " + Thread.currentThread().getId(), true);
 
-      Reporter.log("INFO: " + browser.substring(0, 1).toUpperCase() + browser.substring(1) +
-              " driver closed", true);
-      Reporter.log("After Test Thread ID: " + Thread.currentThread().getId(), true);
-
-      threadLocalDriver.remove();
-      wait2.remove();
-      wait5.remove();
-      wait10.remove();
+        threadLocalDriver.remove();
+        wait2.remove();
+        wait5.remove();
+        wait10.remove();
+      }
     } else {
       Reporter.log("INFO: Driver is null", true);
     }
@@ -86,11 +88,14 @@ public abstract class BaseTest {
     WebDriver driver = getDriver();
 
     if (driver != null) {
-      driver.quit();
-      threadLocalDriver.remove();
-      wait2.remove();
-      wait5.remove();
-      wait10.remove();
+      try {
+        driver.quit();
+      } finally {
+        threadLocalDriver.remove();
+        wait2.remove();
+        wait5.remove();
+        wait10.remove();
+      }
     }
   }
 

@@ -84,6 +84,7 @@ public class TestData {
   public static final String ACCOUNT_URL = BASE_URL + "/customer/account/";
   public static final String CREATE_ACCOUNT_URL = BASE_URL + "/customer/account/create/";
   public static final String EMAIL_ERROR_MESSAGE = "There is already an account with this email address.";
+  public static final String CUSTOMER_LOGIN_URL = BASE_URL + "/customer/account/login/referer/";
 
   //            Allure.step("Set up expected results");
   @DataProvider(name = "navigationData")
@@ -125,7 +126,7 @@ public class TestData {
   @DataProvider(name = "loginData")
   public static Object[][] getLoginData() {
     return new Object[][]{
-            {FIRST_NAME, LAST_NAME, EMAIL, PASSWORD, ACCOUNT_URL}
+            {FIRST_NAME, LAST_NAME, EMAIL, PASSWORD}
     };
   }
 

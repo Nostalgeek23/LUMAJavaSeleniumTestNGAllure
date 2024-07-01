@@ -46,14 +46,31 @@ public  class Login<T extends Login<T>> extends TopMenu{
     return getCurrentUrl().equals(TestData.ACCOUNT_URL);
   }
 
+  private boolean isOnCreateAccountPage() {
+    return getCurrentUrl().equals(TestData.CREATE_ACCOUNT_URL);
+  }
+
+  private boolean isOnCustomerLoginPage() {
+    return getCurrentUrl().equals(TestData.CUSTOMER_LOGIN_URL);
+  }
+
+  private boolean isOnHomePage() {
+    return getCurrentUrl().equals(TestData.BASE_URL + "/");
+  }
+
+
   @Step("Click on button to login or create account")
   public Login<?> clickAccountSubmitButton() {
     accountSubmitButton.click();
 
     if (isOnMyAccountPage()) {
       return new MyAccountPage(getDriver());
-    } else {
+    } else if (isOnCreateAccountPage()){
       return new CreateAccountPage(getDriver());
+    } else if (isOnCustomerLoginPage()) {
+      return new CustomerLoginPage(getDriver());
+    } else {
+      throw new IllegalArgumentException("Unknown page redirect");
     }
   }
 
@@ -62,6 +79,7 @@ public  class Login<T extends Login<T>> extends TopMenu{
     return getCurrentUrl().equals(TestData.ACCOUNT_URL);
   }
 
+  @Step("Check account created or Email already registered")
   public void verifyAccountCreation() {
     if (this instanceof MyAccountPage) {
       Allure.step("Verify URL after create account");
@@ -75,4 +93,5 @@ public  class Login<T extends Login<T>> extends TopMenu{
       throw new IllegalStateException("Unexpected page type: " + this.getClass().getName());
     }
   }
+
 }

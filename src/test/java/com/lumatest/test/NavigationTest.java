@@ -16,7 +16,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class NavigationTest extends BaseTest {
@@ -251,13 +250,13 @@ public class NavigationTest extends BaseTest {
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
   @Description("Ensure that Create Account page opens after clicking on the Create an Account button on top of the page.")
-  @Link(TestData.BASE_URL)
+  @Link(TestData.CREATE_ACCOUNT_URL)
   public void testNavToCreateAccountPage() {
     Allure.step("Open Base URL");
     getDriver().get(TestData.BASE_URL);
 
     String createAccountURL = new HomePage(getDriver())
-            .clickCreateAccountButton()
+            .clickCreateAccountLink()
             .getCurrentUrl();
 
     Allure.step("Verify URL after click on create account");
@@ -274,13 +273,13 @@ public class NavigationTest extends BaseTest {
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
   @Description("Ensure that Account page opens after clicking on the Create an Account button on Create Account page.")
-  @Link(TestData.BASE_URL)
-  public void testNavToAccPageByCreateAcc(String firstName, String lastName, String email, String password, String accLink) {
+  @Link(TestData.ACCOUNT_URL)
+  public void testNavToAccPageByCreateAcc(String firstName, String lastName, String email, String password) {
     Allure.step("Open Base URL");
     getDriver().get(TestData.BASE_URL);
 
     Login<?> resultPage = new HomePage(getDriver())
-            .clickCreateAccountButton()
+            .clickCreateAccountLink()
             .typeFirstName(firstName)
             .typeLastName(lastName)
             .typeEmail(email)
@@ -289,6 +288,56 @@ public class NavigationTest extends BaseTest {
             .clickAccountSubmitButton();
 
     resultPage.verifyAccountCreation();
+  }
+
+  @Test(
+          groups = {"regression"},
+          description = "TC-01.06.03: Verify Navigation to Customer Login page after click on Sign In link",
+          testName = "Verify Navigation to Customer Login page after click on Sign In link"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that Login page opens after clicking on the Sign In button on top of the page.")
+  @Link(TestData.CUSTOMER_LOGIN_URL)
+  public void testNavToLoginPage() {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    String loginURL = new HomePage(getDriver())
+            .clickSignInLink()
+            .getCurrentUrl();
+
+    Allure.step("Verify URL after click on Sign In");
+    Assert.assertTrue(loginURL.contains(TestData.CUSTOMER_LOGIN_URL));
+  }
+
+  @Test(
+          dependsOnMethods = "testNavToAccPageByCreateAcc",
+          groups = {"regression"},
+          dataProviderClass = TestData.class,
+          dataProvider = "loginData",
+          description = "TC-01.06.04: Verify Navigation to Account page after login",
+          testName = "Navigation: Verify Navigation to Account page after login"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that Account page opens after clicking on the Create an Account button on Create Account page.")
+  @Link(TestData.ACCOUNT_URL)
+  public void testRedirectToHomeAfterLogin(String firstName, String lastName, String email, String password) {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    String headerMessage = new HomePage(getDriver())
+            .clickSignInLink()
+            .typeEmail(email)
+            .typePassword(password)
+            .clickSignInButton()
+            .getHeaderLoggedInMessage();
+
+    System.out.println(headerMessage);
+
+    Allure.step("Verify header message after logged in");
+    Assert.assertTrue(headerMessage.contains("Welcome,"));
   }
 
 }

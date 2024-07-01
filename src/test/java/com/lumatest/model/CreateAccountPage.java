@@ -48,11 +48,10 @@ public class CreateAccountPage extends Login<CreateAccountPage>{
     return this;
   }
 
+  @Step("Get text from error message if account cannot be created")
   public String getErrorMessageText() {
     getWait().until(ExpectedConditions.visibilityOf(errorMessage));
     return errorMessage.getText();
   }
-
-
 
 }

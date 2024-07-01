@@ -19,7 +19,15 @@ public abstract class TopMenu extends BasePage {
   private WebElement searchInput;
 
   @FindBy(css = "a[href*='/create/']")
-  private WebElement createAccountButton;
+  private WebElement createAccountLink;
+
+  @FindBy(css = "div[class='panel header'] a[href*='login']")
+  private WebElement signInLink;
+
+//  @FindBy(css = "div[class*='header'] span[class='logged-in']")
+//  private WebElement headerLoggedInMessage;
+  @FindBy(xpath = "//header//span[contains(text(),'Welcome')]")
+  private WebElement headerLoggedInMessage;
 
   protected TopMenu(WebDriver driver) {
     super(driver);
@@ -68,9 +76,25 @@ public abstract class TopMenu extends BasePage {
   }
 
   @Step("Click on Create an Account")
-  public CreateAccountPage clickCreateAccountButton() {
-    getWait().until(ExpectedConditions.elementToBeClickable(createAccountButton)).click();
+  public CreateAccountPage clickCreateAccountLink() {
+    getWait().until(ExpectedConditions.elementToBeClickable(createAccountLink)).click();
 
     return new CreateAccountPage(getDriver());
   }
+
+  @Step("Click on Sign In")
+  public CustomerLoginPage clickSignInLink() {
+    getWait().until(ExpectedConditions.elementToBeClickable(signInLink)).click();
+
+    return new CustomerLoginPage(getDriver());
+  }
+
+  @Step("Check the header message after login")
+  public String getHeaderLoggedInMessage() {
+    getWait().until(ExpectedConditions.elementToBeClickable(headerLoggedInMessage));
+
+    return headerLoggedInMessage.getText();
+  }
+
+
 }
