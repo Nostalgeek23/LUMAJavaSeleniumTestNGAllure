@@ -29,6 +29,15 @@ public abstract class TopMenu extends BasePage {
   @FindBy(xpath = "//header//span[contains(text(),'Welcome')]")
   private WebElement headerLoggedInMessage;
 
+  @FindBy(css = "div[data-ui-id*='message-success']")
+  WebElement addToCartSuccessMessage;
+
+  @FindBy(css = "a[class='action showcart']")
+  private WebElement cartIcon;
+
+  @FindBy(css = "a[class='action viewcart']")
+  private WebElement viewCartLink;
+
   protected TopMenu(WebDriver driver) {
     super(driver);
   }
@@ -96,5 +105,16 @@ public abstract class TopMenu extends BasePage {
     return headerLoggedInMessage.getText();
   }
 
+  @Step("Click on the Cart icon")
+  public TopMenu clickOnCartIcon() {
+    cartIcon.click();
 
+    return this;
+  }
+
+  public ShoppingCartPage clickViewCartLink() {
+    getWait().until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
+
+    return new ShoppingCartPage(getDriver());
+  }
 }

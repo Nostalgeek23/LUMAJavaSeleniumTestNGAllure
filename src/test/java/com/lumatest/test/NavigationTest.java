@@ -340,4 +340,28 @@ public class NavigationTest extends BaseTest {
     Assert.assertTrue(headerMessage.contains("Welcome,"));
   }
 
+  @Test(
+          groups = {"regression"},
+          description = "TC-01.07: Verify Navigation to Cart",
+          testName = "Verify Navigation to Cart"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that clicking on the View Cart link redirects the user to the shopping cart page.")
+  @Link(TestData.SHOPPING_CART_URL)
+  public void testNavToCart() {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    String resultURL = new HomePage(getDriver())
+            .clickProductImg(TestData.FUSION_BACKPACK_PRODUCT_NAME)
+            .clickOnAddToCart()
+            .clickOnCartIcon()
+            .clickViewCartLink()
+            .getCurrentUrl();
+
+    Allure.step("Verify URL after click on View Cart");
+    Assert.assertEquals(resultURL, TestData.SHOPPING_CART_URL);
+  }
+
 }

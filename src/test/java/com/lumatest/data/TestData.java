@@ -1,6 +1,5 @@
 package com.lumatest.data;
 
-import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 
@@ -73,6 +72,7 @@ public class TestData {
   */
   public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
+  public static final String FUSION_BACKPACK_PRODUCT_NAME = "Fusion Backpack";
 
   /*
   For login
@@ -85,6 +85,11 @@ public class TestData {
   public static final String CREATE_ACCOUNT_URL = BASE_URL + "/customer/account/create/";
   public static final String EMAIL_ERROR_MESSAGE = "There is already an account with this email address.";
   public static final String CUSTOMER_LOGIN_URL = BASE_URL + "/customer/account/login/referer/";
+
+  /*
+  For Cart
+   */
+  public static final String SHOPPING_CART_URL = BASE_URL + "/checkout/cart/";
 
   //            Allure.step("Set up expected results");
   @DataProvider(name = "navigationData")

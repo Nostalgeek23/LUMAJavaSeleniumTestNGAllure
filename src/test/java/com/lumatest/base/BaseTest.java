@@ -83,7 +83,7 @@ public abstract class BaseTest {
     ReportUtils.logf("Execution time is %d sec\n", (result.getEndMillis() - result.getStartMillis()) / 1000);
   }
 
-  @AfterClass
+  @AfterClass(alwaysRun = true)
   public void tearDownClass() {
     WebDriver driver = getDriver();
 
