@@ -90,6 +90,7 @@ public class TestData {
   For Cart
    */
   public static final String SHOPPING_CART_URL = BASE_URL + "/checkout/cart/";
+  public static final String CHECKOUT_URL = BASE_URL + "/checkout/";
 
   //            Allure.step("Set up expected results");
   @DataProvider(name = "navigationData")

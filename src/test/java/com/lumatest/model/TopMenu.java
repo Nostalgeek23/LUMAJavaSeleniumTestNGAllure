@@ -38,6 +38,9 @@ public abstract class TopMenu extends BasePage {
   @FindBy(css = "a[class='action viewcart']")
   private WebElement viewCartLink;
 
+  @FindBy(id = "top-cart-btn-checkout")
+  private WebElement checkoutButton;
+
   protected TopMenu(WebDriver driver) {
     super(driver);
   }
@@ -112,9 +115,17 @@ public abstract class TopMenu extends BasePage {
     return this;
   }
 
+  @Step("Click on View and Edit Cart link")
   public ShoppingCartPage clickViewCartLink() {
     getWait().until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
 
     return new ShoppingCartPage(getDriver());
+  }
+
+  @Step("Click on Proceed to Checkout button")
+  public CheckoutPage clickCheckoutButton() {
+    getWait().until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+
+    return new CheckoutPage(getDriver());
   }
 }
