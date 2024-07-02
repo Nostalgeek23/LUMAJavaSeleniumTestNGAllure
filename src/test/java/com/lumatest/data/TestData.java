@@ -92,6 +92,25 @@ public class TestData {
   public static final String SHOPPING_CART_URL = BASE_URL + "/checkout/cart/";
   public static final String CHECKOUT_URL = BASE_URL + "/checkout/";
 
+  /*
+  For Footer
+   */
+  public static final String SEARCH_TERMS_URL = BASE_URL + "/search/term/popular/";
+  public static final By SEARCH_TERMS_LINK = By.cssSelector("a[href$='/search/term/popular/']");
+  public static final String SEARCH_TERMS_TITLE = "Popular Search Terms";
+
+  public static final String POLICY_URL = BASE_URL + "/privacy-policy-cookie-restriction-mode";
+  public static final By POLICY_LINK = By.cssSelector("a[href$='/privacy-policy-cookie-restriction-mode/']");
+  public static final String POLICY_TITLE = "Privacy Policy";
+
+  public static final String ADVANCED_SEARCH_URL = BASE_URL + "/catalogsearch/advanced/";
+  public static final By ADVANCED_SEARCH_LINK = By.cssSelector("footer a[href$='/catalogsearch/advanced/']");
+  public static final String ADVANCED_SEARCH_TITLE = "Advanced Search";
+
+  public static final String ORDERS_AND_RETURNS_URL = BASE_URL + "/sales/guest/form/";
+  public static final By ORDERS_AND_RETURNS_LINK = By.cssSelector("a[href$='/sales/guest/form/']");
+  public static final String ORDERS_AND_RETURNS_TITLE = "Orders and Returns";
+
   //            Allure.step("Set up expected results");
   @DataProvider(name = "navigationData")
   public static Object[][] getNavMenuData() {
@@ -133,6 +152,16 @@ public class TestData {
   public static Object[][] getLoginData() {
     return new Object[][]{
             {FIRST_NAME, LAST_NAME, EMAIL, PASSWORD}
+    };
+  }
+
+  @DataProvider(name = "footerNavigationData")
+  public static Object[][] getFooterNavMenuData() {
+    return new Object[][]{
+            {SEARCH_TERMS_LINK, SEARCH_TERMS_URL, SEARCH_TERMS_TITLE},
+            {POLICY_LINK, POLICY_URL, POLICY_TITLE},
+            {ADVANCED_SEARCH_LINK, ADVANCED_SEARCH_URL, ADVANCED_SEARCH_TITLE},
+            {ORDERS_AND_RETURNS_LINK, ORDERS_AND_RETURNS_URL, ORDERS_AND_RETURNS_TITLE}
     };
   }
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public abstract class TopMenu extends BasePage {
+public abstract class TopMenu extends FooterMenu {
   @FindBy(css = "a.logo")
   private WebElement logo;
 

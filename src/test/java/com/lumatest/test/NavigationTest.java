@@ -388,4 +388,26 @@ public class NavigationTest extends BaseTest {
     Assert.assertEquals(resultURL, TestData.CHECKOUT_URL);
   }
 
+  @Test(
+          groups = {"regression"},
+          dataProviderClass = TestData.class,
+          dataProvider = "footerNavigationData",
+          description = "TC-01.09: Verify Footer Links Navigation",
+          testName = "Navigation: Verify Footer Links Navigation"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Navigation")
+  @Description("Ensure that clicking on the links in the footer redirects the user to the correct pages.")
+  @Link(TestData.BASE_URL)
+  public void testFooterNavigation(By footerLink, String pageURL, String expectedTitle) {
+    Allure.step("Open Base URL");
+    getDriver().get(TestData.BASE_URL);
+
+    String actualTitle = new HomePage(getDriver())
+            .clickFooterLink(footerLink)
+            .getPageTitleWithURL(pageURL);
+
+    Allure.step("Verify actual results as expected");
+    Assert.assertEquals(actualTitle, expectedTitle);
+  }
 }
