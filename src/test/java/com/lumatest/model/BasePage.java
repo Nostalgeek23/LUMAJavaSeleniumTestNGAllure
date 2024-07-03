@@ -2,6 +2,7 @@ package com.lumatest.model;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -32,13 +33,6 @@ public abstract class BasePage {
   }
 
   @Step("Hover on element")
-//    public void hoverOverElementBy(By selector) {
-//        WebElement element = getDriver().findElement(selector);
-//
-//        new Actions(getDriver())
-//                .moveToElement(element)
-//                .perform();
-//    }
   public void hoverOverElement(WebElement element) {
     new Actions(getDriver())
             .moveToElement(element)
@@ -62,5 +56,11 @@ public abstract class BasePage {
   @Step("Get current URL")
   public String getCurrentUrl() {
     return getDriver().getCurrentUrl();
+  }
+
+  @Step("Click on element with JS")
+  public void clickWithJS(WebElement element) {
+    ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+    ((JavascriptExecutor) getDriver()).executeScript("arguments[0].click();", element);
   }
 }

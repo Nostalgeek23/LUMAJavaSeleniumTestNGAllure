@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public abstract class SideMenu extends BreadcrumbsMenu {
 
-  @FindBy(css = "dd a[href*='bags']")
+  @FindBy(css = "ol[class='items'] a[href*='bags']")
   private WebElement bagsSideMenu;
 
   protected SideMenu(WebDriver driver) {

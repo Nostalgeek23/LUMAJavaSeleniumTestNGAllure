@@ -34,9 +34,6 @@ public class NavigationTest extends BaseTest {
     final String expectedURL = TestData.BASE_URL + "/";
     final String expectedTitle = TestData.BASE_URL_TITLE;
 
-    Allure.step("Open base URL");
-    getDriver().get(TestData.BASE_URL);
-
     Allure.step("Collect actual results");
     final String actualURL = getDriver().getCurrentUrl();
     final String actualTitle = getDriver().getTitle();
@@ -56,8 +53,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that clicking on the website logo navigates the user to the homepage.")
   @Link(TestData.BASE_URL)
   public void testNavToHomePage() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     boolean isRedirectToHomePage = new HomePage(getDriver())
             .clickGearTopMenu()
@@ -82,10 +77,6 @@ public class NavigationTest extends BaseTest {
           "corresponding category page.")
   @Link(TestData.WHATS_NEW_URL)
   public void testNavigationMenu(String baseURL, By navBarMenu, String expectedURL, String expectedTitle) {
-
-    Allure.step("Open Base URL");
-    getDriver().get(baseURL);
-
     Allure.step("Click on " + navBarMenu.toString());
     try {
       getWait10().until(ExpectedConditions.elementToBeClickable(navBarMenu)).click();
@@ -121,9 +112,6 @@ public class NavigationTest extends BaseTest {
   @Link(TestData.BASE_URL)
   public void testSubCategoryNavigation(By navBarMenu, By subNavMenu, String pageURL, String expectedTitle) {
 
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
-
     String actualTitle = new HomePage(getDriver())
             .clickSubcategory(navBarMenu, subNavMenu)
             .getPageTitleWithURL(pageURL);
@@ -142,8 +130,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that the breadcrumb link are functional and navigate the user to the to category page.")
   @Link(TestData.BASE_URL)
   public void testBreadcrumbsNavigationToCategory() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     ProductPage productPage = new HomePage(getDriver())
             .clickGearTopMenu()
@@ -170,8 +156,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that the breadcrumb link are functional and navigate the user to the to subcategory page.")
   @Link(TestData.BASE_URL)
   public void testBreadcrumbsNavigationToSubCategory() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     ProductPage productPage = new HomePage(getDriver())
             .clickGearTopMenu()
@@ -199,8 +183,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that the breadcrumb link are functional and navigate the user to the to home page.")
   @Link(TestData.BASE_URL)
   public void testBreadcrumbsNavigationToHomePage() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String actualResult = new HomePage(getDriver())
             .clickGearTopMenu()
@@ -225,8 +207,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that clicking on a product in the search results redirects the user to the correct product page.")
   @Link(TestData.BASE_URL)
   public void testSearchResultNavigation(String baseURL, String productName, String expectedURL) {
-    Allure.step("Open Base URL");
-    getDriver().get(baseURL);
 
     ProductPage productPage = new HomePage(getDriver())
             .searchProduct(productName)
@@ -252,8 +232,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that Create Account page opens after clicking on the Create an Account button on top of the page.")
   @Link(TestData.CREATE_ACCOUNT_URL)
   public void testNavToCreateAccountPage() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String createAccountURL = new HomePage(getDriver())
             .clickCreateAccountLink()
@@ -275,8 +253,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that Account page opens after clicking on the Create an Account button on Create Account page.")
   @Link(TestData.ACCOUNT_URL)
   public void testNavToAccPageByCreateAcc(String firstName, String lastName, String email, String password) {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     Login<?> resultPage = new HomePage(getDriver())
             .clickCreateAccountLink()
@@ -300,8 +276,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that Login page opens after clicking on the Sign In button on top of the page.")
   @Link(TestData.CUSTOMER_LOGIN_URL)
   public void testNavToLoginPage() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String loginURL = new HomePage(getDriver())
             .clickSignInLink()
@@ -324,8 +298,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that Account page opens after clicking on the Create an Account button on Create Account page.")
   @Link(TestData.ACCOUNT_URL)
   public void testRedirectToHomeAfterLogin(String firstName, String lastName, String email, String password) {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String headerMessage = new HomePage(getDriver())
             .clickSignInLink()
@@ -350,8 +322,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that clicking on the View Cart link redirects the user to the shopping cart page.")
   @Link(TestData.SHOPPING_CART_URL)
   public void testNavToCart() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String resultURL = new HomePage(getDriver())
             .clickProductImg(TestData.FUSION_BACKPACK_PRODUCT_NAME)
@@ -374,8 +344,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that clicking on the Checkout button from the cart page redirects the user to the checkout page.")
   @Link(TestData.SHOPPING_CART_URL)
   public void testNavToCheckout() {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String resultURL = new HomePage(getDriver())
             .clickProductImg(TestData.FUSION_BACKPACK_PRODUCT_NAME)
@@ -400,8 +368,6 @@ public class NavigationTest extends BaseTest {
   @Description("Ensure that clicking on the links in the footer redirects the user to the correct pages.")
   @Link(TestData.BASE_URL)
   public void testFooterNavigation(By footerLink, String pageURL, String expectedTitle) {
-    Allure.step("Open Base URL");
-    getDriver().get(TestData.BASE_URL);
 
     String actualTitle = new HomePage(getDriver())
             .clickFooterLink(footerLink)

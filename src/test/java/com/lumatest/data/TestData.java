@@ -1,7 +1,14 @@
 package com.lumatest.data;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
+
+import java.io.IOException;
+import java.util.List;
+
+import static com.lumatest.utils.ProjectUtils.readFromFile;
+
 
 public class TestData {
   public static final String BASE_URL = "https://magento.softwaretestingboard.com";
@@ -70,8 +77,13 @@ public class TestData {
   /*
   For Product Pages
   */
+  public static final String PRODUCT_IN_STOCK = "IN STOCK";
   public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
+  public static final String DRIVEN_BACKPACK_LISTED_PRICE = "$36.00";
+  public static final String DRIVEN_BACKPACK_DESCRIPTION;
+  public static final String DRIVEN_BACKPACK_SKU = "24-WB03";
+  public static final List<String> DRIVEN_BACKPACK_BREADCRUMB_PATH = List.of("Home", "Gear", "Bags", "Driven Backpack");
   public static final String FUSION_BACKPACK_PRODUCT_NAME = "Fusion Backpack";
 
   /*
@@ -111,7 +123,14 @@ public class TestData {
   public static final By ORDERS_AND_RETURNS_LINK = By.cssSelector("a[href$='/sales/guest/form/']");
   public static final String ORDERS_AND_RETURNS_TITLE = "Orders and Returns";
 
-  //            Allure.step("Set up expected results");
+  static {
+    try {
+      DRIVEN_BACKPACK_DESCRIPTION = readFromFile("src/test/java/com/lumatest/data/DrivenBackpackDescription.txt");
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
   @DataProvider(name = "navigationData")
   public static Object[][] getNavMenuData() {
     return new Object[][]{
@@ -162,6 +181,14 @@ public class TestData {
             {POLICY_LINK, POLICY_URL, POLICY_TITLE},
             {ADVANCED_SEARCH_LINK, ADVANCED_SEARCH_URL, ADVANCED_SEARCH_TITLE},
             {ORDERS_AND_RETURNS_LINK, ORDERS_AND_RETURNS_URL, ORDERS_AND_RETURNS_TITLE}
+    };
+  }
+
+  @DataProvider(name = "compareProductData")
+  public static Object[][] getCompareProductData() {
+    return new Object[][]{
+            {DRIVEN_BACKPACK_PRODUCT_NAME},
+            {FUSION_BACKPACK_PRODUCT_NAME}
     };
   }
 
