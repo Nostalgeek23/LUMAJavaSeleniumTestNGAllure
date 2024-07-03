@@ -64,7 +64,7 @@ public class ProductPageTest extends BaseTest {
   }
 
   @Test(
-          testName = "PRODUCT | Product Description ",
+          testName = "PRODUCT | Product Description",
           description = "TC-PROD-005 Verify Product Price on Product Page",
           groups = {"functional"}
   )
@@ -82,5 +82,26 @@ public class ProductPageTest extends BaseTest {
 
     Allure.step("Verify current price matches the listed one");
     Assert.assertEquals(productDescription, TestData.DRIVEN_BACKPACK_DESCRIPTION);
+  }
+
+  @Test(
+          testName = "PRODUCT | Product Stock Availability",
+          description = "TC-PROD-006 Verify Stock Availability on Product Page",
+          groups = {"functional"}
+  )
+  @Story("Product Details")
+  @Severity(SeverityLevel.NORMAL)
+  @Description("Ensure that the stock availability is displayed correctly on the product page.")
+  @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
+  public void testProductInStock() {
+
+    String productAvailability = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
+            .getProductAvailability();
+
+    Allure.step("Verify Stock Availability status on Product Page");
+    Assert.assertEquals(productAvailability, TestData.PRODUCT_IN_STOCK);
   }
 }

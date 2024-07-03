@@ -76,6 +76,7 @@ public class TestData {
   /*
   For Product Pages
   */
+  public static final String PRODUCT_IN_STOCK = "IN STOCK";
   public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
   public static final String DRIVEN_BACKPACK_LISTED_PRICE = "$36.00";
