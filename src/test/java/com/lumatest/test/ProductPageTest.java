@@ -28,9 +28,6 @@ public class ProductPageTest extends BaseTest {
           "for the 'Driven Backpack'.")
   @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
   public void testProduct() {
-    Allure.step("Open base URL");
-    getDriver().get(TestData.BASE_URL);
-
     ProductPage productPage = new HomePage(getDriver())
             .clickGearTopMenu()
             .clickBagsSideMenu()
@@ -38,7 +35,6 @@ public class ProductPageTest extends BaseTest {
 
     final String productName = productPage.getProductName();
     final List<String> breadcrumbsMenuText = productPage.getBreadcrumbsMenuText();
-    System.out.println(breadcrumbsMenuText);
 
     Allure.step("Verify " + productName + " is on product page and in the breadcrumbs");
     Assert.assertEquals(productName, TestData.DRIVEN_BACKPACK_PRODUCT_NAME);

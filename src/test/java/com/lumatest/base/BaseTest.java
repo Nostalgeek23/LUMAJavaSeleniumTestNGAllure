@@ -1,5 +1,6 @@
 package com.lumatest.base;
 
+import com.lumatest.utils.ProjectUtils;
 import com.lumatest.utils.ReportUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import com.lumatest.utils.DriverUtils;
@@ -53,6 +54,8 @@ public abstract class BaseTest {
       Reporter.log("INFO: " + browser.substring(0, 1).toUpperCase() + browser.substring(1) +
               " driver created", true);
     }
+
+    driver.get(ProjectUtils.getBaseUrl());
   }
 
   @Parameters("browser")
