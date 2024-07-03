@@ -72,6 +72,7 @@ public class TestData {
   */
   public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
+  public static final String DRIVEN_BACKPACK_LISTED_PRICE = "$36.00";
   public static final String FUSION_BACKPACK_PRODUCT_NAME = "Fusion Backpack";
 
   /*

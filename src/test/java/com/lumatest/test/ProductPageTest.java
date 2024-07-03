@@ -18,8 +18,8 @@ import java.util.List;
 public class ProductPageTest extends BaseTest {
 
   @Test(
-          testName = "PRODUCT | Product Details",
-          description = "TC-03 Verify Product Details on Product Page",
+          testName = "PRODUCT | Product Name",
+          description = "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
           groups = {"functional"}
   )
   @Story("Product Details")
@@ -28,6 +28,7 @@ public class ProductPageTest extends BaseTest {
           "for the 'Driven Backpack'.")
   @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
   public void testProduct() {
+
     ProductPage productPage = new HomePage(getDriver())
             .clickGearTopMenu()
             .clickBagsSideMenu()
@@ -39,5 +40,27 @@ public class ProductPageTest extends BaseTest {
     Allure.step("Verify " + productName + " is on product page and in the breadcrumbs");
     Assert.assertEquals(productName, TestData.DRIVEN_BACKPACK_PRODUCT_NAME);
     Assert.assertTrue(breadcrumbsMenuText.contains(TestData.DRIVEN_BACKPACK_PRODUCT_NAME));
+  }
+
+  @Test(
+          testName = "PRODUCT | Product Price",
+          description = "TC-PROD-003 Verify Product Price on Product Page",
+          groups = {"functional"}
+  )
+  @Story("Product Details")
+  @Severity(SeverityLevel.NORMAL)
+  @Description("Ensure that the product price is displayed correctly and matches the listed price.")
+  @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
+  public void testProductPrice() {
+
+    String productPrice = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
+            .getProductPrice();
+
+    Allure.step("Verify current price matches the listed one");
+    Assert.assertEquals(productPrice, TestData.DRIVEN_BACKPACK_LISTED_PRICE);
+
   }
 }

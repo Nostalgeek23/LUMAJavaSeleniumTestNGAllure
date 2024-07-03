@@ -14,6 +14,9 @@ public class ProductPage extends CatalogPage {
   @FindBy(id = "product-addtocart-button")
   WebElement addToCartButton;
 
+  @FindBy(css = "div[class*=info-price] span[class=price]")
+  private WebElement productPrice;
+
   protected ProductPage(WebDriver driver) {
     super(driver);
   }
@@ -29,5 +32,11 @@ public class ProductPage extends CatalogPage {
     getWait().until(ExpectedConditions.elementToBeClickable(addToCartSuccessMessage));
 
     return this;
+  }
+
+  public String getProductPrice() {
+    getWait().until(ExpectedConditions.elementToBeClickable(productPrice));
+
+    return productPrice.getText();
   }
 }
