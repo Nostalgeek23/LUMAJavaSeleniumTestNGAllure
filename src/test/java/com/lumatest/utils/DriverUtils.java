@@ -29,12 +29,12 @@ public class DriverUtils {
     chromeOptions.addArguments("--ignore-certificate-errors");
 
     firefoxOptions = new FirefoxOptions();
-    firefoxOptions.addArguments("--incognito");
-    firefoxOptions.addArguments("--headless");
-    firefoxOptions.addArguments("--window-size=1920,1080");
-    firefoxOptions.addArguments("--disable-gpu");
-    firefoxOptions.addArguments("--no-sandbox");
-    firefoxOptions.addArguments("--disable-dev-shm-usage");
+    firefoxOptions.addArguments("-incognito");
+    firefoxOptions.addArguments("-headless");
+    firefoxOptions.addArguments("-start-maximized");
+    firefoxOptions.addArguments("-disable-gpu");
+    firefoxOptions.addArguments("-no-sandbox");
+    firefoxOptions.addArguments("-disable-dev-shm-usage");
 //        firefoxOptions.addArguments("--disable-web-security");
 //        firefoxOptions.addArguments("--allow-running-insecure-content");
 //        firefoxOptions.addArguments("--ignore-certificate-errors");

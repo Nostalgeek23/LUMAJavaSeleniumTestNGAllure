@@ -145,4 +145,27 @@ public class ProductPageTest extends BaseTest {
     Allure.step("Verify the product breadcrumb path");
     Assert.assertEquals(actualProductPath, TestData.DRIVEN_BACKPACK_BREADCRUMB_PATH);
   }
+
+  @Test(
+          testName = "PRODUCT | Product add to compare list message",
+          description = "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+          groups = {"functional"},
+          dataProviderClass = TestData.class,
+          dataProvider = "compareProductData"
+  )
+  @Story("Product Details")
+  @Severity(SeverityLevel.NORMAL)
+  @Description("Verify add to compare message displays after click Add to Compare button")
+  public void testAddToCompareMessage(String productName) {
+
+    String actualMessage = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(productName)
+            .clickAddToCompare()
+            .getAlertMessage();
+
+    Allure.step("Verify add to compare message");
+    Assert.assertEquals(actualMessage, "You added product " + productName + " to the comparison list.");
+  }
 }

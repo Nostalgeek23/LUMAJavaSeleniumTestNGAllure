@@ -131,7 +131,6 @@ public class TestData {
     }
   }
 
-  @Step("Set up expected results")
   @DataProvider(name = "navigationData")
   public static Object[][] getNavMenuData() {
     return new Object[][]{
@@ -144,7 +143,6 @@ public class TestData {
     };
   }
 
-  @Step("Set up expected results")
   @DataProvider(name = "subNavigationData")
   public static Object[][] getSubNavMenuData() {
     return new Object[][]{
@@ -162,7 +160,6 @@ public class TestData {
     };
   }
 
-  @Step("Set up expected results")
   @DataProvider(name = "searchNavigationData")
   public static Object[][] getSearchNavData() {
     return new Object[][]{
@@ -170,7 +167,6 @@ public class TestData {
     };
   }
 
-  @Step("Set up expected results")
   @DataProvider(name = "loginData")
   public static Object[][] getLoginData() {
     return new Object[][]{
@@ -178,7 +174,6 @@ public class TestData {
     };
   }
 
-  @Step("Set up expected results")
   @DataProvider(name = "footerNavigationData")
   public static Object[][] getFooterNavMenuData() {
     return new Object[][]{
@@ -186,6 +181,14 @@ public class TestData {
             {POLICY_LINK, POLICY_URL, POLICY_TITLE},
             {ADVANCED_SEARCH_LINK, ADVANCED_SEARCH_URL, ADVANCED_SEARCH_TITLE},
             {ORDERS_AND_RETURNS_LINK, ORDERS_AND_RETURNS_URL, ORDERS_AND_RETURNS_TITLE}
+    };
+  }
+
+  @DataProvider(name = "compareProductData")
+  public static Object[][] getCompareProductData() {
+    return new Object[][]{
+            {DRIVEN_BACKPACK_PRODUCT_NAME},
+            {FUSION_BACKPACK_PRODUCT_NAME}
     };
   }
 

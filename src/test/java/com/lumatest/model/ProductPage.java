@@ -15,7 +15,7 @@ public class ProductPage extends CatalogPage {
   @FindBy(id = "product-addtocart-button")
   WebElement addToCartButton;
 
-  @FindBy(css = "div[class*=info-price] span[class=price]")
+  @FindBy(css = "div[class*='info-price'] span[class='price']")
   private WebElement productPrice;
 
   @FindBy(css = "div[class*='description']")
@@ -26,6 +26,12 @@ public class ProductPage extends CatalogPage {
 
   @FindBy(css = "div[itemprop='sku']")
   private WebElement productSKU;
+
+  @FindBy(css = "div[class='page messages'] div[data-bind*='html']")
+  private WebElement productAlertMessage;
+
+  @FindBy(css = "a[class='action tocompare']")
+  private WebElement addToCompareButton;
 
   protected ProductPage(WebDriver driver) {
     super(driver);
@@ -78,5 +84,24 @@ public class ProductPage extends CatalogPage {
     getWait().until(ExpectedConditions.elementToBeClickable(productSKU));
 
     return productSKU.getText();
+  }
+
+  @Step("Get text from alert message on product page")
+  public String getAlertMessage() {
+    getWait().until(ExpectedConditions.visibilityOf(productAlertMessage));
+
+    return productAlertMessage.getText();
+  }
+
+  @Step("Click on Add to Compare button")
+  public ProductPage clickAddToCompare() {
+    try {
+      getWait().until(ExpectedConditions.elementToBeClickable(addToCompareButton)).click();
+    } catch (Exception e) {
+      Reporter.log("Click Element using fallback method: " + addToCompareButton, true);
+      clickWithJS(addToCompareButton);
+    }
+
+    return this;
   }
 }

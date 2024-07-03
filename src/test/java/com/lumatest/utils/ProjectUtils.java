@@ -22,12 +22,10 @@ public class ProjectUtils {
     }
   }
 
-  @Step("Open Base URL")
   public static String getBaseUrl() {
     return properties.getProperty("base.url");
   }
 
-  @Step("Read text from file")
   public static String readFromFile(String filePath) throws IOException {
     StringBuilder contentBuilder = new StringBuilder();
     try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
