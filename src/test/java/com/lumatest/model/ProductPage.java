@@ -24,6 +24,9 @@ public class ProductPage extends CatalogPage {
   @FindBy(css = "div[title='Availability']")
   private WebElement productAvailability;
 
+  @FindBy(css = "div[itemprop='sku']")
+  private WebElement productSKU;
+
   protected ProductPage(WebDriver driver) {
     super(driver);
   }
@@ -68,5 +71,12 @@ public class ProductPage extends CatalogPage {
     } else {
       return "Unknown product stock";
     }
+  }
+
+  @Step("Get product SKU or ID")
+  public String getProductSKU() {
+    getWait().until(ExpectedConditions.elementToBeClickable(productSKU));
+
+    return productSKU.getText();
   }
 }

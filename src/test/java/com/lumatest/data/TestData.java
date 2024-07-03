@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 
 import java.io.IOException;
+import java.util.List;
 
 import static com.lumatest.utils.ProjectUtils.readFromFile;
 
@@ -81,6 +82,8 @@ public class TestData {
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
   public static final String DRIVEN_BACKPACK_LISTED_PRICE = "$36.00";
   public static final String DRIVEN_BACKPACK_DESCRIPTION;
+  public static final String DRIVEN_BACKPACK_SKU = "24-WB03";
+  public static final List<String> DRIVEN_BACKPACK_BREADCRUMB_PATH = List.of("Home", "Gear", "Bags", "Driven Backpack");
   public static final String FUSION_BACKPACK_PRODUCT_NAME = "Fusion Backpack";
 
   /*

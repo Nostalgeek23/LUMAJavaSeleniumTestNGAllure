@@ -104,4 +104,45 @@ public class ProductPageTest extends BaseTest {
     Allure.step("Verify Stock Availability status on Product Page");
     Assert.assertEquals(productAvailability, TestData.PRODUCT_IN_STOCK);
   }
+
+  @Test(
+          testName = "PRODUCT | Product SKU/ID",
+          description = "TC-PROD-009 Verify SKU/ID Display",
+          groups = {"functional"}
+  )
+  @Story("Product Details")
+  @Severity(SeverityLevel.NORMAL)
+  @Description("Ensure that the product SKU or ID is displayed correctly.")
+  @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
+  public void testProductSKU() {
+
+    String productSKU = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
+            .getProductSKU();
+
+    Allure.step("Verify SKU or ID on Product Page");
+    Assert.assertEquals(productSKU, TestData.DRIVEN_BACKPACK_SKU);
+  }
+
+  @Test(
+          testName = "PRODUCT | Product breadcrumb path",
+          description = "TC-PROD-010 Verify the opened product breadcrumb path",
+          groups = {"functional"}
+  )
+  @Story("Product Details")
+  @Severity(SeverityLevel.NORMAL)
+  @Description("Verify the opened product breadcrumb path")
+  public void testProductPath() {
+
+    List<String> actualProductPath = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
+            .getBreadcrumbsMenuText();
+
+    Allure.step("Verify the product breadcrumb path");
+    Assert.assertEquals(actualProductPath, TestData.DRIVEN_BACKPACK_BREADCRUMB_PATH);
+  }
 }
