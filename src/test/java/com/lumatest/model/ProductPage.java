@@ -27,7 +27,7 @@ public class ProductPage extends CatalogPage {
   @FindBy(css = "div[itemprop='sku']")
   private WebElement productSKU;
 
-  @FindBy(css = "div[class='page messages'] div[data-bind*='html']")
+  @FindBy(css = "div[data-bind*='html']")
   private WebElement productAlertMessage;
 
   @FindBy(css = "a[class='action tocompare']")
