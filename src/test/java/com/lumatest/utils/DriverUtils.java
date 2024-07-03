@@ -40,6 +40,7 @@ public class DriverUtils {
 //        firefoxOptions.addArguments("--ignore-certificate-errors");
 
     edgeOptions = new EdgeOptions();
+    edgeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
     edgeOptions.addArguments("--incognito");
     edgeOptions.addArguments("--headless");
     edgeOptions.addArguments("--window-size=1920,1080");

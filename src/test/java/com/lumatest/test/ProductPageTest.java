@@ -65,7 +65,7 @@ public class ProductPageTest extends BaseTest {
 
   @Test(
           testName = "PRODUCT | Product Description",
-          description = "TC-PROD-005 Verify Product Price on Product Page",
+          description = "TC-PROD-005 Verify Product Description on Product Page",
           groups = {"functional"}
   )
   @Story("Product Details")
@@ -80,7 +80,7 @@ public class ProductPageTest extends BaseTest {
             .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
             .getProductDescription();
 
-    Allure.step("Verify current price matches the listed one");
+    Allure.step("Verify current description matches the listed one");
     Assert.assertEquals(productDescription, TestData.DRIVEN_BACKPACK_DESCRIPTION);
   }
 
@@ -165,7 +165,7 @@ public class ProductPageTest extends BaseTest {
             .clickAddToCompare()
             .getAlertMessage();
 
-    Allure.step("Verify add to compare message");
+    Allure.step("Verify add to compare message for " + productName);
     Assert.assertEquals(actualMessage, "You added product " + productName + " to the comparison list.");
   }
 }
