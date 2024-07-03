@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Reporter;
 
 public class ProductPage extends CatalogPage {
 
@@ -16,6 +17,12 @@ public class ProductPage extends CatalogPage {
 
   @FindBy(css = "div[class*=info-price] span[class=price]")
   private WebElement productPrice;
+
+  @FindBy(css = "div[class*='description']")
+  private WebElement productDescription;
+
+  @FindBy(css = "div[title='Availability']")
+  private WebElement productAvailability;
 
   protected ProductPage(WebDriver driver) {
     super(driver);
@@ -34,9 +41,32 @@ public class ProductPage extends CatalogPage {
     return this;
   }
 
+  @Step("Get price from Product Page")
   public String getProductPrice() {
     getWait().until(ExpectedConditions.elementToBeClickable(productPrice));
 
     return productPrice.getText();
+  }
+
+  @Step("Get description of product")
+  public String getProductDescription() {
+    getWait().until(ExpectedConditions.elementToBeClickable(productDescription));
+
+    return productDescription.getText();
+  }
+
+  @Step("Get availability of product")
+  public String getProductAvailability() {
+    getWait().until(ExpectedConditions.elementToBeClickable(productAvailability));
+
+    if (productAvailability.getText().equals("IN STOCK")) {
+      Reporter.log("Product is in stock", true);
+      return productAvailability.getText();
+    } else if (productAvailability.getText().equals("OUT OF STOCK")) {
+      Reporter.log("Product is out of stock", true);
+      return productAvailability.getText();
+    } else {
+      return "Unknown product stock";
+    }
   }
 }

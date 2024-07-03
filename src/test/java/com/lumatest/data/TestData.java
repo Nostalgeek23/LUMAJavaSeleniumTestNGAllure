@@ -1,7 +1,13 @@
 package com.lumatest.data;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
+
+import java.io.IOException;
+
+import static com.lumatest.utils.ProjectUtils.readFromFile;
+
 
 public class TestData {
   public static final String BASE_URL = "https://magento.softwaretestingboard.com";
@@ -73,6 +79,7 @@ public class TestData {
   public static final String DRIVEN_BACKPACK_PRODUCT_URL = BASE_URL + "/driven-backpack.html";
   public static final String DRIVEN_BACKPACK_PRODUCT_NAME = "Driven Backpack";
   public static final String DRIVEN_BACKPACK_LISTED_PRICE = "$36.00";
+  public static final String DRIVEN_BACKPACK_DESCRIPTION;
   public static final String FUSION_BACKPACK_PRODUCT_NAME = "Fusion Backpack";
 
   /*
@@ -112,7 +119,15 @@ public class TestData {
   public static final By ORDERS_AND_RETURNS_LINK = By.cssSelector("a[href$='/sales/guest/form/']");
   public static final String ORDERS_AND_RETURNS_TITLE = "Orders and Returns";
 
-  //            Allure.step("Set up expected results");
+  static {
+    try {
+      DRIVEN_BACKPACK_DESCRIPTION = readFromFile("src/test/java/com/lumatest/data/DrivenBackpackDescription.txt");
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
+  }
+
+  @Step("Set up expected results")
   @DataProvider(name = "navigationData")
   public static Object[][] getNavMenuData() {
     return new Object[][]{
@@ -125,6 +140,7 @@ public class TestData {
     };
   }
 
+  @Step("Set up expected results")
   @DataProvider(name = "subNavigationData")
   public static Object[][] getSubNavMenuData() {
     return new Object[][]{
@@ -142,6 +158,7 @@ public class TestData {
     };
   }
 
+  @Step("Set up expected results")
   @DataProvider(name = "searchNavigationData")
   public static Object[][] getSearchNavData() {
     return new Object[][]{
@@ -149,6 +166,7 @@ public class TestData {
     };
   }
 
+  @Step("Set up expected results")
   @DataProvider(name = "loginData")
   public static Object[][] getLoginData() {
     return new Object[][]{
@@ -156,6 +174,7 @@ public class TestData {
     };
   }
 
+  @Step("Set up expected results")
   @DataProvider(name = "footerNavigationData")
   public static Object[][] getFooterNavMenuData() {
     return new Object[][]{

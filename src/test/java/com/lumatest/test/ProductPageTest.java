@@ -61,6 +61,26 @@ public class ProductPageTest extends BaseTest {
 
     Allure.step("Verify current price matches the listed one");
     Assert.assertEquals(productPrice, TestData.DRIVEN_BACKPACK_LISTED_PRICE);
+  }
 
+  @Test(
+          testName = "PRODUCT | Product Description ",
+          description = "TC-PROD-005 Verify Product Price on Product Page",
+          groups = {"functional"}
+  )
+  @Story("Product Details")
+  @Severity(SeverityLevel.NORMAL)
+  @Description("Ensure that the product description is displayed correctly and matches the listed one.")
+  @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
+  public void testProductDescription() {
+
+    String productDescription = new HomePage(getDriver())
+            .clickGearTopMenu()
+            .clickBagsSideMenu()
+            .clickProductImg(TestData.DRIVEN_BACKPACK_PRODUCT_NAME)
+            .getProductDescription();
+
+    Allure.step("Verify current price matches the listed one");
+    Assert.assertEquals(productDescription, TestData.DRIVEN_BACKPACK_DESCRIPTION);
   }
 }
