@@ -1,6 +1,7 @@
 package com.lumatest.model;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -88,20 +89,42 @@ public class ProductPage extends CatalogPage {
 
   @Step("Get text from alert message on product page")
   public String getAlertMessage() {
-    getWait().until(ExpectedConditions.visibilityOf(productAlertMessage));
-
-    return productAlertMessage.getText();
+    int retries = 3;
+    while (retries > 0) {
+      Reporter.log("Remaining retries: " + retries, true);
+      try {
+        getWait().until(ExpectedConditions.visibilityOf(productAlertMessage));
+        return productAlertMessage.getText();
+      } catch (StaleElementReferenceException e) {
+        retries--;
+        if (retries == 0) {
+          throw e;
+        }
+        getWait().until(ExpectedConditions.visibilityOf(productAlertMessage));
+      }
+    }
+    return null;
   }
 
   @Step("Click on Add to Compare button")
   public ProductPage clickAddToCompare() {
-    try {
-      getWait().until(ExpectedConditions.elementToBeClickable(addToCompareButton)).click();
-    } catch (Exception e) {
-      Reporter.log("Click Element using fallback method: " + addToCompareButton, true);
-      clickWithJS(addToCompareButton);
+    int retries = 3;
+    while (retries > 0) {
+      try {
+        getWait().until(ExpectedConditions.elementToBeClickable(addToCompareButton)).click();
+        break;
+      } catch (StaleElementReferenceException e) {
+        retries--;
+        if (retries == 0) {
+          throw e;
+        }
+        getWait().until(ExpectedConditions.visibilityOf(addToCompareButton));
+      } catch (Exception e) {
+        Reporter.log("Click Element using fallback method: " + addToCompareButton, true);
+        clickWithJS(addToCompareButton);
+        break;
+      }
     }
-
     return this;
   }
 }

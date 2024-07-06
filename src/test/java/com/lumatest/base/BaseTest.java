@@ -41,6 +41,7 @@ public abstract class BaseTest {
     Reporter.log("Run " + result.getMethod().getMethodName(), true);
 
     WebDriver driver = DriverUtils.createDriver(browser);
+    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
     this.threadLocalDriver.set(driver);
 
     Reporter.log("Test Thread ID: " + Thread.currentThread().getId(), true);
