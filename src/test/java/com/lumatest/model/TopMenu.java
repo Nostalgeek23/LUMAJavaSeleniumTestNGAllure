@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Reporter;
 
 public abstract class TopMenu extends FooterMenu {
   @FindBy(css = "a.logo")
@@ -34,6 +35,9 @@ public abstract class TopMenu extends FooterMenu {
 
   @FindBy(css = "a[class='action showcart']")
   private WebElement cartIcon;
+
+  @FindBy(css = "span[class='counter-number']")
+  private WebElement cartCounterNumber;
 
   @FindBy(css = "a[class='action viewcart']")
   private WebElement viewCartLink;
@@ -63,8 +67,13 @@ public abstract class TopMenu extends FooterMenu {
   public ProductPage clickProductImg(String productName) {
     final String productNameLocator = "img[alt*='";
     String imgLocator = productNameLocator + productName + "']";
-    getWait().until(ExpectedConditions.elementToBeClickable(getDriver().findElement(By.cssSelector(imgLocator))))
-            .click();
+    try {
+      getWait().until(ExpectedConditions.elementToBeClickable(getDriver().findElement(By.cssSelector(imgLocator))))
+              .click();
+    } catch (Exception e) {
+      WebElement productImg = getDriver().findElement(By.cssSelector(imgLocator));
+      clickWithJS(productImg);
+    }
 
     return new ProductPage(getDriver());
   }
@@ -103,29 +112,58 @@ public abstract class TopMenu extends FooterMenu {
 
   @Step("Check the header message after login")
   public String getHeaderLoggedInMessage() {
-    getWait().until(ExpectedConditions.elementToBeClickable(headerLoggedInMessage));
+    getWait().until(ExpectedConditions.visibilityOf(headerLoggedInMessage));
 
     return headerLoggedInMessage.getText();
   }
 
   @Step("Click on the Cart icon")
   public TopMenu clickOnCartIcon() {
-    cartIcon.click();
+    try {
+      getWait().until(ExpectedConditions.elementToBeClickable(cartCounterNumber));
+      cartIcon.click();
+    } catch (Exception e) {
+      clickWithJS(cartIcon);
+    }
 
     return this;
   }
 
   @Step("Click on View and Edit Cart link")
   public ShoppingCartPage clickViewCartLink() {
+    String currentURL = getDriver().getCurrentUrl();
+
     getWait().until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
+    waitForUrlToChange(currentURL);
 
     return new ShoppingCartPage(getDriver());
   }
 
   @Step("Click on Proceed to Checkout button")
   public CheckoutPage clickCheckoutButton() {
-    getWait().until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+    String currentURL = getDriver().getCurrentUrl();
+    int retries = 3;
+    while (retries > 0) {
+      Reporter.log("Remaining retries: " + retries, true);
+      try {
+        getWait().until(ExpectedConditions.elementToBeClickable(checkoutButton)).click();
+        waitForUrlToChange(currentURL);
 
-    return new CheckoutPage(getDriver());
+        return new CheckoutPage(getDriver());
+      } catch (Exception e1) {
+        Reporter.log("Standard click failed: " + e1.getMessage(), true);
+          try {
+            clickWithJS(checkoutButton);
+            waitForUrlToChange(currentURL);
+            return new CheckoutPage(getDriver());
+          } catch (Exception e2) {
+            Reporter.log("JS click failed: " + e2.getMessage(), true);
+          }
+      } finally {
+        retries--;
+      }
+    }
+
+    throw new RuntimeException("Failed to click checkout button after 3 retries");
   }
 }

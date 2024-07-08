@@ -1,6 +1,5 @@
 package com.lumatest.data;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 
@@ -103,6 +102,7 @@ public class TestData {
    */
   public static final String SHOPPING_CART_URL = BASE_URL + "/checkout/cart/";
   public static final String CHECKOUT_URL = BASE_URL + "/checkout/";
+  public static final String CHECKOUT_FIREFOX_URL = BASE_URL + "/checkout/#shipping";
 
   /*
   For Footer

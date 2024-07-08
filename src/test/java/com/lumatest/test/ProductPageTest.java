@@ -20,14 +20,14 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Name",
           description = "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          groups = {"functional"}
+          groups = {"product"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
   @Description("To verify that the product page displays the correct product name and breadcrumb menu text " +
           "for the 'Driven Backpack'.")
   @Link(TestData.DRIVEN_BACKPACK_PRODUCT_URL)
-  public void testProduct() {
+  public void testProductName() {
 
     ProductPage productPage = new HomePage(getDriver())
             .clickGearTopMenu()
@@ -45,7 +45,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Price",
           description = "TC-PROD-003 Verify Product Price on Product Page",
-          groups = {"functional"}
+          groups = {"product"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -66,7 +66,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Description",
           description = "TC-PROD-005 Verify Product Description on Product Page",
-          groups = {"functional"}
+          groups = {"product"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -87,7 +87,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Stock Availability",
           description = "TC-PROD-006 Verify Stock Availability on Product Page",
-          groups = {"functional"}
+          groups = {"product"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -108,7 +108,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product SKU/ID",
           description = "TC-PROD-009 Verify SKU/ID Display",
-          groups = {"functional"}
+          groups = {"product"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -129,7 +129,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product breadcrumb path",
           description = "TC-PROD-010 Verify the opened product breadcrumb path",
-          groups = {"functional"}
+          groups = {"product"}
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -149,7 +149,7 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product add to compare list message",
           description = "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          groups = {"functional"},
+          groups = {"product"},
           dataProviderClass = TestData.class,
           dataProvider = "compareProductData"
   )

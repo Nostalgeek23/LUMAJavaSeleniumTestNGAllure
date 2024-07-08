@@ -18,6 +18,7 @@ public class DriverUtils {
   static {
     chromeOptions = new ChromeOptions();
     chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+//    chromeOptions.setBinary("/home/eugene/chrome/linux-126.0.6478.126/chrome-linux64/chrome");
     chromeOptions.addArguments("--incognito");
     chromeOptions.addArguments("--headless");
     chromeOptions.addArguments("--window-size=1920,1080");

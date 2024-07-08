@@ -43,19 +43,19 @@ public  class Login<T extends Login<T>> extends TopMenu{
   }
 
   private boolean isOnMyAccountPage() {
-    return getCurrentUrl().equals(TestData.ACCOUNT_URL);
+    return getUrl().equals(TestData.ACCOUNT_URL);
   }
 
   private boolean isOnCreateAccountPage() {
-    return getCurrentUrl().equals(TestData.CREATE_ACCOUNT_URL);
+    return getUrl().equals(TestData.CREATE_ACCOUNT_URL);
   }
 
   private boolean isOnCustomerLoginPage() {
-    return getCurrentUrl().equals(TestData.CUSTOMER_LOGIN_URL);
+    return getUrl().equals(TestData.CUSTOMER_LOGIN_URL);
   }
 
   private boolean isOnHomePage() {
-    return getCurrentUrl().equals(TestData.BASE_URL + "/");
+    return getUrl().equals(TestData.BASE_URL + "/");
   }
 
 
@@ -76,7 +76,7 @@ public  class Login<T extends Login<T>> extends TopMenu{
 
   @Step("Check URL is '{accountURL}'")
   public boolean isAccountCreated() {
-    return getCurrentUrl().equals(TestData.ACCOUNT_URL);
+    return getUrl().equals(TestData.ACCOUNT_URL);
   }
 
   @Step("Check account created or Email already registered")
