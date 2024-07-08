@@ -19,7 +19,7 @@ public class SearchTest extends BaseTest {
           groups = {"search"},
           dataProviderClass = TestData.class,
           dataProvider = "searchNavigationData",
-          description = "TC-01.05: Verify Search Result Navigation",
+          description = "TC-04.01: Verify Search Result Navigation",
           testName = "Search: Verify Search Result Navigation"
   )
   @Severity(SeverityLevel.CRITICAL)

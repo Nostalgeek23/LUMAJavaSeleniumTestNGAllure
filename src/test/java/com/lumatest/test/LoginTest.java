@@ -17,7 +17,7 @@ public class LoginTest extends BaseTest {
 
   @Test(
           groups = {"login"},
-          description = "TC-01.06.01: Verify Navigation to Create Account page after click on create account link",
+          description = "TC-03.01: Verify Navigation to Create Account page after click on create account link",
           testName = "Login: Verify Navigation to Create Account page after click on create account link"
   )
   @Severity(SeverityLevel.CRITICAL)
@@ -38,7 +38,7 @@ public class LoginTest extends BaseTest {
           groups = {"login"},
           dataProviderClass = TestData.class,
           dataProvider = "loginData",
-          description = "TC-01.06.02: Verify Navigation to Account page after account creation",
+          description = "TC-03.02: Verify Navigation to Account page after account creation",
           testName = "Login: Verify Navigation to Account page after account creation"
   )
   @Severity(SeverityLevel.CRITICAL)
@@ -61,7 +61,7 @@ public class LoginTest extends BaseTest {
 
   @Test(
           groups = {"login"},
-          description = "TC-01.06.03: Verify Navigation to Customer Login page after click on Sign In link",
+          description = "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
           testName = "Login: Verify Navigation to Customer Login page after click on Sign In link"
   )
   @Severity(SeverityLevel.CRITICAL)
@@ -83,7 +83,7 @@ public class LoginTest extends BaseTest {
           groups = {"login"},
           dataProviderClass = TestData.class,
           dataProvider = "loginData",
-          description = "TC-01.06.04: Verify Navigation to Account page after login",
+          description = "TC-03.04: Verify Navigation to Account page after login",
           testName = "Login: Verify Navigation to Account page after login"
   )
   @Severity(SeverityLevel.CRITICAL)

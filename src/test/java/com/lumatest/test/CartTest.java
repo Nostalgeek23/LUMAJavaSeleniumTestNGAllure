@@ -16,7 +16,7 @@ public class CartTest extends BaseTest {
 
   @Test(
           groups = {"cart"},
-          description = "TC-01.07: Verify Navigation to Cart",
+          description = "TC-02.01: Verify Navigation to Cart",
           testName = "Cart: Verify Navigation to Cart"
   )
   @Severity(SeverityLevel.CRITICAL)
@@ -38,7 +38,7 @@ public class CartTest extends BaseTest {
 
   @Test(
           groups = {"cart"},
-          description = "TC-01.08: Verify Navigation to Checkout",
+          description = "TC-02.02: Verify Navigation to Checkout",
           testName = "Cart: Verify Navigation to Checkout"
   )
   @Severity(SeverityLevel.CRITICAL)
@@ -57,5 +57,27 @@ public class CartTest extends BaseTest {
     Allure.step("Verify URL after click on Checkout");
     Assert.assertTrue(
             resultURL.equals(TestData.CHECKOUT_URL) || resultURL.equals(TestData.CHECKOUT_FIREFOX_URL));
+  }
+
+  @Test(
+          groups = {"cart"},
+          description = "TC-02.03: Verify Add to Cart Functionality",
+          testName = "Cart: Verify Add to Cart Functionality"
+  )
+  @Severity(SeverityLevel.CRITICAL)
+  @Story("Cart")
+  @Description("Ensure that the Add to Cart button adds the product to the shopping cart correctly.")
+  @Link(TestData.SHOPPING_CART_URL)
+  public void testAddToCart() {
+
+    String itemInCartName = new HomePage(getDriver())
+            .clickProductImg(TestData.FUSION_BACKPACK_PRODUCT_NAME)
+            .clickOnAddToCart()
+            .clickOnCartIcon()
+            .clickViewCartLink()
+            .getItemInCartName();
+
+    Allure.step("Verify item name in cart matches added one");
+    Assert.assertEquals(itemInCartName, TestData.FUSION_BACKPACK_PRODUCT_NAME);
   }
 }
