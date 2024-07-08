@@ -107,20 +107,6 @@ public abstract class BaseTest {
     return threadLocalDriver.get();
   }
 
-  protected WebDriverWait getWait2() {
-    if (wait2.get() == null) {
-      wait2.set(new WebDriverWait(getDriver(), Duration.ofSeconds(2)));
-    }
-    return wait2.get();
-  }
-
-  protected WebDriverWait getWait5() {
-    if (wait5.get() == null) {
-      wait5.set(new WebDriverWait(getDriver(), Duration.ofSeconds(5)));
-    }
-    return wait5.get();
-  }
-
   protected WebDriverWait getWait10() {
     if (wait10.get() == null) {
       wait10.set(new WebDriverWait(getDriver(), Duration.ofSeconds(10)));

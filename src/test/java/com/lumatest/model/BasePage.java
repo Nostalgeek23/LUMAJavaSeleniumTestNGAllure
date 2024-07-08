@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -53,8 +54,13 @@ public abstract class BasePage {
     return getDriver().getTitle();
   }
 
+  public void waitForUrlToChange(String oldUrl) {
+    getWait().until(ExpectedConditions.not((ExpectedCondition<Boolean>) d -> d.getCurrentUrl().equals(oldUrl)));
+  }
+
   @Step("Get current URL")
-  public String getCurrentUrl() {
+  public String getUrl() {
+
     return getDriver().getCurrentUrl();
   }
 
