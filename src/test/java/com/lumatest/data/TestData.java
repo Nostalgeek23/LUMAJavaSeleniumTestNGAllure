@@ -1,6 +1,5 @@
 package com.lumatest.data;
 
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 

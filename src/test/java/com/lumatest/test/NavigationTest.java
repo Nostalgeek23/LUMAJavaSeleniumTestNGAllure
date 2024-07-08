@@ -3,7 +3,6 @@ package com.lumatest.test;
 import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
-import com.lumatest.model.Login;
 import com.lumatest.model.ProductPage;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;

@@ -1,6 +1,5 @@
 package com.lumatest.model;
 
-import com.lumatest.data.TestData;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
