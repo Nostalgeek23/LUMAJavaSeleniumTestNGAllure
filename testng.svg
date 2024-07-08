@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96.5" height="28" role="img">
+    <g shape-rendering="crispEdges">
+      <rect width="90" height="28" fill="#F9F6EE"/>
+    </g>
+  <g text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="100">
+    <text transform="scale(.1)" x="350" y="175" textLength="375" font-weight="bold" fill="black">TEST</text>
+    <text transform="scale(.1)" x="610" y="175" textLength="525" font-weight="bold" fill="red">N</text>
+    <text transform="scale(.1)" x="710" y="175" textLength="525" font-weight="bold" fill="orange">G</text>
+  </g>
+</svg>
