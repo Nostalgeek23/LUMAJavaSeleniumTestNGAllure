@@ -112,7 +112,7 @@ public abstract class TopMenu extends FooterMenu {
 
   @Step("Check the header message after login")
   public String getHeaderLoggedInMessage() {
-    getWait().until(ExpectedConditions.elementToBeClickable(headerLoggedInMessage));
+    getWait().until(ExpectedConditions.visibilityOf(headerLoggedInMessage));
 
     return headerLoggedInMessage.getText();
   }
