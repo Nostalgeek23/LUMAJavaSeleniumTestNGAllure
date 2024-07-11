@@ -163,7 +163,12 @@ jobs:
 
       - name: Merge Allure Reports
         run: |
-          allure generate reports/ubuntu reports/windows reports/macos --clean -o reports/merged
+          allure generate reports/ubuntu reports/windows reports/macos -o reports/merged
+
+      - name: List Merged Allure Report for Debugging
+        run: |
+          echo "Merged Allure Report:"
+          ls -l allure-report
 
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
