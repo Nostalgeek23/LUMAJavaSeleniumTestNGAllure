@@ -4,6 +4,7 @@ import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
 import com.lumatest.model.ProductPage;
+import com.lumatest.utils.RetryAnalyzer;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -20,7 +21,8 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Name",
           description = "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          groups = {"product"}
+          groups = {"product"},
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -45,7 +47,8 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Price",
           description = "TC-PROD-003 Verify Product Price on Product Page",
-          groups = {"product"}
+          groups = {"product"},
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -66,7 +69,8 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Description",
           description = "TC-PROD-005 Verify Product Description on Product Page",
-          groups = {"product"}
+          groups = {"product"},
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -87,7 +91,8 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product Stock Availability",
           description = "TC-PROD-006 Verify Stock Availability on Product Page",
-          groups = {"product"}
+          groups = {"product"},
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -108,7 +113,8 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product SKU/ID",
           description = "TC-PROD-009 Verify SKU/ID Display",
-          groups = {"product"}
+          groups = {"product"},
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -129,7 +135,8 @@ public class ProductPageTest extends BaseTest {
   @Test(
           testName = "PRODUCT | Product breadcrumb path",
           description = "TC-PROD-010 Verify the opened product breadcrumb path",
-          groups = {"product"}
+          groups = {"product"},
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)
@@ -151,7 +158,8 @@ public class ProductPageTest extends BaseTest {
           description = "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
           groups = {"product"},
           dataProviderClass = TestData.class,
-          dataProvider = "compareProductData"
+          dataProvider = "compareProductData",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Story("Product Details")
   @Severity(SeverityLevel.NORMAL)

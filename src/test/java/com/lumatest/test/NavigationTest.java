@@ -4,6 +4,7 @@ import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
 import com.lumatest.model.ProductPage;
+import com.lumatest.utils.RetryAnalyzer;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -22,7 +23,8 @@ public class NavigationTest extends BaseTest {
   @Test(
           groups = {"navigation"},
           description = "TC-01.00 Open base URL",
-          testName = "Navigation: open base URL"
+          testName = "Navigation: open base URL",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.BLOCKER)
   @Story("Navigation")
@@ -45,7 +47,8 @@ public class NavigationTest extends BaseTest {
   @Test(
           groups = {"navigation"},
           description = "TC-01.01 Open Home page by logo click",
-          testName = "Navigation: open home page by clicking logo"
+          testName = "Navigation: open home page by clicking logo",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -68,7 +71,8 @@ public class NavigationTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "navigationData",
           description = "TC-01.02 Check Nav menu URLs",
-          testName = "Navigation: Verify Category Navigation"
+          testName = "Navigation: Verify Category Navigation",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -102,7 +106,8 @@ public class NavigationTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "subNavigationData",
           description = "TC-01.03 Open Home page by logo click",
-          testName = "Navigation: Verify Subcategory Navigation"
+          testName = "Navigation: Verify Subcategory Navigation",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -122,7 +127,8 @@ public class NavigationTest extends BaseTest {
   @Test(
           groups = {"navigation"},
           description = "TC-01.04.01 Verify Breadcrumb Navigation to category page",
-          testName = "Navigation: Verify Breadcrumb Navigation to category page"
+          testName = "Navigation: Verify Breadcrumb Navigation to category page",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -148,7 +154,8 @@ public class NavigationTest extends BaseTest {
   @Test(
           groups = {"navigation"},
           description = "TC-01.04.02 Verify Breadcrumb Navigation to subcategory page",
-          testName = "Navigation: Verify Breadcrumb Navigation to subcategory page"
+          testName = "Navigation: Verify Breadcrumb Navigation to subcategory page",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -175,7 +182,8 @@ public class NavigationTest extends BaseTest {
   @Test(
           groups = {"navigation"},
           description = "TC-01.04.03 Verify Breadcrumb Navigation to home page",
-          testName = "Navigation: Verify Breadcrumb Navigation to home page"
+          testName = "Navigation: Verify Breadcrumb Navigation to home page",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
@@ -199,7 +207,8 @@ public class NavigationTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "footerNavigationData",
           description = "TC-01.09: Verify Footer Links Navigation",
-          testName = "Navigation: Verify Footer Links Navigation"
+          testName = "Navigation: Verify Footer Links Navigation",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Navigation")
