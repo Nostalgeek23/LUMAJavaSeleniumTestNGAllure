@@ -141,32 +141,32 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: allure-results-ubuntu-latest
-          path: allure-results/ubuntu
+          path: reports/ubuntu
 
       - name: Download Allure Results (Windows)
         uses: actions/download-artifact@v2
         with:
           name: allure-results-windows-latest
-          path: allure-results/windows
+          path: reports/windows
 
       - name: Download Allure Results (macOS)
         uses: actions/download-artifact@v2
         with:
           name: allure-results-macos-13
-          path: allure-results/macos
+          path: reports/macos
 
       - name: List Downloaded Reports for Debugging
         run: |
           echo "Ubuntu Allure Results:"
-          ls -l allure-results/ubuntu
+          ls -l reports/ubuntu
           echo "Windows Allure Results:"
-          ls -l allure-results/windows
+          ls -l reports/windows
           echo "macOS Allure Results:"
-          ls -l allure-results/macos        
+          ls -l reports/macos     
 
       - name: Merge Allure Reports
         run: |
-          allure generate reports/ubuntu reports/windows reports/macos -o allure-report
+          allure generate reports/ubuntu reports/windows reports/macos --clean -o allure-report
           echo "Allure generate exit code: $?"
 
       - name: List Merged Allure Report for Debugging
