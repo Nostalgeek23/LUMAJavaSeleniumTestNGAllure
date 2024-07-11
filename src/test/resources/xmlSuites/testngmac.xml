@@ -4,6 +4,7 @@
 
     <test name = "ChromeTestMacOs" verbose="10">
         <parameter name="browser" value="chrome"/>
+        <parameter name="os" value="macos" />
         <classes>
             <class name="com.lumatest.test.ProductPageTest"/>
             <class name="com.lumatest.test.CartTest"/>
