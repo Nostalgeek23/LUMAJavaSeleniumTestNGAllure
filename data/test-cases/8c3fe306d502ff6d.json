@@ -1,0 +1,239 @@
+{
+  "uid" : "8c3fe306d502ff6d",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "fullName" : "com.lumatest.test.SearchTest.testSearchResultNavigation",
+  "historyId" : "3e648ad26a75ade9a6c804b7ee407d2c",
+  "time" : {
+    "start" : 1720732338313,
+    "stop" : 1720732339340,
+    "duration" : 1027
+  },
+  "description" : "Ensure that clicking on a product in the search results redirects the user to the correct product page.",
+  "descriptionHtml" : "<p>Ensure that clicking on a product in the search results redirects the user to the correct product page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720732337378,
+      "stop" : 1720732338303,
+      "duration" : 925
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720732285326,
+      "stop" : 1720732285888,
+      "duration" : 562
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that clicking on a product in the search results redirects the user to the correct product page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Search product 'Driven Backpack'",
+      "time" : {
+        "start" : 1720732338314,
+        "stop" : 1720732338779,
+        "duration" : 465
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Driven Backpack"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click 'Driven Backpack' Img.",
+      "time" : {
+        "start" : 1720732338779,
+        "stop" : 1720732339242,
+        "duration" : 463
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Driven Backpack"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Collect actual product name text",
+      "time" : {
+        "start" : 1720732339242,
+        "stop" : 1720732339306,
+        "duration" : 64
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get current URL",
+      "time" : {
+        "start" : 1720732339306,
+        "stop" : 1720732339338,
+        "duration" : 32
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify that the user is redirected to the Driven Backpack page.",
+      "time" : {
+        "start" : 1720732339338,
+        "stop" : 1720732339339,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720732339424,
+      "stop" : 1720732339424,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720732339351,
+      "stop" : 1720732339424,
+      "duration" : 73
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.SearchTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.SearchTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testSearchResultNavigation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "ChromeTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.SearchTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1105-56"
+  }, {
+    "name" : "thread",
+    "value" : "4704@fv-az1105-56.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Search"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "https://magento.softwaretestingboard.com"
+  }, {
+    "name" : "arg1",
+    "value" : "Driven Backpack"
+  }, {
+    "name" : "arg2",
+    "value" : "https://magento.softwaretestingboard.com/driven-backpack.html"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com",
+    "type" : "custom"
+  } ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8c3fe306d502ff6d.json",
+  "parameterValues" : [ "https://magento.softwaretestingboard.com", "Driven Backpack", "https://magento.softwaretestingboard.com/driven-backpack.html", "chrome" ]
+}

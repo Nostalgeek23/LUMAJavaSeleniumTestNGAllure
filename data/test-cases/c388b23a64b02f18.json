@@ -1,0 +1,244 @@
+{
+  "uid" : "c388b23a64b02f18",
+  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+  "fullName" : "com.lumatest.test.ProductPageTest.testProductName",
+  "historyId" : "40d8f89a9ce83a3e32bf4c5bc3d391a5",
+  "time" : {
+    "start" : 1720732389396,
+    "stop" : 1720732391591,
+    "duration" : 2195
+  },
+  "description" : "To verify that the product page displays the correct product name and breadcrumb menu text for the 'Driven Backpack'.",
+  "descriptionHtml" : "<p>To verify that the product page displays the correct product name and breadcrumb menu text for the 'Driven Backpack'.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720732388435,
+      "stop" : 1720732389393,
+      "duration" : 958
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720732285326,
+      "stop" : 1720732285888,
+      "duration" : 562
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "To verify that the product page displays the correct product name and breadcrumb menu text for the 'Driven Backpack'.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Gear in the top menu",
+      "time" : {
+        "start" : 1720732389404,
+        "stop" : 1720732390258,
+        "duration" : 854
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on Bags in side menu",
+      "time" : {
+        "start" : 1720732390258,
+        "stop" : 1720732390777,
+        "duration" : 519
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click 'Driven Backpack' Img.",
+      "time" : {
+        "start" : 1720732390777,
+        "stop" : 1720732391284,
+        "duration" : 507
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Driven Backpack"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Collect actual product name text",
+      "time" : {
+        "start" : 1720732391284,
+        "stop" : 1720732391368,
+        "duration" : 84
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Collect List of breadcrumbs items",
+      "time" : {
+        "start" : 1720732391368,
+        "stop" : 1720732391591,
+        "duration" : 223
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify Driven Backpack is on product page and in the breadcrumbs",
+      "time" : {
+        "start" : 1720732391591,
+        "stop" : 1720732391591,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720732391593,
+      "stop" : 1720732392703,
+      "duration" : 1110
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720732405429,
+      "stop" : 1720732405429,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testProductName"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "EdgeTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1105-56"
+  }, {
+    "name" : "thread",
+    "value" : "4704@fv-az1105-56.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Product Details"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "edge"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/driven-backpack.html",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c388b23a64b02f18.json",
+  "parameterValues" : [ "edge" ]
+}

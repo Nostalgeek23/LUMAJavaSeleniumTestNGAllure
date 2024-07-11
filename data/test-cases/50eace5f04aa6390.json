@@ -1,0 +1,270 @@
+{
+  "uid" : "50eace5f04aa6390",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "fullName" : "com.lumatest.test.CartTest.testNavToCart",
+  "historyId" : "b56b6e001f912582125b0f5a35e00045",
+  "time" : {
+    "start" : 1720732541178,
+    "stop" : 1720732544812,
+    "duration" : 3634
+  },
+  "description" : "Ensure that clicking on the View Cart link redirects the user to the shopping cart page.",
+  "descriptionHtml" : "<p>Ensure that clicking on the View Cart link redirects the user to the shopping cart page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720732538013,
+      "stop" : 1720732541172,
+      "duration" : 3159
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720732285326,
+      "stop" : 1720732285888,
+      "duration" : 562
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that clicking on the View Cart link redirects the user to the shopping cart page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click 'Fusion Backpack' Img.",
+      "time" : {
+        "start" : 1720732541179,
+        "stop" : 1720732541247,
+        "duration" : 68
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Click on element with JS",
+        "time" : {
+          "start" : 1720732541215,
+          "stop" : 1720732541247,
+          "duration" : 32
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "[[FirefoxDriver: firefox on windows (54094ef7-c4a7-4dbe-a2d0-7cf76b86fa7f)] -> css selector: img[alt*='Fusion Backpack']]"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Fusion Backpack"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Add product to cart",
+      "time" : {
+        "start" : 1720732541249,
+        "stop" : 1720732543213,
+        "duration" : 1964
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the Cart icon",
+      "time" : {
+        "start" : 1720732543213,
+        "stop" : 1720732543466,
+        "duration" : 253
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on View and Edit Cart link",
+      "time" : {
+        "start" : 1720732543466,
+        "stop" : 1720732544800,
+        "duration" : 1334
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get current URL",
+      "time" : {
+        "start" : 1720732544800,
+        "stop" : 1720732544810,
+        "duration" : 10
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify URL after click on View Cart",
+      "time" : {
+        "start" : 1720732544810,
+        "stop" : 1720732544810,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 7,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720732553030,
+      "stop" : 1720732553030,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720732544819,
+      "stop" : 1720732545593,
+      "duration" : 774
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.CartTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.CartTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testNavToCart"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "FirefoxTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.CartTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1105-56"
+  }, {
+    "name" : "thread",
+    "value" : "4704@fv-az1105-56.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Cart"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/checkout/cart/",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ {
+      "uid" : "c4b471f374d699b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720732286515,
+        "stop" : 1720732290284,
+        "duration" : 3769
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "50eace5f04aa6390.json",
+  "parameterValues" : [ "firefox" ]
+}

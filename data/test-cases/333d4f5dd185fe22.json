@@ -1,0 +1,227 @@
+{
+  "uid" : "333d4f5dd185fe22",
+  "name" : "TC-01.09: Verify Footer Links Navigation",
+  "fullName" : "com.lumatest.test.NavigationTest.testFooterNavigation",
+  "historyId" : "6934736a3f2a82f89fb9b8e5d46781ec",
+  "time" : {
+    "start" : 1720732243116,
+    "stop" : 1720732243802,
+    "duration" : 686
+  },
+  "description" : "Ensure that clicking on the links in the footer redirects the user to the correct pages.",
+  "descriptionHtml" : "<p>Ensure that clicking on the links in the footer redirects the user to the correct pages.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720732242178,
+      "stop" : 1720732243103,
+      "duration" : 925
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720732230245,
+      "stop" : 1720732230823,
+      "duration" : 578
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that clicking on the links in the footer redirects the user to the correct pages.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click link in footer",
+      "time" : {
+        "start" : 1720732243129,
+        "stop" : 1720732243732,
+        "duration" : 603
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "footerLink",
+        "value" : "By.cssSelector: a[href$='/search/term/popular/']"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get page title with URL provided",
+      "time" : {
+        "start" : 1720732243732,
+        "stop" : 1720732243799,
+        "duration" : 67
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "https://magento.softwaretestingboard.com/search/term/popular/"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Verify actual results as expected",
+      "time" : {
+        "start" : 1720732243799,
+        "stop" : 1720732243799,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720732279285,
+      "stop" : 1720732279285,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720732243804,
+      "stop" : 1720732243850,
+      "duration" : 46
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testFooterNavigation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Regression"
+  }, {
+    "name" : "suite",
+    "value" : "Regression Test Run"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1105-56"
+  }, {
+    "name" : "thread",
+    "value" : "8108@fv-az1105-56.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Navigation"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "By.cssSelector: a[href$='/search/term/popular/']"
+  }, {
+    "name" : "arg1",
+    "value" : "https://magento.softwaretestingboard.com/search/term/popular/"
+  }, {
+    "name" : "arg2",
+    "value" : "Popular Search Terms"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ {
+      "uid" : "81448bf3f6071fac",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720732234010,
+        "stop" : 1720732234916,
+        "duration" : 906
+      }
+    }, {
+      "uid" : "66955f9ef187c2a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720732179172,
+        "stop" : 1720732179987,
+        "duration" : 815
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "333d4f5dd185fe22.json",
+  "parameterValues" : [ "By.cssSelector: a[href$='/search/term/popular/']", "https://magento.softwaretestingboard.com/search/term/popular/", "Popular Search Terms", "chrome" ]
+}

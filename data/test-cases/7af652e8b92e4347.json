@@ -1,0 +1,237 @@
+{
+  "uid" : "7af652e8b92e4347",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "fullName" : "com.lumatest.test.ProductPageTest.testProductInStock",
+  "historyId" : "6e53eb7ca84d22df7f5baaf289a27b6",
+  "time" : {
+    "start" : 1720732490987,
+    "stop" : 1720732494193,
+    "duration" : 3206
+  },
+  "description" : "Ensure that the stock availability is displayed correctly on the product page.",
+  "descriptionHtml" : "<p>Ensure that the stock availability is displayed correctly on the product page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720732487395,
+      "stop" : 1720732490981,
+      "duration" : 3586
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720732285326,
+      "stop" : 1720732285888,
+      "duration" : 562
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that the stock availability is displayed correctly on the product page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Gear in the top menu",
+      "time" : {
+        "start" : 1720732490987,
+        "stop" : 1720732492008,
+        "duration" : 1021
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on Bags in side menu",
+      "time" : {
+        "start" : 1720732492008,
+        "stop" : 1720732493000,
+        "duration" : 992
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click 'Driven Backpack' Img.",
+      "time" : {
+        "start" : 1720732493003,
+        "stop" : 1720732493867,
+        "duration" : 864
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Driven Backpack"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get availability of product",
+      "time" : {
+        "start" : 1720732493867,
+        "stop" : 1720732494192,
+        "duration" : 325
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify Stock Availability status on Product Page",
+      "time" : {
+        "start" : 1720732494192,
+        "stop" : 1720732494192,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720732494195,
+      "stop" : 1720732495091,
+      "duration" : 896
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720732528109,
+      "stop" : 1720732528109,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testProductInStock"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "FirefoxTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1105-56"
+  }, {
+    "name" : "thread",
+    "value" : "4704@fv-az1105-56.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Product Details"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/driven-backpack.html",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "421de78772d35008",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720732258351,
+        "stop" : 1720732261311,
+        "duration" : 2960
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7af652e8b92e4347.json",
+  "parameterValues" : [ "firefox" ]
+}
