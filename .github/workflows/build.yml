@@ -124,11 +124,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Download and install Allure
+      - name: Install Homebrew
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+      - name: Install Allure
+        run: |
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
           brew install allure
-          allure --version
+          allure --version          
 
       - name: Download Allure Reports (Ubuntu)
         uses: actions/download-artifact@v2
