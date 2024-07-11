@@ -124,6 +124,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install Allure
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y allure
+          
       - name: Download Allure Reports (Ubuntu)
         uses: actions/download-artifact@v2
         with:
