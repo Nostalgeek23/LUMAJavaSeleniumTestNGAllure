@@ -3,7 +3,8 @@
 <suite name="Ubuntu crossBrowser Test Suite" parallel="methods" thread-count="2" data-provider-thread-count="2">
 
     <test name = "ChromeTestUbuntu" verbose="10">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="chrome" />
+        <parameter name="os" value="ubuntu" />
         <classes>
             <class name="com.lumatest.test.ProductPageTest"/>
             <class name="com.lumatest.test.CartTest"/>
@@ -14,6 +15,7 @@
 
     <test name = "FirefoxTestUbuntu" verbose="10">
         <parameter name="browser" value="firefox"/>
+        <parameter name="os" value="ubuntu" />
         <classes>
             <class name="com.lumatest.test.ProductPageTest"/>
             <class name="com.lumatest.test.CartTest"/>

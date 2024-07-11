@@ -4,6 +4,7 @@ import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
 import com.lumatest.model.ProductPage;
+import com.lumatest.utils.RetryAnalyzer;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -20,7 +21,8 @@ public class SearchTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "searchNavigationData",
           description = "TC-04.01: Verify Search Result Navigation",
-          testName = "Search: Verify Search Result Navigation"
+          testName = "Search: Verify Search Result Navigation",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Search")

@@ -1,6 +1,7 @@
 package com.lumatest.model;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -54,8 +55,18 @@ public class ProductPage extends CatalogPage {
   @Step("Get price from Product Page")
   public String getProductPrice() {
     getWait().until(ExpectedConditions.elementToBeClickable(productPrice));
+    String productPriceText;
 
-    return productPrice.getText();
+    try {
+      productPriceText = productPrice.getText();
+      System.out.println("Element found by common method: " + productPriceText);
+    } catch (Exception e) {
+      productPriceText = (String) ((JavascriptExecutor) getDriver()).executeScript(
+              "return arguments[0].innerText;", productPrice);
+      System.out.println("Element found by JS executor method: " + productPriceText);
+    }
+
+    return productPriceText;
   }
 
   @Step("Get description of product")

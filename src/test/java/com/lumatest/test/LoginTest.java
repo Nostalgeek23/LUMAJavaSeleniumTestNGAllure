@@ -4,6 +4,7 @@ import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
 import com.lumatest.model.Login;
+import com.lumatest.utils.RetryAnalyzer;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -18,7 +19,8 @@ public class LoginTest extends BaseTest {
   @Test(
           groups = {"login"},
           description = "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          testName = "Login: Verify Navigation to Create Account page after click on create account link"
+          testName = "Login: Verify Navigation to Create Account page after click on create account link",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Login")
@@ -39,7 +41,8 @@ public class LoginTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "loginData",
           description = "TC-03.02: Verify Navigation to Account page after account creation",
-          testName = "Login: Verify Navigation to Account page after account creation"
+          testName = "Login: Verify Navigation to Account page after account creation",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Login")
@@ -62,7 +65,8 @@ public class LoginTest extends BaseTest {
   @Test(
           groups = {"login"},
           description = "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          testName = "Login: Verify Navigation to Customer Login page after click on Sign In link"
+          testName = "Login: Verify Navigation to Customer Login page after click on Sign In link",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Login")
@@ -84,7 +88,8 @@ public class LoginTest extends BaseTest {
           dataProviderClass = TestData.class,
           dataProvider = "loginData",
           description = "TC-03.04: Verify Navigation to Account page after login",
-          testName = "Login: Verify Navigation to Account page after login"
+          testName = "Login: Verify Navigation to Account page after login",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Login")

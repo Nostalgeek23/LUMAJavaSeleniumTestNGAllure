@@ -25,7 +25,7 @@ jobs:
 
 
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 15
+    timeout-minutes: 30
 
     steps:
       - name: Clone code from repo
@@ -57,9 +57,9 @@ jobs:
       - name: Test with Maven - Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
         run: |
-          mvn test -PSmokeTest
-          mvn test -PRegressTest          
-          mvn test -PUbuntuTest
+          mvn test -PSmokeTest -Dtestng.suiteXmlFile=src/test/resources/xmlSuites/smoke.xml
+          mvn test -PRegressTest -Dtestng.suiteXmlFile=src/test/resources/xmlSuites/regression.xml
+          mvn test -PUbuntuTest -Dtestng.suiteXmlFile=src/test/resources/xmlSuites/testngubu.xml
 
 #             WINDOWS JOBS
 
@@ -74,7 +74,7 @@ jobs:
         if: ${{ matrix.os == 'windows-latest' }}
         run: |
           mvn test -PSmokeTest
-          mvn test -PRegressTest         
+          mvn test -PRegressTest
           mvn test -PWindowsTest
 
 #             MACOS JOBS
@@ -94,7 +94,7 @@ jobs:
         if: ${{ matrix.os == 'macos-13' }}
         run: |
           mvn test -PSmokeTest
-          mvn test -PRegressTest           
+          mvn test -PRegressTest
           mvn test -PMacosTest
 
 #          Dorny Test Reporter
@@ -109,29 +109,77 @@ jobs:
 
 #          ALLURE
 
-      - name: Load Allure test report history
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-results-${{ matrix.os }}
+          path: target/allure-results
+
+  merge-reports:
+    name: Merge Allure Reports and Deploy
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v4
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
 
-      - name: Build Allure test report
-        uses: simple-elf/allure-report-action@v1.7
-        if: ${{ matrix.os == 'ubuntu-latest' }}
-        with:
-          gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: target/allure-results
+#      - name: Install Homebrew
+#        run: |
+#          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/runner/.bashrc
+#          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#
+      - name: Install Allure
+        run: |
+          curl -o allure-2.13.8.tgz -OLs https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
+          sudo tar -zxvf allure-2.13.8.tgz -C /opt/
+          sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+          allure --version
 
-      - name: Publish Allure test report
+      - name: Download Allure Results (Ubuntu)
+        uses: actions/download-artifact@v2
+        with:
+          name: allure-results-ubuntu-latest
+          path: reports/ubuntu
+
+      - name: Download Allure Results (Windows)
+        uses: actions/download-artifact@v2
+        with:
+          name: allure-results-windows-latest
+          path: reports/windows
+
+      - name: Download Allure Results (macOS)
+        uses: actions/download-artifact@v2
+        with:
+          name: allure-results-macos-13
+          path: reports/macos
+
+      - name: List Downloaded Reports for Debugging
+        run: |
+          echo "Ubuntu Allure Results:"
+          ls -l reports/ubuntu
+          echo "Windows Allure Results:"
+          ls -l reports/windows
+          echo "macOS Allure Results:"
+          ls -l reports/macos     
+
+      - name: Merge Allure Reports
+        run: |
+          allure generate reports/ubuntu reports/windows reports/macos --clean -o allure-report
+          echo "Allure generate exit code: $?"
+
+      - name: List Merged Allure Report for Debugging
+        run: |
+          echo "Merged Allure Report:"
+          ls -l allure-report
+
+      - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-        if: ${{ matrix.os == 'ubuntu-latest' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history
+          publish_dir: allure-report
 
 #          CODE-STYLE
 

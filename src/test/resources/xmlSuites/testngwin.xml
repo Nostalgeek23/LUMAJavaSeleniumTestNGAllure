@@ -4,6 +4,7 @@
 
     <test name = "ChromeTestWindows" verbose="10">
         <parameter name="browser" value="chrome"/>
+        <parameter name="os" value="windows" />
         <classes>
             <class name="com.lumatest.test.ProductPageTest"/>
             <class name="com.lumatest.test.CartTest"/>
@@ -14,6 +15,7 @@
 
     <test name = "EdgeTestWindows" verbose="10">
         <parameter name="browser" value="edge"/>
+        <parameter name="os" value="windows" />
         <classes>
             <class name="com.lumatest.test.ProductPageTest"/>
             <class name="com.lumatest.test.CartTest"/>
@@ -24,6 +26,7 @@
 
     <test name = "FirefoxTestWindows" verbose="10">
         <parameter name="browser" value="firefox"/>
+        <parameter name="os" value="windows" />
         <classes>
             <class name="com.lumatest.test.ProductPageTest"/>
             <class name="com.lumatest.test.CartTest"/>

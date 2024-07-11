@@ -3,6 +3,7 @@ package com.lumatest.test;
 import com.lumatest.base.BaseTest;
 import com.lumatest.data.TestData;
 import com.lumatest.model.HomePage;
+import com.lumatest.utils.RetryAnalyzer;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Link;
@@ -17,7 +18,8 @@ public class CartTest extends BaseTest {
   @Test(
           groups = {"cart"},
           description = "TC-02.01: Verify Navigation to Cart",
-          testName = "Cart: Verify Navigation to Cart"
+          testName = "Cart: Verify Navigation to Cart",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Cart")
@@ -39,7 +41,8 @@ public class CartTest extends BaseTest {
   @Test(
           groups = {"cart"},
           description = "TC-02.02: Verify Navigation to Checkout",
-          testName = "Cart: Verify Navigation to Checkout"
+          testName = "Cart: Verify Navigation to Checkout",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Cart")
@@ -62,7 +65,8 @@ public class CartTest extends BaseTest {
   @Test(
           groups = {"cart"},
           description = "TC-02.03: Verify Add to Cart Functionality",
-          testName = "Cart: Verify Add to Cart Functionality"
+          testName = "Cart: Verify Add to Cart Functionality",
+          retryAnalyzer = RetryAnalyzer.class
   )
   @Severity(SeverityLevel.CRITICAL)
   @Story("Cart")
