@@ -47,44 +47,44 @@ Open the latest Allure report by clicking on the badge at the top.
 <h3>Project Structure</h3>
 <div class="project-structure">
 <pre>
-LUMAJavaSeleniumTestngAllure/
-├── .github/
-│   └── workflows/
+📁 LUMAJavaSeleniumTestngAllure/
+├──📁 .github/
+│   └──📁 workflows/
 │       └── build.yml
-├── src/
-│   └── test/
-│      └── java/
-│          └── com/
-│              └── lumatest/
-│              |    ├── base/
-│              |    │   └── BaseTest.java
-│              |    ├── data/
-│              |    │   ├── TestData.java
-│              |    │   └── DrivenBackpackDescription.txt  
-│              |    ├── model/
-│              |    │   └── *POM classes*
-│              |    ├── test/
-│              |    │   ├── CartTest.java  
-│              |    │   ├── LoginTest.java  
-│              |    │   ├── NavigationTest.java
-│              |    │   ├── ProductPageTest.java
-│              |    │   └── SearchTest.java  
-│              |    ├── utils/
-│              |    │   ├── DriverUtils.java
-│              |    │   ├── ProjectUtils.java  
-│              |    │   └── ReportUtils.java
-│              |    └── FrameworkTest.java
-│              └── resources/
-│                   ├── xmlSuites/
-│                   │   ├── smoke.xml
-│                   │   ├── regression.xml
-│                   │   ├── testngubu.xml
-│                   │   ├── testngwin.xml
-│                   │   └── testngmac.xml
-│                   ├── allure.properties
-│                   └── logback.xml
-├── target/
-│   └── allure-results/
+├──📁 src/
+│   └── 📁test/
+│        └── 📁 java/
+│              └── 📁 com/
+│                    └── 📁 lumatest/
+│                    |    ├── 📁 base/
+│                    |    │     └── BaseTest.java
+│                    |    ├── 📁 data/
+│                    |    │     ├── TestData.java
+│                    |    │     └── DrivenBackpackDescription.txt  
+│                    |    ├── 📁 model/
+│                    |    │     └── *POM classes*
+│                    |    ├── 📁 test/
+│                    |    │     ├── CartTest.java  
+│                    |    │     ├── LoginTest.java  
+│                    |    │     ├── NavigationTest.java
+│                    |    │     ├── ProductPageTest.java
+│                    |    │     └── SearchTest.java  
+│                    |    ├── 📁 utils/
+│                    |    │     ├── DriverUtils.java
+│                    |    │     ├── ProjectUtils.java  
+│                    |    │     └── ReportUtils.java
+│                    |    └── FrameworkTest.java
+│                    └── 📁 resources/
+│                         ├── 📁 xmlSuites/
+│                         │     ├── smoke.xml
+│                         │     ├── regression.xml
+│                         │     ├── testngubu.xml
+│                         │     ├── testngwin.xml
+│                         │     └── testngmac.xml
+│                         ├── allure.properties
+│                         └── logback.xml
+├── 📁 target/
+│    └── allure-results/
 ├── pom.xml
 └── README.md
 </pre>
