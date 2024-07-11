@@ -1,0 +1,48 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "FrameworkTest",
+    "children" : [ {
+      "name" : "testFail",
+      "uid" : "88c0b86964caafdd",
+      "parentUid" : "00b7fb79b97d14a601f2e670fc3ee514",
+      "status" : "unknown",
+      "time" : {
+        "start" : 1720724417929,
+        "stop" : 1720724417931,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "testGoogle",
+      "uid" : "57708d90f681c0cd",
+      "parentUid" : "00b7fb79b97d14a601f2e670fc3ee514",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720724496717,
+        "stop" : 1720724497391,
+        "duration" : 674
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "testPass",
+      "uid" : "e91651f3f2affd30",
+      "parentUid" : "00b7fb79b97d14a601f2e670fc3ee514",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720724501329,
+        "stop" : 1720724501329,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "00b7fb79b97d14a601f2e670fc3ee514"
+  } ],
+  "name" : "packages"
+}

@@ -1,0 +1,146 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az984-545",
+    "children" : [ {
+      "name" : "1883@fv-az984-545.main(1)",
+      "children" : [ {
+        "name" : "testFail",
+        "uid" : "45956a647da02e47",
+        "parentUid" : "ff21a48eb9a4c97985dbebfb9ed35816",
+        "status" : "unknown",
+        "time" : {
+          "start" : 1720724332376,
+          "stop" : 1720724332377,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "TC-00.01 Open Google.com",
+        "uid" : "5d9c3ee617491e06",
+        "parentUid" : "ff21a48eb9a4c97985dbebfb9ed35816",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720724334538,
+          "stop" : 1720724335262,
+          "duration" : 724
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "TC-00.00 AssertTrue = true",
+        "uid" : "c1200a11e9067027",
+        "parentUid" : "ff21a48eb9a4c97985dbebfb9ed35816",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720724336294,
+          "stop" : 1720724336295,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      } ],
+      "uid" : "ff21a48eb9a4c97985dbebfb9ed35816"
+    } ],
+    "uid" : "f482e3ec3029b7f91dea94cfdcb97026"
+  }, {
+    "name" : "fv-az1455-723",
+    "children" : [ {
+      "name" : "3352@fv-az1455-723.main(1)",
+      "children" : [ {
+        "name" : "testFail",
+        "uid" : "88c0b86964caafdd",
+        "parentUid" : "6b78e0b74afa1d01aa9a7b0f3d6fc607",
+        "status" : "unknown",
+        "time" : {
+          "start" : 1720724417929,
+          "stop" : 1720724417931,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "TC-00.01 Open Google.com",
+        "uid" : "57708d90f681c0cd",
+        "parentUid" : "6b78e0b74afa1d01aa9a7b0f3d6fc607",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720724496717,
+          "stop" : 1720724497391,
+          "duration" : 674
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "TC-00.00 AssertTrue = true",
+        "uid" : "e91651f3f2affd30",
+        "parentUid" : "6b78e0b74afa1d01aa9a7b0f3d6fc607",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720724501329,
+          "stop" : 1720724501329,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      } ],
+      "uid" : "6b78e0b74afa1d01aa9a7b0f3d6fc607"
+    } ],
+    "uid" : "37080cc02e8ac3f275b889f3e0447a85"
+  }, {
+    "name" : "Mac-1720723374232.local",
+    "children" : [ {
+      "name" : "4232@Mac-1720723374232.local.main(1)",
+      "children" : [ {
+        "name" : "TC-00.00 AssertTrue = true",
+        "uid" : "a8312f6d0d86c9bd",
+        "parentUid" : "65e3546fd38840a3e2d964c24fa1ef8c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720724399084,
+          "stop" : 1720724399084,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "testFail",
+        "uid" : "abb28afeb2609191",
+        "parentUid" : "65e3546fd38840a3e2d964c24fa1ef8c",
+        "status" : "unknown",
+        "time" : {
+          "start" : 1720724383614,
+          "stop" : 1720724383615,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "TC-00.01 Open Google.com",
+        "uid" : "42da2bd9a6299198",
+        "parentUid" : "65e3546fd38840a3e2d964c24fa1ef8c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1720724396263,
+          "stop" : 1720724397271,
+          "duration" : 1008
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      } ],
+      "uid" : "65e3546fd38840a3e2d964c24fa1ef8c"
+    } ],
+    "uid" : "35943e36a3a45e23c890bb434e339aba"
+  } ],
+  "name" : "timeline"
+}
