@@ -1,4 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"unknown","Thu Jul 11 19:00:17 UTC 2024","Thu Jul 11 19:00:17 UTC 2024","2","Smoke","Smoke Test Run","FrameworkTest","FrameworkTest","testFail","testFail",""
-"passed","Thu Jul 11 19:01:41 UTC 2024","Thu Jul 11 19:01:41 UTC 2024","0","Smoke","Smoke Test Run","FrameworkTest","FrameworkTest","testPass","TC-00.00 AssertTrue = true","TC-00.00 AssertTrue = true"
-"passed","Thu Jul 11 19:01:36 UTC 2024","Thu Jul 11 19:01:37 UTC 2024","674","Smoke","Smoke Test Run","FrameworkTest","FrameworkTest","testGoogle","TC-00.01 Open Google.com","TC-00.01 Open Google.com"

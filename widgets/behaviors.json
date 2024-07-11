@@ -1,15 +1,4 @@
 {
-  "total" : 2,
-  "items" : [ {
-    "uid" : "a83a8ec411f16faf2e5741a88cd98344",
-    "name" : "Smoke",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 2,
-      "unknown" : 0,
-      "total" : 2
-    }
-  } ]
+  "total" : 0,
+  "items" : [ ]
 }
