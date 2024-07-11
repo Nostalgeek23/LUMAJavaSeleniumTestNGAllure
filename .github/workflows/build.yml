@@ -113,7 +113,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: allure-report-${{ matrix.os }}
-          path: target/allure-results
+          path: target/allure-report
 
   merge-reports:
     name: Merge Allure Reports and Deploy
@@ -141,19 +141,19 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: allure-report-ubuntu-latest
-          path: reports/ubuntu
+          path: allure-report/ubuntu
 
       - name: Download Allure Reports (Windows)
         uses: actions/download-artifact@v2
         with:
           name: allure-report-windows-latest
-          path: reports/windows
+          path: allure-report/windows
 
       - name: Download Allure Reports (macOS)
         uses: actions/download-artifact@v2
         with:
           name: allure-report-macos-13
-          path: reports/macos
+          path: allure-report/macos
 
       - name: List Downloaded Reports for Debugging
         run: |
