@@ -1,741 +1,1221 @@
 [ {
-  "uid" : "5a36a4153d127b75",
-  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "uid" : "7c4747bebeeab95c",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
   "time" : {
-    "start" : 1720732378773,
-    "stop" : 1720732382965,
-    "duration" : 4192
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "817175452cb03cb8",
-  "name" : "TC-04.01: Verify Search Result Navigation",
-  "time" : {
-    "start" : 1720732441835,
-    "stop" : 1720732443099,
-    "duration" : 1264
+    "start" : 1720737608210,
+    "stop" : 1720737610473,
+    "duration" : 2263
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "82de19a4d5c15e93",
-  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "uid" : "69c778b07d411c03",
+  "name" : "TC-02.02: Verify Navigation to Checkout",
   "time" : {
-    "start" : 1720732434243,
-    "stop" : 1720732434995,
-    "duration" : 752
+    "start" : 1720737668104,
+    "stop" : 1720737672518,
+    "duration" : 4414
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "2512e34b277023c0",
-  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-  "time" : {
-    "start" : 1720732385107,
-    "stop" : 1720732387300,
-    "duration" : 2193
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c68a5fb5b18a829d",
-  "name" : "TC-03.04: Verify Navigation to Account page after login",
-  "time" : {
-    "start" : 1720732437155,
-    "stop" : 1720732439687,
-    "duration" : 2532
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "94e64bfe0d60b1d4",
-  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-  "time" : {
-    "start" : 1720732498164,
-    "stop" : 1720732501215,
-    "duration" : 3051
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b32dc8b48738f6bb",
+  "uid" : "82347e4e386ccba3",
   "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
   "time" : {
-    "start" : 1720732505636,
-    "stop" : 1720732509864,
-    "duration" : 4228
+    "start" : 1720737644981,
+    "stop" : 1720737648385,
+    "duration" : 3404
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e469b04af1c9ee7e",
+  "uid" : "af167c590f0f513f",
+  "name" : "TC-02.03: Verify Add to Cart Functionality",
+  "time" : {
+    "start" : 1720737657186,
+    "stop" : 1720737664073,
+    "duration" : 6887
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8949260e5be490d1",
   "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
   "time" : {
-    "start" : 1720732372692,
-    "stop" : 1720732376140,
-    "duration" : 3448
+    "start" : 1720737586462,
+    "stop" : 1720737590238,
+    "duration" : 3776
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "90080a2e2e2d3e98",
+  "uid" : "b3c719e7c3e096bf",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "time" : {
+    "start" : 1720737626989,
+    "stop" : 1720737630070,
+    "duration" : 3081
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e1d53094767336f",
+  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+  "time" : {
+    "start" : 1720737669527,
+    "stop" : 1720737672329,
+    "duration" : 2802
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "bb2287dbd0486794",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
+  "time" : {
+    "start" : 1720737676248,
+    "stop" : 1720737677259,
+    "duration" : 1011
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "c6d16bc3d773b86e",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "time" : {
+    "start" : 1720737659847,
+    "stop" : 1720737664811,
+    "duration" : 4964
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "cfc0cf6c23b2b0ae",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "time" : {
+    "start" : 1720737584993,
+    "stop" : 1720737587481,
+    "duration" : 2488
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2c417420f2f0fe4",
+  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
+  "time" : {
+    "start" : 1720737590648,
+    "stop" : 1720737592842,
+    "duration" : 2194
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "89f9d359f71501c0",
+  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+  "time" : {
+    "start" : 1720737588065,
+    "stop" : 1720737590088,
+    "duration" : 2023
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d8e2865851662d2c",
+  "name" : "TC-PROD-003 Verify Product Price on Product Page",
+  "time" : {
+    "start" : 1720737649939,
+    "stop" : 1720737653016,
+    "duration" : 3077
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "139e9cfbb7c08e70",
+  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+  "time" : {
+    "start" : 1720737605835,
+    "stop" : 1720737610695,
+    "duration" : 4860
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "232196be3c8255b6",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "time" : {
+    "start" : 1720737682227,
+    "stop" : 1720737683578,
+    "duration" : 1351
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "d4b11f02689ddf11",
+  "name" : "TC-PROD-009 Verify SKU/ID Display",
+  "time" : {
+    "start" : 1720737593657,
+    "stop" : 1720737595720,
+    "duration" : 2063
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "db7123d5af46c479",
+  "name" : "TC-PROD-003 Verify Product Price on Product Page",
+  "time" : {
+    "start" : 1720737590834,
+    "stop" : 1720737592928,
+    "duration" : 2094
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf53db217a0ecc59",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "time" : {
+    "start" : 1720737681777,
+    "stop" : 1720737685619,
+    "duration" : 3842
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "d0b99fa353f138ab",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720737636512,
+    "stop" : 1720737640767,
+    "duration" : 4255
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a85bc934a48a358f",
+  "name" : "TC-02.03: Verify Add to Cart Functionality",
+  "time" : {
+    "start" : 1720737593736,
+    "stop" : 1720737602394,
+    "duration" : 8658
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "4b47cc37206dec4f",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "time" : {
+    "start" : 1720737581436,
+    "stop" : 1720737584186,
+    "duration" : 2750
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "87fb919c956df621",
+  "name" : "TC-02.02: Verify Navigation to Checkout",
+  "time" : {
+    "start" : 1720737602980,
+    "stop" : 1720737607307,
+    "duration" : 4327
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "4a85c841947b2a28",
+  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+  "time" : {
+    "start" : 1720737641702,
+    "stop" : 1720737645549,
+    "duration" : 3847
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7583a5e08e3ddcef",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "time" : {
+    "start" : 1720737614540,
+    "stop" : 1720737615609,
+    "duration" : 1069
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "f6289e16755445b2",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "time" : {
+    "start" : 1720737634584,
+    "stop" : 1720737637425,
+    "duration" : 2841
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b01166a48b3114d",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720737626749,
+    "stop" : 1720737631684,
+    "duration" : 4935
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9aac1452780971c",
+  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "time" : {
+    "start" : 1720737676595,
+    "stop" : 1720737677758,
+    "duration" : 1163
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8c7cafdc837e50b2",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "time" : {
+    "start" : 1720737596434,
+    "stop" : 1720737605161,
+    "duration" : 8727
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "9b9063609bc2a95a",
+  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "time" : {
+    "start" : 1720737611204,
+    "stop" : 1720737613912,
+    "duration" : 2708
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "b66327fd56235b8e",
+  "name" : "TC-PROD-009 Verify SKU/ID Display",
+  "time" : {
+    "start" : 1720737653269,
+    "stop" : 1720737655468,
+    "duration" : 2199
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "643e012a5c1e68a",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "time" : {
+    "start" : 1720737611454,
+    "stop" : 1720737615215,
+    "duration" : 3761
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "4ed7b68dcabd0719",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720737581428,
+    "stop" : 1720737585684,
+    "duration" : 4256
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "756682205c79a430",
+  "name" : "TC-01.00 Open base URL",
+  "time" : {
+    "start" : 1720739903436,
+    "stop" : 1720739903456,
+    "duration" : 20
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "17b001dc7f1375a6",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "time" : {
+    "start" : 1720740719805,
+    "stop" : 1720740727539,
+    "duration" : 7734
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "f4e9ae5e5e3000b3",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720740126248,
+    "stop" : 1720740135673,
+    "duration" : 9425
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dc888966d36f5e6d",
+  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
+  "time" : {
+    "start" : 1720740594922,
+    "stop" : 1720740606616,
+    "duration" : 11694
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d7680cb964a244ec",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "time" : {
+    "start" : 1720740345037,
+    "stop" : 1720740349407,
+    "duration" : 4370
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "aa8dc61f17aee8aa",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720740440782,
+    "stop" : 1720740458634,
+    "duration" : 17852
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8afc70db0e4a7faf",
+  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+  "time" : {
+    "start" : 1720740573056,
+    "stop" : 1720740583856,
+    "duration" : 10800
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e233d27557b558d8",
+  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+  "time" : {
+    "start" : 1720740756225,
+    "stop" : 1720740762228,
+    "duration" : 6003
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "36d735804975fa5e",
   "name" : "testFail",
   "time" : {
-    "start" : 1720732193518,
-    "stop" : 1720732193534,
+    "start" : 1720739791294,
+    "stop" : 1720739791310,
     "duration" : 16
   },
   "status" : "unknown",
   "severity" : "normal"
 }, {
-  "uid" : "e51f5730b698cd93",
-  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-  "time" : {
-    "start" : 1720732465804,
-    "stop" : 1720732470841,
-    "duration" : 5037
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c655932303a3cf59",
-  "name" : "TC-PROD-009 Verify SKU/ID Display",
-  "time" : {
-    "start" : 1720732523753,
-    "stop" : 1720732527196,
-    "duration" : 3443
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7af652e8b92e4347",
-  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-  "time" : {
-    "start" : 1720732490987,
-    "stop" : 1720732494193,
-    "duration" : 3206
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "288bf357015e3db8",
-  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-  "time" : {
-    "start" : 1720732365494,
-    "stop" : 1720732368889,
-    "duration" : 3395
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a68281985eb182eb",
-  "name" : "TC-01.09: Verify Footer Links Navigation",
-  "time" : {
-    "start" : 1720732246499,
-    "stop" : 1720732247015,
-    "duration" : 516
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "f1b5c654edd173a0",
-  "name" : "TC-00.00 AssertTrue = true",
-  "time" : {
-    "start" : 1720732224436,
-    "stop" : 1720732224437,
-    "duration" : 1
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "877f1514164458a4",
-  "name" : "TC-02.03: Verify Add to Cart Functionality",
-  "time" : {
-    "start" : 1720732531170,
-    "stop" : 1720732536935,
-    "duration" : 5765
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "da0ec69c73d46662",
-  "name" : "TC-02.01: Verify Navigation to Cart",
-  "time" : {
-    "start" : 1720732412498,
-    "stop" : 1720732416100,
-    "duration" : 3602
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "4e52e87ab578888a",
-  "name" : "TC-03.04: Verify Navigation to Account page after login",
-  "time" : {
-    "start" : 1720732572684,
-    "stop" : 1720732578293,
-    "duration" : 5609
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "967201bc4f09d0f",
-  "name" : "TC-01.04.02 Verify Breadcrumb Navigation to subcategory page",
-  "time" : {
-    "start" : 1720732239816,
-    "stop" : 1720732242112,
-    "duration" : 2296
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "fb66d373729d7902",
-  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-  "time" : {
-    "start" : 1720732556301,
-    "stop" : 1720732559372,
-    "duration" : 3071
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "50eace5f04aa6390",
-  "name" : "TC-02.01: Verify Navigation to Cart",
-  "time" : {
-    "start" : 1720732541178,
-    "stop" : 1720732544812,
-    "duration" : 3634
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "10b8f4ee5751af24",
-  "name" : "TC-02.02: Verify Navigation to Checkout",
-  "time" : {
-    "start" : 1720732548377,
-    "stop" : 1720732552022,
-    "duration" : 3645
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "c6ca365a9cb6e251",
-  "name" : "TC-02.02: Verify Navigation to Checkout",
-  "time" : {
-    "start" : 1720732418249,
-    "stop" : 1720732424722,
-    "duration" : 6473
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "386c8203f6cae92c",
-  "name" : "TC-PROD-003 Verify Product Price on Product Page",
-  "time" : {
-    "start" : 1720732515304,
-    "stop" : 1720732519475,
-    "duration" : 4171
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d233431573020047",
-  "name" : "TC-01.09: Verify Footer Links Navigation",
-  "time" : {
-    "start" : 1720732247997,
-    "stop" : 1720732248498,
-    "duration" : 501
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "fa91ed6a008374fa",
-  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-  "time" : {
-    "start" : 1720732393679,
-    "stop" : 1720732395839,
-    "duration" : 2160
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8353cc7bab8d1e9a",
-  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-  "time" : {
-    "start" : 1720732426914,
-    "stop" : 1720732429282,
-    "duration" : 2368
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "6ef84d0aa9049318",
-  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-  "time" : {
-    "start" : 1720732474849,
-    "stop" : 1720732478961,
-    "duration" : 4112
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f25ad227becab28e",
-  "name" : "TC-02.03: Verify Add to Cart Functionality",
-  "time" : {
-    "start" : 1720732406474,
-    "stop" : 1720732410374,
-    "duration" : 3900
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "8b5ab5cafe6f4eb0",
-  "name" : "TC-PROD-005 Verify Product Description on Product Page",
-  "time" : {
-    "start" : 1720732483591,
-    "stop" : 1720732486383,
-    "duration" : 2792
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e38a81bae74d3ed0",
-  "name" : "TC-01.01 Open Home page by logo click",
-  "time" : {
-    "start" : 1720732249534,
-    "stop" : 1720732251223,
-    "duration" : 1689
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "b2576182e2c9de65",
-  "name" : "TC-01.09: Verify Footer Links Navigation",
-  "time" : {
-    "start" : 1720732244766,
-    "stop" : 1720732245536,
-    "duration" : 770
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "9a1f87743515825",
-  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-  "time" : {
-    "start" : 1720732567890,
-    "stop" : 1720732568657,
-    "duration" : 767
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "7e7080e4775dee52",
-  "name" : "TC-PROD-009 Verify SKU/ID Display",
-  "time" : {
-    "start" : 1720732402197,
-    "stop" : 1720732404276,
-    "duration" : 2079
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4674421c9fd16efb",
-  "name" : "TC-PROD-003 Verify Product Price on Product Page",
-  "time" : {
-    "start" : 1720732397963,
-    "stop" : 1720732400052,
-    "duration" : 2089
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b8a049b88666af02",
-  "name" : "TC-01.04.01 Verify Breadcrumb Navigation to category page",
-  "time" : {
-    "start" : 1720732232696,
-    "stop" : 1720732235567,
-    "duration" : 2871
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "5a9bbc5d826fa456",
-  "name" : "TC-00.01 Open Google.com",
-  "time" : {
-    "start" : 1720732222704,
-    "stop" : 1720732223321,
-    "duration" : 617
-  },
-  "status" : "passed",
-  "severity" : "blocker"
-}, {
-  "uid" : "752ba0215a9f7e01",
-  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-  "time" : {
-    "start" : 1720732431389,
-    "stop" : 1720732432080,
-    "duration" : 691
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "22d4ba2106733fd5",
-  "name" : "TC-04.01: Verify Search Result Navigation",
-  "time" : {
-    "start" : 1720732582243,
-    "stop" : 1720732583296,
-    "duration" : 1053
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "333d4f5dd185fe22",
-  "name" : "TC-01.09: Verify Footer Links Navigation",
-  "time" : {
-    "start" : 1720732243116,
-    "stop" : 1720732243802,
-    "duration" : 686
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "5676438a3f071981",
+  "uid" : "245f9fb232418e22",
   "name" : "TC-01.04.03 Verify Breadcrumb Navigation to home page",
   "time" : {
-    "start" : 1720732236638,
-    "stop" : 1720732238826,
-    "duration" : 2188
+    "start" : 1720739841462,
+    "stop" : 1720739847723,
+    "duration" : 6261
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "252f0779505114c2",
-  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-  "time" : {
-    "start" : 1720732563067,
-    "stop" : 1720732563993,
-    "duration" : 926
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "c388b23a64b02f18",
-  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-  "time" : {
-    "start" : 1720732389396,
-    "stop" : 1720732391591,
-    "duration" : 2195
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ee5e0bd0c0a0edd6",
-  "name" : "TC-02.03: Verify Add to Cart Functionality",
-  "time" : {
-    "start" : 1720732372487,
-    "stop" : 1720732376878,
-    "duration" : 4391
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "84f8ffa6c09e310c",
-  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-  "time" : {
-    "start" : 1720732357881,
-    "stop" : 1720732359931,
-    "duration" : 2050
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5acee689c0fa6a9c",
-  "name" : "TC-03.04: Verify Navigation to Account page after login",
-  "time" : {
-    "start" : 1720732409886,
-    "stop" : 1720732412939,
-    "duration" : 3053
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "793f3e82fabf5888",
-  "name" : "TC-01.02 Check Nav menu URLs",
-  "time" : {
-    "start" : 1720732255083,
-    "stop" : 1720732255838,
-    "duration" : 755
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "86a1334fe700103",
+  "uid" : "b89e7e2eb5c8b15f",
   "name" : "TC-02.02: Verify Navigation to Checkout",
   "time" : {
-    "start" : 1720732388008,
-    "stop" : 1720732391583,
-    "duration" : 3575
+    "start" : 1720740049033,
+    "stop" : 1720740062114,
+    "duration" : 13081
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "f3303f2758c00a47",
-  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-  "time" : {
-    "start" : 1720732324219,
-    "stop" : 1720732327921,
-    "duration" : 3702
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "beaacd412187c0d8",
-  "name" : "TC-01.02 Check Nav menu URLs",
-  "time" : {
-    "start" : 1720732277274,
-    "stop" : 1720732277698,
-    "duration" : 424
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "60398244076760f7",
-  "name" : "TC-01.03 Open Home page by logo click",
-  "time" : {
-    "start" : 1720732289085,
-    "stop" : 1720732290327,
-    "duration" : 1242
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "7bdfdf1aaa7f6f65",
-  "name" : "TC-04.01: Verify Search Result Navigation",
-  "time" : {
-    "start" : 1720732419020,
-    "stop" : 1720732420223,
-    "duration" : 1203
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "5449a9742e48dcea",
-  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-  "time" : {
-    "start" : 1720732401340,
-    "stop" : 1720732402123,
-    "duration" : 783
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "b099a4ef15992c9c",
-  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-  "time" : {
-    "start" : 1720732334019,
-    "stop" : 1720732337149,
-    "duration" : 3130
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "510208ac11f35300",
-  "name" : "TC-01.02 Check Nav menu URLs",
-  "time" : {
-    "start" : 1720732266446,
-    "stop" : 1720732266965,
-    "duration" : 519
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "921175d8249a383a",
-  "name" : "TC-PROD-003 Verify Product Price on Product Page",
-  "time" : {
-    "start" : 1720732361115,
-    "stop" : 1720732363566,
-    "duration" : 2451
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "58c17cef0cb9ed5f",
-  "name" : "TC-02.01: Verify Navigation to Cart",
-  "time" : {
-    "start" : 1720732383283,
-    "stop" : 1720732386984,
-    "duration" : 3701
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "7f2e643a02a9aea0",
-  "name" : "TC-PROD-005 Verify Product Description on Product Page",
-  "time" : {
-    "start" : 1720732338271,
-    "stop" : 1720732340665,
-    "duration" : 2394
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8a49d8872863a462",
-  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-  "time" : {
-    "start" : 1720732346758,
-    "stop" : 1720732348440,
-    "duration" : 1682
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f1e7c52d16dc6d6b",
-  "name" : "TC-01.02 Check Nav menu URLs",
-  "time" : {
-    "start" : 1720732257111,
-    "stop" : 1720732258317,
-    "duration" : 1206
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "37914de2846a77dc",
-  "name" : "TC-PROD-009 Verify SKU/ID Display",
-  "time" : {
-    "start" : 1720732369664,
-    "stop" : 1720732371526,
-    "duration" : 1862
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f8a056657ae69eec",
-  "name" : "TC-01.03 Open Home page by logo click",
-  "time" : {
-    "start" : 1720732310505,
-    "stop" : 1720732311058,
-    "duration" : 553
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "76393b2ac9c2023a",
-  "name" : "TC-01.03 Open Home page by logo click",
-  "time" : {
-    "start" : 1720732300923,
-    "stop" : 1720732302215,
-    "duration" : 1292
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "97a2e00238ca534a",
-  "name" : "TC-01.03 Open Home page by logo click",
-  "time" : {
-    "start" : 1720732303180,
-    "stop" : 1720732304430,
-    "duration" : 1250
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "2db84f7e7c923f7f",
-  "name" : "TC-01.03 Open Home page by logo click",
-  "time" : {
-    "start" : 1720732280027,
-    "stop" : 1720732281303,
-    "duration" : 1276
-  },
-  "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "cebc21d534e9ea9",
+  "uid" : "427e7d717cd299c9",
   "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
   "time" : {
-    "start" : 1720732349522,
-    "stop" : 1720732351924,
-    "duration" : 2402
+    "start" : 1720740175471,
+    "stop" : 1720740181170,
+    "duration" : 5699
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c3ed2fb8e49227c4",
-  "name" : "TC-01.02 Check Nav menu URLs",
+  "uid" : "f8082811355c9b6f",
+  "name" : "TC-01.04.02 Verify Breadcrumb Navigation to subcategory page",
   "time" : {
-    "start" : 1720732270359,
-    "stop" : 1720732271269,
-    "duration" : 910
+    "start" : 1720739849580,
+    "stop" : 1720739856308,
+    "duration" : 6728
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "7e1519f106dac87f",
+  "uid" : "72fbac67ef6855f7",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "time" : {
+    "start" : 1720739976233,
+    "stop" : 1720739982435,
+    "duration" : 6202
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4bbc6f508ebef5ab",
+  "name" : "TC-02.03: Verify Add to Cart Functionality",
+  "time" : {
+    "start" : 1720740234263,
+    "stop" : 1720740251938,
+    "duration" : 17675
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "162b9a54de436705",
   "name" : "TC-01.03 Open Home page by logo click",
   "time" : {
-    "start" : 1720732287316,
-    "stop" : 1720732288039,
-    "duration" : 723
+    "start" : 1720739913939,
+    "stop" : 1720739916656,
+    "duration" : 2717
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "e51138c41627e318",
-  "name" : "TC-01.00 Open base URL",
+  "uid" : "d188f5e0fb310fc9",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
   "time" : {
-    "start" : 1720732278684,
-    "stop" : 1720732278771,
-    "duration" : 87
+    "start" : 1720740468875,
+    "stop" : 1720740478909,
+    "duration" : 10034
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "82204f8c4a28e873",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
+  "time" : {
+    "start" : 1720740772033,
+    "stop" : 1720740774026,
+    "duration" : 1993
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "7f03b31f3c79df7e",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "time" : {
+    "start" : 1720740853447,
+    "stop" : 1720740858099,
+    "duration" : 4652
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "66e4d19e52804d79",
+  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "time" : {
+    "start" : 1720740318087,
+    "stop" : 1720740321235,
+    "duration" : 3148
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8544ee646608866c",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720740372175,
+    "stop" : 1720740428635,
+    "duration" : 56460
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a34ec79803c3e70",
+  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "time" : {
+    "start" : 1720740079049,
+    "stop" : 1720740081797,
+    "duration" : 2748
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "f902bf1d9d18b604",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "time" : {
+    "start" : 1720740155272,
+    "stop" : 1720740162284,
+    "duration" : 7012
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e082435632d08f19",
+  "name" : "TC-PROD-009 Verify SKU/ID Display",
+  "time" : {
+    "start" : 1720740223947,
+    "stop" : 1720740230607,
+    "duration" : 6660
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1a9cef4025a8001c",
+  "name" : "TC-01.02 Check Nav menu URLs",
+  "time" : {
+    "start" : 1720739878056,
+    "stop" : 1720739880041,
+    "duration" : 1985
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "d53658d518c356e2",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "time" : {
+    "start" : 1720740166160,
+    "stop" : 1720740171943,
+    "duration" : 5783
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8171c824bf819d4b",
+  "name" : "TC-01.02 Check Nav menu URLs",
+  "time" : {
+    "start" : 1720739898729,
+    "stop" : 1720739901287,
+    "duration" : 2558
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "496436f0dd8e0063",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "time" : {
+    "start" : 1720740804957,
+    "stop" : 1720740843793,
+    "duration" : 38836
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "8653f052ad5896a",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "time" : {
+    "start" : 1720739930839,
+    "stop" : 1720739932751,
+    "duration" : 1912
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "70d248d3c9e32236",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "time" : {
+    "start" : 1720740255462,
+    "stop" : 1720740274451,
+    "duration" : 18989
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "e28aaea8246d2293",
+  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+  "time" : {
+    "start" : 1720740064280,
+    "stop" : 1720740072757,
+    "duration" : 8477
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "76185bdc9aac574a",
+  "name" : "TC-PROD-003 Verify Product Price on Product Page",
+  "time" : {
+    "start" : 1720739998086,
+    "stop" : 1720740003210,
+    "duration" : 5124
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "765200f5bf15555d",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "time" : {
+    "start" : 1720740488818,
+    "stop" : 1720740518528,
+    "duration" : 29710
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "62d97caff950e606",
+  "name" : "TC-01.02 Check Nav menu URLs",
+  "time" : {
+    "start" : 1720739890527,
+    "stop" : 1720739892241,
+    "duration" : 1714
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "b832bceb6ac171c2",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720740140384,
+    "stop" : 1720740149981,
+    "duration" : 9597
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5ce9e411d9734b8d",
+  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
+  "time" : {
+    "start" : 1720740184651,
+    "stop" : 1720740191243,
+    "duration" : 6592
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b930e76a0838f4f",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "time" : {
+    "start" : 1720739968865,
+    "stop" : 1720739973895,
+    "duration" : 5030
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d010d44b5250070d",
+  "name" : "TC-00.01 Open Google.com",
+  "time" : {
+    "start" : 1720739819025,
+    "stop" : 1720739819782,
+    "duration" : 757
   },
   "status" : "passed",
   "severity" : "blocker"
 }, {
-  "uid" : "4721e00ac01bb969",
+  "uid" : "83209a27c36e32b9",
   "name" : "TC-01.03 Open Home page by logo click",
   "time" : {
-    "start" : 1720732291614,
-    "stop" : 1720732293027,
-    "duration" : 1413
+    "start" : 1720739905729,
+    "stop" : 1720739908392,
+    "duration" : 2663
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "c5e282837658c3f0",
+  "uid" : "5409011c390522ce",
+  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+  "time" : {
+    "start" : 1720739984666,
+    "stop" : 1720739989463,
+    "duration" : 4797
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "634351279f497418",
+  "name" : "TC-PROD-003 Verify Product Price on Product Page",
+  "time" : {
+    "start" : 1720740214451,
+    "stop" : 1720740220415,
+    "duration" : 5964
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "da139364be8ea815",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "time" : {
+    "start" : 1720740097445,
+    "stop" : 1720740100975,
+    "duration" : 3530
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "eba1b20ed6af225",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "time" : {
+    "start" : 1720739922568,
+    "stop" : 1720739924654,
+    "duration" : 2086
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "b4bd5b019422963a",
+  "name" : "TC-01.01 Open Home page by logo click",
+  "time" : {
+    "start" : 1720739871957,
+    "stop" : 1720739876003,
+    "duration" : 4046
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "121cbfa304de399e",
   "name" : "TC-01.02 Check Nav menu URLs",
   "time" : {
-    "start" : 1720732268163,
-    "stop" : 1720732269231,
-    "duration" : 1068
+    "start" : 1720739886160,
+    "stop" : 1720739888451,
+    "duration" : 2291
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "159fb9f6912ae999",
+  "uid" : "4c2f782ea941f98",
+  "name" : "TC-02.03: Verify Add to Cart Functionality",
+  "time" : {
+    "start" : 1720740702154,
+    "stop" : 1720740710008,
+    "duration" : 7854
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "df7268d46205c7fc",
   "name" : "TC-01.03 Open Home page by logo click",
   "time" : {
-    "start" : 1720732299083,
-    "stop" : 1720732299857,
-    "duration" : 774
+    "start" : 1720739926642,
+    "stop" : 1720739928850,
+    "duration" : 2208
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "53fb31143061402",
-  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "uid" : "d2953c0875ae80b3",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
   "time" : {
-    "start" : 1720732408197,
-    "stop" : 1720732408789,
-    "duration" : 592
+    "start" : 1720740074842,
+    "stop" : 1720740077201,
+    "duration" : 2359
   },
   "status" : "passed",
   "severity" : "critical"
 }, {
-  "uid" : "2b87c1c31c469941",
+  "uid" : "b5f829c1938a0bba",
+  "name" : "TC-02.02: Verify Navigation to Checkout",
+  "time" : {
+    "start" : 1720740277976,
+    "stop" : 1720740294128,
+    "duration" : 16152
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "668068371058fd83",
+  "name" : "TC-01.02 Check Nav menu URLs",
+  "time" : {
+    "start" : 1720739894756,
+    "stop" : 1720739896935,
+    "duration" : 2179
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "4028c7962bdc2f2d",
+  "name" : "TC-01.04.01 Verify Breadcrumb Navigation to category page",
+  "time" : {
+    "start" : 1720739832721,
+    "stop" : 1720739839659,
+    "duration" : 6938
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "53542075796365e4",
+  "name" : "TC-02.03: Verify Add to Cart Functionality",
+  "time" : {
+    "start" : 1720740012130,
+    "stop" : 1720740028426,
+    "duration" : 16296
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "5fb6006b55f9a58e",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "time" : {
+    "start" : 1720739918362,
+    "stop" : 1720739920664,
+    "duration" : 2302
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "aaad3ebd80ee17b7",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720739957852,
+    "stop" : 1720739966957,
+    "duration" : 9105
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c007bebc1ca16b61",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "time" : {
+    "start" : 1720739934835,
+    "stop" : 1720739937210,
+    "duration" : 2375
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "eec2b22d696b7972",
+  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
+  "time" : {
+    "start" : 1720739991049,
+    "stop" : 1720739996531,
+    "duration" : 5482
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ca0a25c8e8779a38",
   "name" : "TC-03.02: Verify Navigation to Account page after account creation",
   "time" : {
-    "start" : 1720732397727,
-    "stop" : 1720732400263,
-    "duration" : 2536
+    "start" : 1720740297586,
+    "stop" : 1720740308763,
+    "duration" : 11177
   },
   "status" : "passed",
   "severity" : "critical"
+}, {
+  "uid" : "2a4f9d06309e0b85",
+  "name" : "TC-01.09: Verify Footer Links Navigation",
+  "time" : {
+    "start" : 1720739858345,
+    "stop" : 1720739860730,
+    "duration" : 2385
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "88f55ecea9748577",
+  "name" : "TC-01.09: Verify Footer Links Navigation",
+  "time" : {
+    "start" : 1720739866452,
+    "stop" : 1720739868028,
+    "duration" : 1576
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "1a09744d3fbf2b9c",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "time" : {
+    "start" : 1720739910133,
+    "stop" : 1720739912385,
+    "duration" : 2252
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "5bba09f6554a1b2e",
+  "name" : "TC-01.09: Verify Footer Links Navigation",
+  "time" : {
+    "start" : 1720739869552,
+    "stop" : 1720739870311,
+    "duration" : 759
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "18155feb247952c9",
+  "name" : "TC-02.02: Verify Navigation to Checkout",
+  "time" : {
+    "start" : 1720740737752,
+    "stop" : 1720740745374,
+    "duration" : 7622
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "54069dcc6e2910e4",
+  "name" : "TC-PROD-003 Verify Product Price on Product Page",
+  "time" : {
+    "start" : 1720740617420,
+    "stop" : 1720740629330,
+    "duration" : 11910
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d94e16f4f1ab32e",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "time" : {
+    "start" : 1720740324652,
+    "stop" : 1720740338485,
+    "duration" : 13833
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "1bddcac56dbd3c95",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "time" : {
+    "start" : 1720740083481,
+    "stop" : 1720740095538,
+    "duration" : 12057
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "38cd7c6c910ae84a",
+  "name" : "TC-01.09: Verify Footer Links Navigation",
+  "time" : {
+    "start" : 1720739862398,
+    "stop" : 1720739864438,
+    "duration" : 2040
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "999d5e830164fcd0",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
+  "time" : {
+    "start" : 1720740312156,
+    "stop" : 1720740314682,
+    "duration" : 2526
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "d515ecfddbffce23",
+  "name" : "TC-PROD-009 Verify SKU/ID Display",
+  "time" : {
+    "start" : 1720740005632,
+    "stop" : 1720740010311,
+    "duration" : 4679
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "75ba09f2f7a4a98f",
+  "name" : "TC-00.00 AssertTrue = true",
+  "time" : {
+    "start" : 1720739822435,
+    "stop" : 1720739822435,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "ed82f6e83426cb73",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720739946377,
+    "stop" : 1720739955783,
+    "duration" : 9406
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4aa52e3244c9680e",
+  "name" : "TC-PROD-009 Verify SKU/ID Display",
+  "time" : {
+    "start" : 1720740639698,
+    "stop" : 1720740692821,
+    "duration" : 53123
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d712574a42405378",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "time" : {
+    "start" : 1720740030334,
+    "stop" : 1720740047129,
+    "duration" : 16795
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "a079bd7838427e55",
+  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "time" : {
+    "start" : 1720740783684,
+    "stop" : 1720740786699,
+    "duration" : 3015
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "657e83738d7f58fc",
+  "name" : "TC-01.02 Check Nav menu URLs",
+  "time" : {
+    "start" : 1720739882059,
+    "stop" : 1720739883946,
+    "duration" : 1887
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "d642cc0383ec180e",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
+  "time" : {
+    "start" : 1720737787261,
+    "stop" : 1720737788097,
+    "duration" : 836
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "a995658b023c22cd",
+  "name" : "TC-02.02: Verify Navigation to Checkout",
+  "time" : {
+    "start" : 1720737772670,
+    "stop" : 1720737776098,
+    "duration" : 3428
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "4e67e3a46d196919",
+  "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+  "time" : {
+    "start" : 1720737726061,
+    "stop" : 1720737727648,
+    "duration" : 1587
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b74f692edda9633f",
+  "name" : "TC-PROD-009 Verify SKU/ID Display",
+  "time" : {
+    "start" : 1720737748871,
+    "stop" : 1720737750373,
+    "duration" : 1502
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b2f067170999d4a9",
+  "name" : "TC-02.01: Verify Navigation to Cart",
+  "time" : {
+    "start" : 1720737762534,
+    "stop" : 1720737766704,
+    "duration" : 4170
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "aaffde56de1d181c",
+  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+  "time" : {
+    "start" : 1720737777054,
+    "stop" : 1720737779949,
+    "duration" : 2895
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "2da2496ca77f02f1",
+  "name" : "TC-02.03: Verify Add to Cart Functionality",
+  "time" : {
+    "start" : 1720737751503,
+    "stop" : 1720737756235,
+    "duration" : 4732
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "21e8b6dea36b8211",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720737696069,
+    "stop" : 1720737707062,
+    "duration" : 10993
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "26f21aaf4bfaecf3",
+  "name" : "TC-PROD-003 Verify Product Price on Product Page",
+  "time" : {
+    "start" : 1720737740430,
+    "stop" : 1720737742908,
+    "duration" : 2478
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11ad02ecbce64207",
+  "name" : "TC-04.01: Verify Search Result Navigation",
+  "time" : {
+    "start" : 1720737801020,
+    "stop" : 1720737802172,
+    "duration" : 1152
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "dc5638646559a041",
+  "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
+  "time" : {
+    "start" : 1720737736855,
+    "stop" : 1720737739317,
+    "duration" : 2462
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5c6668423c428bf6",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "time" : {
+    "start" : 1720737792182,
+    "stop" : 1720737794951,
+    "duration" : 2769
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "1d2c3ca794421a31",
+  "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+  "time" : {
+    "start" : 1720737789095,
+    "stop" : 1720737790567,
+    "duration" : 1472
+  },
+  "status" : "passed",
+  "severity" : "critical"
+}, {
+  "uid" : "e508aba08531ce28",
+  "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+  "time" : {
+    "start" : 1720737728460,
+    "stop" : 1720737730745,
+    "duration" : 2285
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7559dcf8f37bd98c",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "time" : {
+    "start" : 1720737717843,
+    "stop" : 1720737719785,
+    "duration" : 1942
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4728723be94d4285",
+  "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+  "time" : {
+    "start" : 1720737713131,
+    "stop" : 1720737716964,
+    "duration" : 3833
+  },
+  "status" : "passed",
+  "severity" : "normal"
 } ]

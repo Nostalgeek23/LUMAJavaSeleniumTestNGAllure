@@ -1,0 +1,233 @@
+{
+  "uid" : "1a3c3169d1b55b6f",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "fullName" : "com.lumatest.test.NavigationTest.testSubCategoryNavigation",
+  "historyId" : "1b3cc967f73446a96e2046ccda1e4b2",
+  "time" : {
+    "start" : 1720737566001,
+    "stop" : 1720737566891,
+    "duration" : 890
+  },
+  "description" : "Ensure that clicking on a subcategory link in the navigation menu redirects the user to the corresponding subcategory page.",
+  "descriptionHtml" : "<p>Ensure that clicking on a subcategory link in the navigation menu redirects the user to the corresponding subcategory page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720737565087,
+      "stop" : 1720737565999,
+      "duration" : 912
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720737533332,
+      "stop" : 1720737533778,
+      "duration" : 446
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that clicking on a subcategory link in the navigation menu redirects the user to the corresponding subcategory page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on subcategory menu",
+      "time" : {
+        "start" : 1720737566002,
+        "stop" : 1720737566823,
+        "duration" : 821
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Hover on element",
+        "time" : {
+          "start" : 1720737566397,
+          "stop" : 1720737566513,
+          "duration" : 116
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "[[ChromeDriver: chrome-headless-shell on linux (55ed5d7b06b3fff1fd5d79299147b3a1)] -> css selector: #ui-id-5]"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "navBarMenu",
+        "value" : "By.cssSelector: #ui-id-5"
+      }, {
+        "name" : "subNavMenu",
+        "value" : "By.cssSelector: #ui-id-17"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get page title with URL provided",
+      "time" : {
+        "start" : 1720737566823,
+        "stop" : 1720737566891,
+        "duration" : 68
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "https://magento.softwaretestingboard.com/men/tops-men.html"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Verify actual results as expected",
+      "time" : {
+        "start" : 1720737566891,
+        "stop" : 1720737566891,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720737566893,
+      "stop" : 1720737566957,
+      "duration" : 64
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720737574897,
+      "stop" : 1720737574898,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testSubCategoryNavigation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Regression"
+  }, {
+    "name" : "suite",
+    "value" : "Regression Test Run"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1437-897"
+  }, {
+    "name" : "thread",
+    "value" : "2130@fv-az1437-897.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Navigation"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "By.cssSelector: #ui-id-5"
+  }, {
+    "name" : "arg1",
+    "value" : "By.cssSelector: #ui-id-17"
+  }, {
+    "name" : "arg2",
+    "value" : "https://magento.softwaretestingboard.com/men/tops-men.html"
+  }, {
+    "name" : "arg3",
+    "value" : "Tops - Men"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com",
+    "type" : "custom"
+  } ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "1a3c3169d1b55b6f.json",
+  "parameterValues" : [ "By.cssSelector: #ui-id-5", "By.cssSelector: #ui-id-17", "https://magento.softwaretestingboard.com/men/tops-men.html", "Tops - Men", "chrome" ]
+}

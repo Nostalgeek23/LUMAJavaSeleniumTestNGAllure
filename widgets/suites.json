@@ -1,8 +1,19 @@
 {
-  "total" : 4,
+  "total" : 5,
   "items" : [ {
     "uid" : "6d495eb7a343edad09700a277962b511",
     "name" : "Windows crossBrowser Test Suite",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 48,
+      "unknown" : 0,
+      "total" : 48
+    }
+  }, {
+    "uid" : "501f59c5a481a2f58372665a43e03711",
+    "name" : "Ubuntu crossBrowser Test Suite",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
