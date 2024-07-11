@@ -109,11 +109,11 @@ jobs:
 
 #          ALLURE
 
-      - name: Upload Allure Report
+      - name: Upload Allure Results
         uses: actions/upload-artifact@v2
         with:
-          name: allure-report-${{ matrix.os }}
-          path: target/allure-report
+          name: allure-results-${{ matrix.os }}
+          path: target/allure-results
 
   merge-reports:
     name: Merge Allure Reports and Deploy
@@ -137,33 +137,37 @@ jobs:
           sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
           allure --version
 
-      - name: Download Allure Reports (Ubuntu)
+      - name: Download Allure Results (Ubuntu)
         uses: actions/download-artifact@v2
         with:
-          name: allure-report-ubuntu-latest
-          path: allure-report/ubuntu
+          name: allure-results-ubuntu-latest
+          path: allure-results/ubuntu
 
-      - name: Download Allure Reports (Windows)
+      - name: Download Allure Results (Windows)
         uses: actions/download-artifact@v2
         with:
-          name: allure-report-windows-latest
-          path: allure-report/windows
+          name: allure-results-windows-latest
+          path: allure-results/windows
 
-      - name: Download Allure Reports (macOS)
+      - name: Download Allure Results (macOS)
         uses: actions/download-artifact@v2
         with:
-          name: allure-report-macos-13
-          path: allure-report/macos
+          name: allure-results-macos-13
+          path: allure-results/macos
 
       - name: List Downloaded Reports for Debugging
         run: |
-          ls -l reports/ubuntu
-          ls -l reports/windows
-          ls -l reports/macos          
+          echo "Ubuntu Allure Results:"
+          ls -l allure-results/ubuntu
+          echo "Windows Allure Results:"
+          ls -l allure-results/windows
+          echo "macOS Allure Results:"
+          ls -l allure-results/macos        
 
       - name: Merge Allure Reports
         run: |
-          allure generate reports/ubuntu reports/windows reports/macos -o reports/merged
+          allure generate reports/ubuntu reports/windows reports/macos -o allure-report
+          echo "Allure generate exit code: $?"
 
       - name: List Merged Allure Report for Debugging
         run: |
@@ -175,7 +179,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: reports/merged
+          publish_dir: allure-report
 
 #          CODE-STYLE
 
