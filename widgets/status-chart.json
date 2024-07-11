@@ -1,1 +1,31 @@
-[ ]
+[ {
+  "uid" : "df3c32c6c19b6041",
+  "name" : "TC-00.01 Open Google.com",
+  "time" : {
+    "start" : 1720729911700,
+    "stop" : 1720729912309,
+    "duration" : 609
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "f4a0c1629b84fa1d",
+  "name" : "TC-00.00 AssertTrue = true",
+  "time" : {
+    "start" : 1720729913907,
+    "stop" : 1720729913908,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "severity" : "blocker"
+}, {
+  "uid" : "cabee101d78ad331",
+  "name" : "testFail",
+  "time" : {
+    "start" : 1720729900057,
+    "stop" : 1720729900058,
+    "duration" : 1
+  },
+  "status" : "unknown",
+  "severity" : "normal"
+} ]

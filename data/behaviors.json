@@ -1,5 +1,48 @@
 {
   "uid" : "b1a8273437954620fa374b796ffaacdd",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "testFail",
+    "uid" : "cabee101d78ad331",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "unknown",
+    "time" : {
+      "start" : 1720729900057,
+      "stop" : 1720729900058,
+      "duration" : 1
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "Smoke",
+    "children" : [ {
+      "name" : "TC-00.01 Open Google.com",
+      "uid" : "df3c32c6c19b6041",
+      "parentUid" : "a83a8ec411f16faf2e5741a88cd98344",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720729911700,
+        "stop" : 1720729912309,
+        "duration" : 609
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "TC-00.00 AssertTrue = true",
+      "uid" : "f4a0c1629b84fa1d",
+      "parentUid" : "a83a8ec411f16faf2e5741a88cd98344",
+      "status" : "passed",
+      "time" : {
+        "start" : 1720729913907,
+        "stop" : 1720729913908,
+        "duration" : 1
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "a83a8ec411f16faf2e5741a88cd98344"
+  } ],
   "name" : "behaviors"
 }

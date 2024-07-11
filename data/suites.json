@@ -1,5 +1,56 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
-  "children" : [ ],
+  "children" : [ {
+    "name" : "Smoke",
+    "children" : [ {
+      "name" : "Smoke Test Run",
+      "children" : [ {
+        "name" : "FrameworkTest",
+        "children" : [ {
+          "name" : "testFail",
+          "uid" : "cabee101d78ad331",
+          "parentUid" : "960b3849330e88e9a84960606c138ae0",
+          "status" : "unknown",
+          "time" : {
+            "start" : 1720729900057,
+            "stop" : 1720729900058,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome" ]
+        }, {
+          "name" : "TC-00.01 Open Google.com",
+          "uid" : "df3c32c6c19b6041",
+          "parentUid" : "960b3849330e88e9a84960606c138ae0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720729911700,
+            "stop" : 1720729912309,
+            "duration" : 609
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome" ]
+        }, {
+          "name" : "TC-00.00 AssertTrue = true",
+          "uid" : "f4a0c1629b84fa1d",
+          "parentUid" : "960b3849330e88e9a84960606c138ae0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720729913907,
+            "stop" : 1720729913908,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome" ]
+        } ],
+        "uid" : "960b3849330e88e9a84960606c138ae0"
+      } ],
+      "uid" : "92bdd24e50cbb8041b398aa65aa6bfe0"
+    } ],
+    "uid" : "26c3355bfe48b4d973f7dd61ae44b0c7"
+  } ],
   "name" : "suites"
 }
