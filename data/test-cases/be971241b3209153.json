@@ -1,0 +1,209 @@
+{
+  "uid" : "be971241b3209153",
+  "name" : "TC-01.09: Verify Footer Links Navigation",
+  "fullName" : "com.lumatest.test.NavigationTest.testFooterNavigation",
+  "historyId" : "6934736a3f2a82f89fb9b8e5d46781ec",
+  "time" : {
+    "start" : 1720730664037,
+    "stop" : 1720730664873,
+    "duration" : 836
+  },
+  "description" : "Ensure that clicking on the links in the footer redirects the user to the correct pages.",
+  "descriptionHtml" : "<p>Ensure that clicking on the links in the footer redirects the user to the correct pages.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720730663471,
+      "stop" : 1720730664033,
+      "duration" : 562
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720730651856,
+      "stop" : 1720730652353,
+      "duration" : 497
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that clicking on the links in the footer redirects the user to the correct pages.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click link in footer",
+      "time" : {
+        "start" : 1720730664038,
+        "stop" : 1720730664824,
+        "duration" : 786
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "footerLink",
+        "value" : "By.cssSelector: a[href$='/search/term/popular/']"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get page title with URL provided",
+      "time" : {
+        "start" : 1720730664824,
+        "stop" : 1720730664871,
+        "duration" : 47
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "https://magento.softwaretestingboard.com/search/term/popular/"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Verify actual results as expected",
+      "time" : {
+        "start" : 1720730664872,
+        "stop" : 1720730664872,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720730699820,
+      "stop" : 1720730699820,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720730664875,
+      "stop" : 1720730664943,
+      "duration" : 68
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testFooterNavigation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Regression"
+  }, {
+    "name" : "suite",
+    "value" : "Regression Test Run"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1014-360"
+  }, {
+    "name" : "thread",
+    "value" : "2178@fv-az1014-360.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Navigation"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "By.cssSelector: a[href$='/search/term/popular/']"
+  }, {
+    "name" : "arg1",
+    "value" : "https://magento.softwaretestingboard.com/search/term/popular/"
+  }, {
+    "name" : "arg2",
+    "value" : "Popular Search Terms"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com",
+    "type" : "custom"
+  } ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "be971241b3209153.json",
+  "parameterValues" : [ "By.cssSelector: a[href$='/search/term/popular/']", "https://magento.softwaretestingboard.com/search/term/popular/", "Popular Search Terms", "chrome" ]
+}

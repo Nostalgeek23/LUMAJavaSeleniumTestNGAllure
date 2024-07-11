@@ -1,0 +1,233 @@
+{
+  "uid" : "a5da4b59d5838552",
+  "name" : "TC-01.03 Open Home page by logo click",
+  "fullName" : "com.lumatest.test.NavigationTest.testSubCategoryNavigation",
+  "historyId" : "64603f961f047a6a356150e1268749e7",
+  "time" : {
+    "start" : 1720730685417,
+    "stop" : 1720730687260,
+    "duration" : 1843
+  },
+  "description" : "Ensure that clicking on a subcategory link in the navigation menu redirects the user to the corresponding subcategory page.",
+  "descriptionHtml" : "<p>Ensure that clicking on a subcategory link in the navigation menu redirects the user to the corresponding subcategory page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720730684837,
+      "stop" : 1720730685415,
+      "duration" : 578
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720730651856,
+      "stop" : 1720730652353,
+      "duration" : 497
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that clicking on a subcategory link in the navigation menu redirects the user to the corresponding subcategory page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on subcategory menu",
+      "time" : {
+        "start" : 1720730685418,
+        "stop" : 1720730687192,
+        "duration" : 1774
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Hover on element",
+        "time" : {
+          "start" : 1720730685858,
+          "stop" : 1720730686011,
+          "duration" : 153
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "element",
+          "value" : "[[ChromeDriver: chrome-headless-shell on linux (f760ca2721ea8811ae5ce854fc1c71ec)] -> css selector: #ui-id-4]"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "navBarMenu",
+        "value" : "By.cssSelector: #ui-id-4"
+      }, {
+        "name" : "subNavMenu",
+        "value" : "By.cssSelector: #ui-id-10"
+      } ],
+      "stepsCount" : 1,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get page title with URL provided",
+      "time" : {
+        "start" : 1720730687192,
+        "stop" : 1720730687260,
+        "duration" : 68
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "url",
+        "value" : "https://magento.softwaretestingboard.com/women/bottoms-women.html"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Verify actual results as expected",
+      "time" : {
+        "start" : 1720730687260,
+        "stop" : 1720730687260,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720730699820,
+      "stop" : 1720730699820,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720730687262,
+      "stop" : 1720730687326,
+      "duration" : 64
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testSubCategoryNavigation"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Regression"
+  }, {
+    "name" : "suite",
+    "value" : "Regression Test Run"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.NavigationTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1014-360"
+  }, {
+    "name" : "thread",
+    "value" : "2178@fv-az1014-360.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Navigation"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "By.cssSelector: #ui-id-4"
+  }, {
+    "name" : "arg1",
+    "value" : "By.cssSelector: #ui-id-10"
+  }, {
+    "name" : "arg2",
+    "value" : "https://magento.softwaretestingboard.com/women/bottoms-women.html"
+  }, {
+    "name" : "arg3",
+    "value" : "Bottoms - Women"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com",
+    "type" : "custom"
+  } ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a5da4b59d5838552.json",
+  "parameterValues" : [ "By.cssSelector: #ui-id-4", "By.cssSelector: #ui-id-10", "https://magento.softwaretestingboard.com/women/bottoms-women.html", "Bottoms - Women", "chrome" ]
+}

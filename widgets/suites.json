@@ -1,6 +1,39 @@
 {
-  "total" : 1,
+  "total" : 4,
   "items" : [ {
+    "uid" : "6d495eb7a343edad09700a277962b511",
+    "name" : "Windows crossBrowser Test Suite",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 32,
+      "unknown" : 0,
+      "total" : 32
+    }
+  }, {
+    "uid" : "5ba398ba8a4e16d50ebb84d8f641e8da",
+    "name" : "Regression",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 23,
+      "unknown" : 0,
+      "total" : 23
+    }
+  }, {
+    "uid" : "9c662463f033c53e65006046669aa11a",
+    "name" : "MacOs crossBrowser Test Suite",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 16,
+      "unknown" : 0,
+      "total" : 16
+    }
+  }, {
     "uid" : "26c3355bfe48b4d973f7dd61ae44b0c7",
     "name" : "Smoke",
     "statistic" : {
