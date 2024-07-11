@@ -1,0 +1,232 @@
+{
+  "uid" : "f0cb3945dcffbcd0",
+  "name" : "TC-PROD-005 Verify Product Description on Product Page",
+  "fullName" : "com.lumatest.test.ProductPageTest.testProductDescription",
+  "historyId" : "99d37959a042f7ec8a7e50d152143bde",
+  "time" : {
+    "start" : 1720741276424,
+    "stop" : 1720741279248,
+    "duration" : 2824
+  },
+  "description" : "Ensure that the product description is displayed correctly and matches the listed one.",
+  "descriptionHtml" : "<p>Ensure that the product description is displayed correctly and matches the listed one.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720741275528,
+      "stop" : 1720741276401,
+      "duration" : 873
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720741265429,
+      "stop" : 1720741265961,
+      "duration" : 532
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that the product description is displayed correctly and matches the listed one.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Gear in the top menu",
+      "time" : {
+        "start" : 1720741276425,
+        "stop" : 1720741277713,
+        "duration" : 1288
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on Bags in side menu",
+      "time" : {
+        "start" : 1720741277714,
+        "stop" : 1720741278367,
+        "duration" : 653
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click 'Driven Backpack' Img.",
+      "time" : {
+        "start" : 1720741278367,
+        "stop" : 1720741279035,
+        "duration" : 668
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "productName",
+        "value" : "Driven Backpack"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Get description of product",
+      "time" : {
+        "start" : 1720741279036,
+        "stop" : 1720741279248,
+        "duration" : 212
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify current description matches the listed one",
+      "time" : {
+        "start" : 1720741279248,
+        "stop" : 1720741279248,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720741279253,
+      "stop" : 1720741279281,
+      "duration" : 28
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720741296311,
+      "stop" : 1720741296311,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testProductDescription"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "ChromeTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.ProductPageTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1258-792"
+  }, {
+    "name" : "thread",
+    "value" : "7328@fv-az1258-792.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Product Details"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  }, {
+    "name" : "os",
+    "value" : "windows"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/driven-backpack.html",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f0cb3945dcffbcd0.json",
+  "parameterValues" : [ "chrome", "windows" ]
+}

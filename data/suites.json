@@ -1,6 +1,57 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "children" : [ {
+    "name" : "Smoke",
+    "children" : [ {
+      "name" : "Smoke Test Run",
+      "children" : [ {
+        "name" : "FrameworkTest",
+        "children" : [ {
+          "name" : "testFail",
+          "uid" : "b5440db79f278cba",
+          "parentUid" : "960b3849330e88e9a84960606c138ae0",
+          "status" : "unknown",
+          "time" : {
+            "start" : 1720741181962,
+            "stop" : 1720741181963,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome" ]
+        }, {
+          "name" : "TC-00.01 Open Google.com",
+          "uid" : "d8f60cd5b23023b4",
+          "parentUid" : "960b3849330e88e9a84960606c138ae0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741199262,
+            "stop" : 1720741199707,
+            "duration" : 445
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome" ]
+        }, {
+          "name" : "TC-00.00 AssertTrue = true",
+          "uid" : "845707446a26d21",
+          "parentUid" : "960b3849330e88e9a84960606c138ae0",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741200843,
+            "stop" : 1720741200844,
+            "duration" : 1
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome" ]
+        } ],
+        "uid" : "960b3849330e88e9a84960606c138ae0"
+      } ],
+      "uid" : "92bdd24e50cbb8041b398aa65aa6bfe0"
+    } ],
+    "uid" : "26c3355bfe48b4d973f7dd61ae44b0c7"
+  }, {
     "name" : "Ubuntu crossBrowser Test Suite",
     "children" : [ {
       "name" : "ChromeTestUbuntu",
@@ -8,104 +59,104 @@
         "name" : "com.lumatest.test.ProductPageTest",
         "children" : [ {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "4ed7b68dcabd0719",
+          "uid" : "97af5adbc8755839",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737581428,
-            "stop" : 1720737585684,
-            "duration" : 4256
+            "start" : 1720741205964,
+            "stop" : 1720741209575,
+            "duration" : 3611
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Driven Backpack", "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-005 Verify Product Description on Product Page",
-          "uid" : "4b47cc37206dec4f",
+          "uid" : "2449a0c85ba59d8f",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737581436,
-            "stop" : 1720737584186,
-            "duration" : 2750
+            "start" : 1720741205965,
+            "stop" : 1720741208367,
+            "duration" : 2402
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-          "uid" : "cfc0cf6c23b2b0ae",
+          "uid" : "3d65940a184fe205",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737584993,
-            "stop" : 1720737587481,
-            "duration" : 2488
+            "start" : 1720741208968,
+            "stop" : 1720741211016,
+            "duration" : 2048
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "8949260e5be490d1",
+          "uid" : "f78daf8800300eaf",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737586462,
-            "stop" : 1720737590238,
-            "duration" : 3776
+            "start" : 1720741210119,
+            "stop" : 1720741213381,
+            "duration" : 3262
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Fusion Backpack", "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          "uid" : "89f9d359f71501c0",
+          "uid" : "623ea3f869dff47f",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737588065,
-            "stop" : 1720737590088,
-            "duration" : 2023
+            "start" : 1720741211635,
+            "stop" : 1720741213765,
+            "duration" : 2130
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-          "uid" : "2c417420f2f0fe4",
+          "uid" : "f243b83edde84b5a",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737590648,
-            "stop" : 1720737592842,
-            "duration" : 2194
+            "start" : 1720741214012,
+            "stop" : 1720741216112,
+            "duration" : 2100
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-003 Verify Product Price on Product Page",
-          "uid" : "db7123d5af46c479",
+          "uid" : "bc3479bd4b9a8627",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737590834,
-            "stop" : 1720737592928,
-            "duration" : 2094
+            "start" : 1720741214385,
+            "stop" : 1720741216848,
+            "duration" : 2463
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-PROD-009 Verify SKU/ID Display",
-          "uid" : "d4b11f02689ddf11",
+          "uid" : "8263b4cd2776f7c5",
           "parentUid" : "b258c3fd6ae4049e2887c2d7da2b220e",
           "status" : "passed",
           "time" : {
-            "start" : 1720737593657,
-            "stop" : 1720737595720,
-            "duration" : 2063
+            "start" : 1720741216732,
+            "stop" : 1720741218788,
+            "duration" : 2056
           },
           "flaky" : false,
           "newFailed" : false,
@@ -116,39 +167,39 @@
         "name" : "com.lumatest.test.CartTest",
         "children" : [ {
           "name" : "TC-02.03: Verify Add to Cart Functionality",
-          "uid" : "a85bc934a48a358f",
+          "uid" : "e1b47456f5326f80",
           "parentUid" : "66a0c6d385033f5bcbc355933bbaecf9",
           "status" : "passed",
           "time" : {
-            "start" : 1720737593736,
-            "stop" : 1720737602394,
-            "duration" : 8658
+            "start" : 1720741217449,
+            "stop" : 1720741221646,
+            "duration" : 4197
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-02.01: Verify Navigation to Cart",
-          "uid" : "8c7cafdc837e50b2",
+          "uid" : "895e0f370df9f522",
           "parentUid" : "66a0c6d385033f5bcbc355933bbaecf9",
           "status" : "passed",
           "time" : {
-            "start" : 1720737596434,
-            "stop" : 1720737605161,
-            "duration" : 8727
+            "start" : 1720741219371,
+            "stop" : 1720741223162,
+            "duration" : 3791
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-02.02: Verify Navigation to Checkout",
-          "uid" : "87fb919c956df621",
+          "uid" : "2853d8a7538d297b",
           "parentUid" : "66a0c6d385033f5bcbc355933bbaecf9",
           "status" : "passed",
           "time" : {
-            "start" : 1720737602980,
-            "stop" : 1720737607307,
-            "duration" : 4327
+            "start" : 1720741222207,
+            "stop" : 1720741225972,
+            "duration" : 3765
           },
           "flaky" : false,
           "newFailed" : false,
@@ -159,52 +210,52 @@
         "name" : "com.lumatest.test.LoginTest",
         "children" : [ {
           "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-          "uid" : "139e9cfbb7c08e70",
+          "uid" : "e091c054785ec3c6",
           "parentUid" : "33f07b1d5d1e887057073e23c53dfe68",
           "status" : "passed",
           "time" : {
-            "start" : 1720737605835,
-            "stop" : 1720737610695,
-            "duration" : 4860
+            "start" : 1720741223723,
+            "stop" : 1720741226161,
+            "duration" : 2438
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "chrome", "ubuntu" ]
         }, {
           "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          "uid" : "7c4747bebeeab95c",
+          "uid" : "e3b14a9abd391433",
           "parentUid" : "33f07b1d5d1e887057073e23c53dfe68",
           "status" : "passed",
           "time" : {
-            "start" : 1720737608210,
-            "stop" : 1720737610473,
-            "duration" : 2263
+            "start" : 1720741226556,
+            "stop" : 1720741227263,
+            "duration" : 707
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          "uid" : "9b9063609bc2a95a",
+          "uid" : "314fb5f3b0bd6ab1",
           "parentUid" : "33f07b1d5d1e887057073e23c53dfe68",
           "status" : "passed",
           "time" : {
-            "start" : 1720737611204,
-            "stop" : 1720737613912,
-            "duration" : 2708
+            "start" : 1720741226753,
+            "stop" : 1720741227426,
+            "duration" : 673
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "ubuntu" ]
         }, {
           "name" : "TC-03.04: Verify Navigation to Account page after login",
-          "uid" : "643e012a5c1e68a",
+          "uid" : "53cf3fe99ee1b90a",
           "parentUid" : "33f07b1d5d1e887057073e23c53dfe68",
           "status" : "passed",
           "time" : {
-            "start" : 1720737611454,
-            "stop" : 1720737615215,
-            "duration" : 3761
+            "start" : 1720741227847,
+            "stop" : 1720741230299,
+            "duration" : 2452
           },
           "flaky" : false,
           "newFailed" : false,
@@ -215,13 +266,13 @@
         "name" : "com.lumatest.test.SearchTest",
         "children" : [ {
           "name" : "TC-04.01: Verify Search Result Navigation",
-          "uid" : "7583a5e08e3ddcef",
+          "uid" : "7a90f031ddb9116c",
           "parentUid" : "671cc4247ab4316af1eb97a536e46036",
           "status" : "passed",
           "time" : {
-            "start" : 1720737614540,
-            "stop" : 1720737615609,
-            "duration" : 1069
+            "start" : 1720741228020,
+            "stop" : 1720741229123,
+            "duration" : 1103
           },
           "flaky" : false,
           "newFailed" : false,
@@ -236,104 +287,104 @@
         "name" : "com.lumatest.test.ProductPageTest",
         "children" : [ {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "1b01166a48b3114d",
+          "uid" : "58cb4e7c3e1b76fa",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737626749,
-            "stop" : 1720737631684,
-            "duration" : 4935
+            "start" : 1720741241331,
+            "stop" : 1720741245805,
+            "duration" : 4474
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Driven Backpack", "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-005 Verify Product Description on Product Page",
-          "uid" : "b3c719e7c3e096bf",
+          "uid" : "61854e19c2b4ee16",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737626989,
-            "stop" : 1720737630070,
-            "duration" : 3081
+            "start" : 1720741241483,
+            "stop" : 1720741244814,
+            "duration" : 3331
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-          "uid" : "f6289e16755445b2",
+          "uid" : "3f86ff7460cd9f27",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737634584,
-            "stop" : 1720737637425,
-            "duration" : 2841
+            "start" : 1720741251643,
+            "stop" : 1720741261484,
+            "duration" : 9841
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "d0b99fa353f138ab",
+          "uid" : "e5535af1b9ea4f3e",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737636512,
-            "stop" : 1720737640767,
-            "duration" : 4255
+            "start" : 1720741251948,
+            "stop" : 1720741309805,
+            "duration" : 57857
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Fusion Backpack", "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          "uid" : "4a85c841947b2a28",
+          "uid" : "dba5b873503bd423",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737641702,
-            "stop" : 1720737645549,
-            "duration" : 3847
+            "start" : 1720741312150,
+            "stop" : 1720741315488,
+            "duration" : 3338
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-          "uid" : "82347e4e386ccba3",
+          "uid" : "69247e7fd904730f",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737644981,
-            "stop" : 1720737648385,
-            "duration" : 3404
+            "start" : 1720741313137,
+            "stop" : 1720741316348,
+            "duration" : 3211
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-003 Verify Product Price on Product Page",
-          "uid" : "d8e2865851662d2c",
+          "uid" : "9ea3971656d7ac7e",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737649939,
-            "stop" : 1720737653016,
-            "duration" : 3077
+            "start" : 1720741320497,
+            "stop" : 1720741323159,
+            "duration" : 2662
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-PROD-009 Verify SKU/ID Display",
-          "uid" : "b66327fd56235b8e",
+          "uid" : "67af272e6b27b3ab",
           "parentUid" : "191a895485cbcd8565fed3a15b245dbb",
           "status" : "passed",
           "time" : {
-            "start" : 1720737653269,
-            "stop" : 1720737655468,
-            "duration" : 2199
+            "start" : 1720741320858,
+            "stop" : 1720741323400,
+            "duration" : 2542
           },
           "flaky" : false,
           "newFailed" : false,
@@ -343,40 +394,40 @@
       }, {
         "name" : "com.lumatest.test.CartTest",
         "children" : [ {
-          "name" : "TC-02.03: Verify Add to Cart Functionality",
-          "uid" : "af167c590f0f513f",
+          "name" : "TC-02.01: Verify Navigation to Cart",
+          "uid" : "d40c2b367c925cc5",
           "parentUid" : "564b9b1899aae286ef962cb47d756b47",
           "status" : "passed",
           "time" : {
-            "start" : 1720737657186,
-            "stop" : 1720737664073,
-            "duration" : 6887
+            "start" : 1720741327936,
+            "stop" : 1720741331642,
+            "duration" : 3706
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
-          "name" : "TC-02.01: Verify Navigation to Cart",
-          "uid" : "c6d16bc3d773b86e",
+          "name" : "TC-02.03: Verify Add to Cart Functionality",
+          "uid" : "a31fa22b1e030bcc",
           "parentUid" : "564b9b1899aae286ef962cb47d756b47",
           "status" : "passed",
           "time" : {
-            "start" : 1720737659847,
-            "stop" : 1720737664811,
-            "duration" : 4964
+            "start" : 1720741328122,
+            "stop" : 1720741332813,
+            "duration" : 4691
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-02.02: Verify Navigation to Checkout",
-          "uid" : "69c778b07d411c03",
+          "uid" : "5e83ec644a5a4ac2",
           "parentUid" : "564b9b1899aae286ef962cb47d756b47",
           "status" : "passed",
           "time" : {
-            "start" : 1720737668104,
-            "stop" : 1720737672518,
-            "duration" : 4414
+            "start" : 1720741336324,
+            "stop" : 1720741340311,
+            "duration" : 3987
           },
           "flaky" : false,
           "newFailed" : false,
@@ -387,52 +438,52 @@
         "name" : "com.lumatest.test.LoginTest",
         "children" : [ {
           "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-          "uid" : "3e1d53094767336f",
+          "uid" : "33053dadded8fd70",
           "parentUid" : "1546df283286866981a3939f71e5be31",
           "status" : "passed",
           "time" : {
-            "start" : 1720737669527,
-            "stop" : 1720737672329,
-            "duration" : 2802
+            "start" : 1720741337785,
+            "stop" : 1720741340660,
+            "duration" : 2875
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "firefox", "ubuntu" ]
         }, {
           "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          "uid" : "bb2287dbd0486794",
+          "uid" : "59b4357b13f1f7b",
           "parentUid" : "1546df283286866981a3939f71e5be31",
           "status" : "passed",
           "time" : {
-            "start" : 1720737676248,
-            "stop" : 1720737677259,
-            "duration" : 1011
+            "start" : 1720741344879,
+            "stop" : 1720741345923,
+            "duration" : 1044
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          "uid" : "f9aac1452780971c",
+          "uid" : "546d07ac14a1d81b",
           "parentUid" : "1546df283286866981a3939f71e5be31",
           "status" : "passed",
           "time" : {
-            "start" : 1720737676595,
-            "stop" : 1720737677758,
-            "duration" : 1163
+            "start" : 1720741345663,
+            "stop" : 1720741346809,
+            "duration" : 1146
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "ubuntu" ]
         }, {
           "name" : "TC-03.04: Verify Navigation to Account page after login",
-          "uid" : "bf53db217a0ecc59",
+          "uid" : "55997e8cf882d803",
           "parentUid" : "1546df283286866981a3939f71e5be31",
           "status" : "passed",
           "time" : {
-            "start" : 1720737681777,
-            "stop" : 1720737685619,
-            "duration" : 3842
+            "start" : 1720741350299,
+            "stop" : 1720741353580,
+            "duration" : 3281
           },
           "flaky" : false,
           "newFailed" : false,
@@ -443,13 +494,13 @@
         "name" : "com.lumatest.test.SearchTest",
         "children" : [ {
           "name" : "TC-04.01: Verify Search Result Navigation",
-          "uid" : "232196be3c8255b6",
+          "uid" : "f9cc7f539476d9ba",
           "parentUid" : "c6d45866c460db90427eb62f95b8d1c0",
           "status" : "passed",
           "time" : {
-            "start" : 1720737682227,
-            "stop" : 1720737683578,
-            "duration" : 1351
+            "start" : 1720741351387,
+            "stop" : 1720741352586,
+            "duration" : 1199
           },
           "flaky" : false,
           "newFailed" : false,
@@ -461,289 +512,6 @@
     } ],
     "uid" : "501f59c5a481a2f58372665a43e03711"
   }, {
-    "name" : "MacOs crossBrowser Test Suite",
-    "children" : [ {
-      "name" : "ChromeTestMacOs",
-      "children" : [ {
-        "name" : "com.lumatest.test.ProductPageTest",
-        "children" : [ {
-          "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "21e8b6dea36b8211",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737696069,
-            "stop" : 1720737707062,
-            "duration" : 10993
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "Driven Backpack", "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "4728723be94d4285",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737713131,
-            "stop" : 1720737716964,
-            "duration" : 3833
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "Fusion Backpack", "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-005 Verify Product Description on Product Page",
-          "uid" : "7559dcf8f37bd98c",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737717843,
-            "stop" : 1720737719785,
-            "duration" : 1942
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-          "uid" : "4e67e3a46d196919",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737726061,
-            "stop" : 1720737727648,
-            "duration" : 1587
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          "uid" : "e508aba08531ce28",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737728460,
-            "stop" : 1720737730745,
-            "duration" : 2285
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-          "uid" : "dc5638646559a041",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737736855,
-            "stop" : 1720737739317,
-            "duration" : 2462
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-003 Verify Product Price on Product Page",
-          "uid" : "26f21aaf4bfaecf3",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737740430,
-            "stop" : 1720737742908,
-            "duration" : 2478
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-PROD-009 Verify SKU/ID Display",
-          "uid" : "b74f692edda9633f",
-          "parentUid" : "027df289156b10a5a05d16814af1d109",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737748871,
-            "stop" : 1720737750373,
-            "duration" : 1502
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        } ],
-        "uid" : "027df289156b10a5a05d16814af1d109"
-      }, {
-        "name" : "com.lumatest.test.CartTest",
-        "children" : [ {
-          "name" : "TC-02.03: Verify Add to Cart Functionality",
-          "uid" : "2da2496ca77f02f1",
-          "parentUid" : "649b22b054b749f8fd1bcf21c0af7bf4",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737751503,
-            "stop" : 1720737756235,
-            "duration" : 4732
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-02.01: Verify Navigation to Cart",
-          "uid" : "b2f067170999d4a9",
-          "parentUid" : "649b22b054b749f8fd1bcf21c0af7bf4",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737762534,
-            "stop" : 1720737766704,
-            "duration" : 4170
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-02.02: Verify Navigation to Checkout",
-          "uid" : "a995658b023c22cd",
-          "parentUid" : "649b22b054b749f8fd1bcf21c0af7bf4",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737772670,
-            "stop" : 1720737776098,
-            "duration" : 3428
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        } ],
-        "uid" : "649b22b054b749f8fd1bcf21c0af7bf4"
-      }, {
-        "name" : "com.lumatest.test.LoginTest",
-        "children" : [ {
-          "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-          "uid" : "aaffde56de1d181c",
-          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737777054,
-            "stop" : 1720737779949,
-            "duration" : 2895
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "chrome", "macos" ]
-        }, {
-          "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          "uid" : "d642cc0383ec180e",
-          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737787261,
-            "stop" : 1720737788097,
-            "duration" : 836
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          "uid" : "1d2c3ca794421a31",
-          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737789095,
-            "stop" : 1720737790567,
-            "duration" : 1472
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome", "macos" ]
-        }, {
-          "name" : "TC-03.04: Verify Navigation to Account page after login",
-          "uid" : "5c6668423c428bf6",
-          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737792182,
-            "stop" : 1720737794951,
-            "duration" : 2769
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "chrome", "macos" ]
-        } ],
-        "uid" : "c5a4b0824e55088609d6f494fcf02ca7"
-      }, {
-        "name" : "com.lumatest.test.SearchTest",
-        "children" : [ {
-          "name" : "TC-04.01: Verify Search Result Navigation",
-          "uid" : "11ad02ecbce64207",
-          "parentUid" : "916fb5fd49802065273aedd11321dc88",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720737801020,
-            "stop" : 1720737802172,
-            "duration" : 1152
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "https://magento.softwaretestingboard.com", "Driven Backpack", "https://magento.softwaretestingboard.com/driven-backpack.html", "chrome", "macos" ]
-        } ],
-        "uid" : "916fb5fd49802065273aedd11321dc88"
-      } ],
-      "uid" : "b310cc9d14e0148e627d56fa29d15585"
-    } ],
-    "uid" : "9c662463f033c53e65006046669aa11a"
-  }, {
-    "name" : "Smoke",
-    "children" : [ {
-      "name" : "Smoke Test Run",
-      "children" : [ {
-        "name" : "FrameworkTest",
-        "children" : [ {
-          "name" : "testFail",
-          "uid" : "36d735804975fa5e",
-          "parentUid" : "960b3849330e88e9a84960606c138ae0",
-          "status" : "unknown",
-          "time" : {
-            "start" : 1720739791294,
-            "stop" : 1720739791310,
-            "duration" : 16
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome" ]
-        }, {
-          "name" : "TC-00.01 Open Google.com",
-          "uid" : "d010d44b5250070d",
-          "parentUid" : "960b3849330e88e9a84960606c138ae0",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720739819025,
-            "stop" : 1720739819782,
-            "duration" : 757
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome" ]
-        }, {
-          "name" : "TC-00.00 AssertTrue = true",
-          "uid" : "75ba09f2f7a4a98f",
-          "parentUid" : "960b3849330e88e9a84960606c138ae0",
-          "status" : "passed",
-          "time" : {
-            "start" : 1720739822435,
-            "stop" : 1720739822435,
-            "duration" : 0
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ "chrome" ]
-        } ],
-        "uid" : "960b3849330e88e9a84960606c138ae0"
-      } ],
-      "uid" : "92bdd24e50cbb8041b398aa65aa6bfe0"
-    } ],
-    "uid" : "26c3355bfe48b4d973f7dd61ae44b0c7"
-  }, {
     "name" : "Regression",
     "children" : [ {
       "name" : "Regression Test Run",
@@ -751,299 +519,299 @@
         "name" : "com.lumatest.test.NavigationTest",
         "children" : [ {
           "name" : "TC-01.04.01 Verify Breadcrumb Navigation to category page",
-          "uid" : "4028c7962bdc2f2d",
+          "uid" : "73e0a172e0f35f8e",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739832721,
-            "stop" : 1720739839659,
-            "duration" : 6938
+            "start" : 1720741215211,
+            "stop" : 1720741219219,
+            "duration" : 4008
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome" ]
         }, {
           "name" : "TC-01.04.03 Verify Breadcrumb Navigation to home page",
-          "uid" : "245f9fb232418e22",
+          "uid" : "31548124d8edf965",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739841462,
-            "stop" : 1720739847723,
-            "duration" : 6261
+            "start" : 1720741226076,
+            "stop" : 1720741229076,
+            "duration" : 3000
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome" ]
         }, {
           "name" : "TC-01.04.02 Verify Breadcrumb Navigation to subcategory page",
-          "uid" : "f8082811355c9b6f",
+          "uid" : "33c844b0e4c058da",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739849580,
-            "stop" : 1720739856308,
-            "duration" : 6728
+            "start" : 1720741230650,
+            "stop" : 1720741235860,
+            "duration" : 5210
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome" ]
         }, {
           "name" : "TC-01.09: Verify Footer Links Navigation",
-          "uid" : "2a4f9d06309e0b85",
+          "uid" : "3f84150ea23a9445",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739858345,
-            "stop" : 1720739860730,
-            "duration" : 2385
+            "start" : 1720741242461,
+            "stop" : 1720741243097,
+            "duration" : 636
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: a[href$='/search/term/popular/']", "https://magento.softwaretestingboard.com/search/term/popular/", "Popular Search Terms", "chrome" ]
         }, {
           "name" : "TC-01.09: Verify Footer Links Navigation",
-          "uid" : "38cd7c6c910ae84a",
+          "uid" : "f8a4c31965b85570",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739862398,
-            "stop" : 1720739864438,
-            "duration" : 2040
+            "start" : 1720741244069,
+            "stop" : 1720741245658,
+            "duration" : 1589
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: a[href$='/privacy-policy-cookie-restriction-mode/']", "https://magento.softwaretestingboard.com/privacy-policy-cookie-restriction-mode", "Privacy Policy", "chrome" ]
         }, {
           "name" : "TC-01.09: Verify Footer Links Navigation",
-          "uid" : "88f55ecea9748577",
+          "uid" : "775f7283e2dc103a",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739866452,
-            "stop" : 1720739868028,
-            "duration" : 1576
+            "start" : 1720741246876,
+            "stop" : 1720741247449,
+            "duration" : 573
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: footer a[href$='/catalogsearch/advanced/']", "https://magento.softwaretestingboard.com/catalogsearch/advanced/", "Advanced Search", "chrome" ]
         }, {
           "name" : "TC-01.09: Verify Footer Links Navigation",
-          "uid" : "5bba09f6554a1b2e",
+          "uid" : "1f54190151d96210",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739869552,
-            "stop" : 1720739870311,
-            "duration" : 759
+            "start" : 1720741253499,
+            "stop" : 1720741253988,
+            "duration" : 489
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: a[href$='/sales/guest/form/']", "https://magento.softwaretestingboard.com/sales/guest/form/", "Orders and Returns", "chrome" ]
         }, {
           "name" : "TC-01.01 Open Home page by logo click",
-          "uid" : "b4bd5b019422963a",
+          "uid" : "fa45d999bc2d0de5",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739871957,
-            "stop" : 1720739876003,
-            "duration" : 4046
+            "start" : 1720741255290,
+            "stop" : 1720741258998,
+            "duration" : 3708
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome" ]
         }, {
           "name" : "TC-01.02 Check Nav menu URLs",
-          "uid" : "1a9cef4025a8001c",
+          "uid" : "6028d7680935745e",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739878056,
-            "stop" : 1720739880041,
-            "duration" : 1985
+            "start" : 1720741265093,
+            "stop" : 1720741266191,
+            "duration" : 1098
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "https://magento.softwaretestingboard.com", "By.cssSelector: #ui-id-3", "https://magento.softwaretestingboard.com/what-is-new.html", "What's New", "chrome" ]
         }, {
           "name" : "TC-01.02 Check Nav menu URLs",
-          "uid" : "657e83738d7f58fc",
+          "uid" : "82f3a42f49320e72",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739882059,
-            "stop" : 1720739883946,
-            "duration" : 1887
+            "start" : 1720741268566,
+            "stop" : 1720741270499,
+            "duration" : 1933
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "https://magento.softwaretestingboard.com", "By.cssSelector: #ui-id-4", "https://magento.softwaretestingboard.com/women.html", "Women", "chrome" ]
         }, {
           "name" : "TC-01.02 Check Nav menu URLs",
-          "uid" : "121cbfa304de399e",
+          "uid" : "365b7137a9af5201",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739886160,
-            "stop" : 1720739888451,
-            "duration" : 2291
+            "start" : 1720741276779,
+            "stop" : 1720741277353,
+            "duration" : 574
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "https://magento.softwaretestingboard.com", "By.cssSelector: #ui-id-5", "https://magento.softwaretestingboard.com/men.html", "Men", "chrome" ]
         }, {
           "name" : "TC-01.02 Check Nav menu URLs",
-          "uid" : "62d97caff950e606",
+          "uid" : "60622787150081c3",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739890527,
-            "stop" : 1720739892241,
-            "duration" : 1714
+            "start" : 1720741278820,
+            "stop" : 1720741280026,
+            "duration" : 1206
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "https://magento.softwaretestingboard.com", "By.cssSelector: #ui-id-6", "https://magento.softwaretestingboard.com/gear.html", "Gear", "chrome" ]
         }, {
           "name" : "TC-01.02 Check Nav menu URLs",
-          "uid" : "668068371058fd83",
+          "uid" : "a47f37a95fbdf7ba",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739894756,
-            "stop" : 1720739896935,
-            "duration" : 2179
+            "start" : 1720741281299,
+            "stop" : 1720741282498,
+            "duration" : 1199
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "https://magento.softwaretestingboard.com", "By.cssSelector: #ui-id-7", "https://magento.softwaretestingboard.com/training.html", "Training", "chrome" ]
         }, {
           "name" : "TC-01.02 Check Nav menu URLs",
-          "uid" : "8171c824bf819d4b",
+          "uid" : "78a93b916154e772",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739898729,
-            "stop" : 1720739901287,
-            "duration" : 2558
+            "start" : 1720741288701,
+            "stop" : 1720741289336,
+            "duration" : 635
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "https://magento.softwaretestingboard.com", "By.cssSelector: #ui-id-8", "https://magento.softwaretestingboard.com/sale.html", "Sale", "chrome" ]
         }, {
           "name" : "TC-01.00 Open base URL",
-          "uid" : "756682205c79a430",
+          "uid" : "9c6c4f6d2292360e",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739903436,
-            "stop" : 1720739903456,
-            "duration" : 20
+            "start" : 1720741290459,
+            "stop" : 1720741290571,
+            "duration" : 112
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "83209a27c36e32b9",
+          "uid" : "2451cf746dfe92b2",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739905729,
-            "stop" : 1720739908392,
-            "duration" : 2663
+            "start" : 1720741291960,
+            "stop" : 1720741293456,
+            "duration" : 1496
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-4", "By.cssSelector: #ui-id-9", "https://magento.softwaretestingboard.com/women/tops-women.html", "Tops - Women", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "1a09744d3fbf2b9c",
+          "uid" : "fae8418b51b84829",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739910133,
-            "stop" : 1720739912385,
-            "duration" : 2252
+            "start" : 1720741300127,
+            "stop" : 1720741301143,
+            "duration" : 1016
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-4", "By.cssSelector: #ui-id-10", "https://magento.softwaretestingboard.com/women/bottoms-women.html", "Bottoms - Women", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "162b9a54de436705",
+          "uid" : "5be71b936d82139d",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739913939,
-            "stop" : 1720739916656,
-            "duration" : 2717
+            "start" : 1720741310231,
+            "stop" : 1720741311291,
+            "duration" : 1060
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-5", "By.cssSelector: #ui-id-17", "https://magento.softwaretestingboard.com/men/tops-men.html", "Tops - Men", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "5fb6006b55f9a58e",
+          "uid" : "1b729ada0d59b06b",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739918362,
-            "stop" : 1720739920664,
-            "duration" : 2302
+            "start" : 1720741312607,
+            "stop" : 1720741314286,
+            "duration" : 1679
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-5", "By.cssSelector: #ui-id-18", "https://magento.softwaretestingboard.com/men/bottoms-men.html", "Bottoms - Men", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "eba1b20ed6af225",
+          "uid" : "e46f9b08eef18b9a",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739922568,
-            "stop" : 1720739924654,
-            "duration" : 2086
+            "start" : 1720741320676,
+            "stop" : 1720741321511,
+            "duration" : 835
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-6", "By.cssSelector: #ui-id-25", "https://magento.softwaretestingboard.com/gear/bags.html", "Bags - Gear", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "df7268d46205c7fc",
+          "uid" : "24ba34e93c6e80a8",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739926642,
-            "stop" : 1720739928850,
-            "duration" : 2208
+            "start" : 1720741322722,
+            "stop" : 1720741324071,
+            "duration" : 1349
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-6", "By.cssSelector: #ui-id-26", "https://magento.softwaretestingboard.com/gear/fitness-equipment.html", "Fitness Equipment - Gear", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "8653f052ad5896a",
+          "uid" : "a52f05f367f4346",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739930839,
-            "stop" : 1720739932751,
-            "duration" : 1912
+            "start" : 1720741324902,
+            "stop" : 1720741326154,
+            "duration" : 1252
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "By.cssSelector: #ui-id-6", "By.cssSelector: #ui-id-27", "https://magento.softwaretestingboard.com/gear/watches.html", "Watches - Gear", "chrome" ]
         }, {
           "name" : "TC-01.03 Open Home page by logo click",
-          "uid" : "c007bebc1ca16b61",
+          "uid" : "77822f67a7b6162f",
           "parentUid" : "973e3ca101b9f8d82b405120e6bfc079",
           "status" : "passed",
           "time" : {
-            "start" : 1720739934835,
-            "stop" : 1720739937210,
-            "duration" : 2375
+            "start" : 1720741332162,
+            "stop" : 1720741332793,
+            "duration" : 631
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1062,104 +830,104 @@
         "name" : "com.lumatest.test.ProductPageTest",
         "children" : [ {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "ed82f6e83426cb73",
+          "uid" : "35a2f6879ceb2628",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739946377,
-            "stop" : 1720739955783,
-            "duration" : 9406
+            "start" : 1720741267871,
+            "stop" : 1720741271347,
+            "duration" : 3476
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Driven Backpack", "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "aaad3ebd80ee17b7",
+          "uid" : "ccf8a122815ed3ff",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739957852,
-            "stop" : 1720739966957,
-            "duration" : 9105
+            "start" : 1720741272385,
+            "stop" : 1720741275497,
+            "duration" : 3112
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Fusion Backpack", "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-005 Verify Product Description on Product Page",
-          "uid" : "8b930e76a0838f4f",
+          "uid" : "f0cb3945dcffbcd0",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739968865,
-            "stop" : 1720739973895,
-            "duration" : 5030
+            "start" : 1720741276424,
+            "stop" : 1720741279248,
+            "duration" : 2824
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-          "uid" : "72fbac67ef6855f7",
+          "uid" : "10217bc9a9960dc7",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739976233,
-            "stop" : 1720739982435,
-            "duration" : 6202
+            "start" : 1720741280146,
+            "stop" : 1720741282852,
+            "duration" : 2706
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          "uid" : "5409011c390522ce",
+          "uid" : "9287ca9c0a62c57e",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739984666,
-            "stop" : 1720739989463,
-            "duration" : 4797
+            "start" : 1720741283777,
+            "stop" : 1720741285802,
+            "duration" : 2025
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-          "uid" : "eec2b22d696b7972",
+          "uid" : "8f3daaf0c2f028ce",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739991049,
-            "stop" : 1720739996531,
-            "duration" : 5482
+            "start" : 1720741286729,
+            "stop" : 1720741288841,
+            "duration" : 2112
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-003 Verify Product Price on Product Page",
-          "uid" : "76185bdc9aac574a",
+          "uid" : "bffd3aa3fcdb6368",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720739998086,
-            "stop" : 1720740003210,
-            "duration" : 5124
+            "start" : 1720741290023,
+            "stop" : 1720741292939,
+            "duration" : 2916
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-PROD-009 Verify SKU/ID Display",
-          "uid" : "d515ecfddbffce23",
+          "uid" : "b4efe61f8a93dd3",
           "parentUid" : "f9fcd8d9480904533395c9a5c61d57c4",
           "status" : "passed",
           "time" : {
-            "start" : 1720740005632,
-            "stop" : 1720740010311,
-            "duration" : 4679
+            "start" : 1720741294063,
+            "stop" : 1720741296278,
+            "duration" : 2215
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1170,39 +938,39 @@
         "name" : "com.lumatest.test.CartTest",
         "children" : [ {
           "name" : "TC-02.03: Verify Add to Cart Functionality",
-          "uid" : "53542075796365e4",
+          "uid" : "a9f3165b7c000694",
           "parentUid" : "c94260c86f1ce5528db4b8e22c286f20",
           "status" : "passed",
           "time" : {
-            "start" : 1720740012130,
-            "stop" : 1720740028426,
-            "duration" : 16296
+            "start" : 1720741297185,
+            "stop" : 1720741301252,
+            "duration" : 4067
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-02.01: Verify Navigation to Cart",
-          "uid" : "d712574a42405378",
+          "uid" : "84cb724b43e6f9bb",
           "parentUid" : "c94260c86f1ce5528db4b8e22c286f20",
           "status" : "passed",
           "time" : {
-            "start" : 1720740030334,
-            "stop" : 1720740047129,
-            "duration" : 16795
+            "start" : 1720741302193,
+            "stop" : 1720741306978,
+            "duration" : 4785
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-02.02: Verify Navigation to Checkout",
-          "uid" : "b89e7e2eb5c8b15f",
+          "uid" : "249bc776db1c9d72",
           "parentUid" : "c94260c86f1ce5528db4b8e22c286f20",
           "status" : "passed",
           "time" : {
-            "start" : 1720740049033,
-            "stop" : 1720740062114,
-            "duration" : 13081
+            "start" : 1720741307985,
+            "stop" : 1720741311870,
+            "duration" : 3885
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1213,52 +981,52 @@
         "name" : "com.lumatest.test.LoginTest",
         "children" : [ {
           "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-          "uid" : "e28aaea8246d2293",
+          "uid" : "b79e2736af6db840",
           "parentUid" : "400a92454bdc0e623ed67dae31d0d4f9",
           "status" : "passed",
           "time" : {
-            "start" : 1720740064280,
-            "stop" : 1720740072757,
-            "duration" : 8477
+            "start" : 1720741312799,
+            "stop" : 1720741315434,
+            "duration" : 2635
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "chrome", "windows" ]
         }, {
           "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          "uid" : "d2953c0875ae80b3",
+          "uid" : "16950d2254edc60a",
           "parentUid" : "400a92454bdc0e623ed67dae31d0d4f9",
           "status" : "passed",
           "time" : {
-            "start" : 1720740074842,
-            "stop" : 1720740077201,
-            "duration" : 2359
+            "start" : 1720741316326,
+            "stop" : 1720741317117,
+            "duration" : 791
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          "uid" : "1a34ec79803c3e70",
+          "uid" : "fd49d43233518834",
           "parentUid" : "400a92454bdc0e623ed67dae31d0d4f9",
           "status" : "passed",
           "time" : {
-            "start" : 1720740079049,
-            "stop" : 1720740081797,
-            "duration" : 2748
+            "start" : 1720741318272,
+            "stop" : 1720741318867,
+            "duration" : 595
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "chrome", "windows" ]
         }, {
           "name" : "TC-03.04: Verify Navigation to Account page after login",
-          "uid" : "1bddcac56dbd3c95",
+          "uid" : "c9651035721a5522",
           "parentUid" : "400a92454bdc0e623ed67dae31d0d4f9",
           "status" : "passed",
           "time" : {
-            "start" : 1720740083481,
-            "stop" : 1720740095538,
-            "duration" : 12057
+            "start" : 1720741319842,
+            "stop" : 1720741322319,
+            "duration" : 2477
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1269,13 +1037,13 @@
         "name" : "com.lumatest.test.SearchTest",
         "children" : [ {
           "name" : "TC-04.01: Verify Search Result Navigation",
-          "uid" : "da139364be8ea815",
+          "uid" : "539090b39a66096c",
           "parentUid" : "09221c7d465a2428e1bae7883ea929ee",
           "status" : "passed",
           "time" : {
-            "start" : 1720740097445,
-            "stop" : 1720740100975,
-            "duration" : 3530
+            "start" : 1720741323281,
+            "stop" : 1720741324346,
+            "duration" : 1065
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1290,104 +1058,104 @@
         "name" : "com.lumatest.test.ProductPageTest",
         "children" : [ {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "f4e9ae5e5e3000b3",
+          "uid" : "7b68132654f5637a",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740126248,
-            "stop" : 1720740135673,
-            "duration" : 9425
+            "start" : 1720741330984,
+            "stop" : 1720741334208,
+            "duration" : 3224
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Driven Backpack", "edge", "windows" ]
         }, {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "b832bceb6ac171c2",
+          "uid" : "b4e24c0458192eae",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740140384,
-            "stop" : 1720740149981,
-            "duration" : 9597
+            "start" : 1720741336465,
+            "stop" : 1720741340370,
+            "duration" : 3905
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Fusion Backpack", "edge", "windows" ]
         }, {
           "name" : "TC-PROD-005 Verify Product Description on Product Page",
-          "uid" : "f902bf1d9d18b604",
+          "uid" : "a7063b3d7399a43e",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740155272,
-            "stop" : 1720740162284,
-            "duration" : 7012
+            "start" : 1720741342420,
+            "stop" : 1720741344253,
+            "duration" : 1833
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-          "uid" : "d53658d518c356e2",
+          "uid" : "b2612349eedf1596",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740166160,
-            "stop" : 1720740171943,
-            "duration" : 5783
+            "start" : 1720741346613,
+            "stop" : 1720741349086,
+            "duration" : 2473
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          "uid" : "427e7d717cd299c9",
+          "uid" : "72e23ff74cb20676",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740175471,
-            "stop" : 1720740181170,
-            "duration" : 5699
+            "start" : 1720741351152,
+            "stop" : 1720741353013,
+            "duration" : 1861
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-          "uid" : "5ce9e411d9734b8d",
+          "uid" : "bb503df339efc49f",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740184651,
-            "stop" : 1720740191243,
-            "duration" : 6592
+            "start" : 1720741355460,
+            "stop" : 1720741357503,
+            "duration" : 2043
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-PROD-003 Verify Product Price on Product Page",
-          "uid" : "634351279f497418",
+          "uid" : "42f76a552662b107",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740214451,
-            "stop" : 1720740220415,
-            "duration" : 5964
+            "start" : 1720741359532,
+            "stop" : 1720741361891,
+            "duration" : 2359
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-PROD-009 Verify SKU/ID Display",
-          "uid" : "e082435632d08f19",
+          "uid" : "c15996f3cfa74c11",
           "parentUid" : "f7e60dd1c1587f4baf85c8a95ee6f006",
           "status" : "passed",
           "time" : {
-            "start" : 1720740223947,
-            "stop" : 1720740230607,
-            "duration" : 6660
+            "start" : 1720741364131,
+            "stop" : 1720741366533,
+            "duration" : 2402
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1398,39 +1166,39 @@
         "name" : "com.lumatest.test.CartTest",
         "children" : [ {
           "name" : "TC-02.03: Verify Add to Cart Functionality",
-          "uid" : "4bbc6f508ebef5ab",
+          "uid" : "e947b579128f7e10",
           "parentUid" : "ad5258b6dd623fdf929d7ddcaddb1344",
           "status" : "passed",
           "time" : {
-            "start" : 1720740234263,
-            "stop" : 1720740251938,
-            "duration" : 17675
+            "start" : 1720741368594,
+            "stop" : 1720741372450,
+            "duration" : 3856
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-02.01: Verify Navigation to Cart",
-          "uid" : "70d248d3c9e32236",
+          "uid" : "dab641be077d3b66",
           "parentUid" : "ad5258b6dd623fdf929d7ddcaddb1344",
           "status" : "passed",
           "time" : {
-            "start" : 1720740255462,
-            "stop" : 1720740274451,
-            "duration" : 18989
+            "start" : 1720741374718,
+            "stop" : 1720741379466,
+            "duration" : 4748
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-02.02: Verify Navigation to Checkout",
-          "uid" : "b5f829c1938a0bba",
+          "uid" : "23255487cf75da6b",
           "parentUid" : "ad5258b6dd623fdf929d7ddcaddb1344",
           "status" : "passed",
           "time" : {
-            "start" : 1720740277976,
-            "stop" : 1720740294128,
-            "duration" : 16152
+            "start" : 1720741381556,
+            "stop" : 1720741384734,
+            "duration" : 3178
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1441,52 +1209,52 @@
         "name" : "com.lumatest.test.LoginTest",
         "children" : [ {
           "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-          "uid" : "ca0a25c8e8779a38",
+          "uid" : "71431b0ebf927587",
           "parentUid" : "e22b136d42d341adf63c80de9aa10347",
           "status" : "passed",
           "time" : {
-            "start" : 1720740297586,
-            "stop" : 1720740308763,
-            "duration" : 11177
+            "start" : 1720741386931,
+            "stop" : 1720741389522,
+            "duration" : 2591
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "edge", "windows" ]
         }, {
           "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          "uid" : "999d5e830164fcd0",
+          "uid" : "a519160d69e1911f",
           "parentUid" : "e22b136d42d341adf63c80de9aa10347",
           "status" : "passed",
           "time" : {
-            "start" : 1720740312156,
-            "stop" : 1720740314682,
-            "duration" : 2526
+            "start" : 1720741391521,
+            "stop" : 1720741392201,
+            "duration" : 680
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          "uid" : "66e4d19e52804d79",
+          "uid" : "fae21313c1946611",
           "parentUid" : "e22b136d42d341adf63c80de9aa10347",
           "status" : "passed",
           "time" : {
-            "start" : 1720740318087,
-            "stop" : 1720740321235,
-            "duration" : 3148
+            "start" : 1720741394238,
+            "stop" : 1720741394919,
+            "duration" : 681
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "edge", "windows" ]
         }, {
           "name" : "TC-03.04: Verify Navigation to Account page after login",
-          "uid" : "4d94e16f4f1ab32e",
+          "uid" : "17cf840d4aba82cd",
           "parentUid" : "e22b136d42d341adf63c80de9aa10347",
           "status" : "passed",
           "time" : {
-            "start" : 1720740324652,
-            "stop" : 1720740338485,
-            "duration" : 13833
+            "start" : 1720741397161,
+            "stop" : 1720741400191,
+            "duration" : 3030
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1497,13 +1265,13 @@
         "name" : "com.lumatest.test.SearchTest",
         "children" : [ {
           "name" : "TC-04.01: Verify Search Result Navigation",
-          "uid" : "d7680cb964a244ec",
+          "uid" : "541be6c61e1beda4",
           "parentUid" : "d3107133cdb2bc03fb1353e45d17149d",
           "status" : "passed",
           "time" : {
-            "start" : 1720740345037,
-            "stop" : 1720740349407,
-            "duration" : 4370
+            "start" : 1720741402250,
+            "stop" : 1720741403305,
+            "duration" : 1055
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1518,104 +1286,104 @@
         "name" : "com.lumatest.test.ProductPageTest",
         "children" : [ {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "8544ee646608866c",
+          "uid" : "33dc97f44b014241",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740372175,
-            "stop" : 1720740428635,
-            "duration" : 56460
+            "start" : 1720741415639,
+            "stop" : 1720741419169,
+            "duration" : 3530
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Driven Backpack", "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
-          "uid" : "aa8dc61f17aee8aa",
+          "uid" : "70ccfb3de9d758",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740440782,
-            "stop" : 1720740458634,
-            "duration" : 17852
+            "start" : 1720741422650,
+            "stop" : 1720741426278,
+            "duration" : 3628
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Fusion Backpack", "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-005 Verify Product Description on Product Page",
-          "uid" : "d188f5e0fb310fc9",
+          "uid" : "54ee81beb632ddff",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740468875,
-            "stop" : 1720740478909,
-            "duration" : 10034
+            "start" : 1720741429889,
+            "stop" : 1720741432480,
+            "duration" : 2591
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
-          "uid" : "765200f5bf15555d",
+          "uid" : "afdd467c20c632b1",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740488818,
-            "stop" : 1720740518528,
-            "duration" : 29710
+            "start" : 1720741436081,
+            "stop" : 1720741438045,
+            "duration" : 1964
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
-          "uid" : "8afc70db0e4a7faf",
+          "uid" : "4faff66b2f891d8a",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740573056,
-            "stop" : 1720740583856,
-            "duration" : 10800
+            "start" : 1720741441853,
+            "stop" : 1720741444154,
+            "duration" : 2301
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
-          "uid" : "dc888966d36f5e6d",
+          "uid" : "8b6174810cd7ba4",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740594922,
-            "stop" : 1720740606616,
-            "duration" : 11694
+            "start" : 1720741447916,
+            "stop" : 1720741450104,
+            "duration" : 2188
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-003 Verify Product Price on Product Page",
-          "uid" : "54069dcc6e2910e4",
+          "uid" : "66607c69f185b39c",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740617420,
-            "stop" : 1720740629330,
-            "duration" : 11910
+            "start" : 1720741454223,
+            "stop" : 1720741456952,
+            "duration" : 2729
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-PROD-009 Verify SKU/ID Display",
-          "uid" : "4aa52e3244c9680e",
+          "uid" : "38276b7c8905d859",
           "parentUid" : "7ed7e4e44ce56d3eb943f0d987031891",
           "status" : "passed",
           "time" : {
-            "start" : 1720740639698,
-            "stop" : 1720740692821,
-            "duration" : 53123
+            "start" : 1720741461118,
+            "stop" : 1720741463502,
+            "duration" : 2384
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1626,39 +1394,39 @@
         "name" : "com.lumatest.test.CartTest",
         "children" : [ {
           "name" : "TC-02.03: Verify Add to Cart Functionality",
-          "uid" : "4c2f782ea941f98",
+          "uid" : "5bf7405c8ac1c9fa",
           "parentUid" : "fed9f78370d4e08c5e6a8f7b21ee0f40",
           "status" : "passed",
           "time" : {
-            "start" : 1720740702154,
-            "stop" : 1720740710008,
-            "duration" : 7854
+            "start" : 1720741467495,
+            "stop" : 1720741473391,
+            "duration" : 5896
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-02.01: Verify Navigation to Cart",
-          "uid" : "17b001dc7f1375a6",
+          "uid" : "96ff19c31736b486",
           "parentUid" : "fed9f78370d4e08c5e6a8f7b21ee0f40",
           "status" : "passed",
           "time" : {
-            "start" : 1720740719805,
-            "stop" : 1720740727539,
-            "duration" : 7734
+            "start" : 1720741477114,
+            "stop" : 1720741480986,
+            "duration" : 3872
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-02.02: Verify Navigation to Checkout",
-          "uid" : "18155feb247952c9",
+          "uid" : "15055c98bb404afd",
           "parentUid" : "fed9f78370d4e08c5e6a8f7b21ee0f40",
           "status" : "passed",
           "time" : {
-            "start" : 1720740737752,
-            "stop" : 1720740745374,
-            "duration" : 7622
+            "start" : 1720741485149,
+            "stop" : 1720741488878,
+            "duration" : 3729
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1669,52 +1437,52 @@
         "name" : "com.lumatest.test.LoginTest",
         "children" : [ {
           "name" : "TC-03.02: Verify Navigation to Account page after account creation",
-          "uid" : "e233d27557b558d8",
+          "uid" : "d16091a534586f56",
           "parentUid" : "bd600d9acb15a283d8421ec555808987",
           "status" : "passed",
           "time" : {
-            "start" : 1720740756225,
-            "stop" : 1720740762228,
-            "duration" : 6003
+            "start" : 1720741493016,
+            "stop" : 1720741495842,
+            "duration" : 2826
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "firefox", "windows" ]
         }, {
           "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
-          "uid" : "82204f8c4a28e873",
+          "uid" : "5a71f5ff503e35ba",
           "parentUid" : "bd600d9acb15a283d8421ec555808987",
           "status" : "passed",
           "time" : {
-            "start" : 1720740772033,
-            "stop" : 1720740774026,
-            "duration" : 1993
+            "start" : 1720741500663,
+            "stop" : 1720741501486,
+            "duration" : 823
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
-          "uid" : "a079bd7838427e55",
+          "uid" : "3b43914e399d82c3",
           "parentUid" : "bd600d9acb15a283d8421ec555808987",
           "status" : "passed",
           "time" : {
-            "start" : 1720740783684,
-            "stop" : 1720740786699,
-            "duration" : 3015
+            "start" : 1720741505288,
+            "stop" : 1720741506642,
+            "duration" : 1354
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "firefox", "windows" ]
         }, {
           "name" : "TC-03.04: Verify Navigation to Account page after login",
-          "uid" : "496436f0dd8e0063",
+          "uid" : "3d36eccdf491237e",
           "parentUid" : "bd600d9acb15a283d8421ec555808987",
           "status" : "passed",
           "time" : {
-            "start" : 1720740804957,
-            "stop" : 1720740843793,
-            "duration" : 38836
+            "start" : 1720741510620,
+            "stop" : 1720741513515,
+            "duration" : 2895
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1725,13 +1493,13 @@
         "name" : "com.lumatest.test.SearchTest",
         "children" : [ {
           "name" : "TC-04.01: Verify Search Result Navigation",
-          "uid" : "7f03b31f3c79df7e",
+          "uid" : "14f7dd1cb89cffe4",
           "parentUid" : "8f88f1fbba1a04dceb27c3f976db6a9b",
           "status" : "passed",
           "time" : {
-            "start" : 1720740853447,
-            "stop" : 1720740858099,
-            "duration" : 4652
+            "start" : 1720741517425,
+            "stop" : 1720741518540,
+            "duration" : 1115
           },
           "flaky" : false,
           "newFailed" : false,
@@ -1742,6 +1510,238 @@
       "uid" : "43fd7b20a3b43b7ffbd0855ee469ae5c"
     } ],
     "uid" : "6d495eb7a343edad09700a277962b511"
+  }, {
+    "name" : "MacOs crossBrowser Test Suite",
+    "children" : [ {
+      "name" : "ChromeTestMacOs",
+      "children" : [ {
+        "name" : "com.lumatest.test.ProductPageTest",
+        "children" : [ {
+          "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+          "uid" : "ba964a526d110374",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741347521,
+            "stop" : 1720741351447,
+            "duration" : 3926
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "Driven Backpack", "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-011 Verify add to compare message displays after click Add to Compare button",
+          "uid" : "48152db95eaebab6",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741357434,
+            "stop" : 1720741360458,
+            "duration" : 3024
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "Fusion Backpack", "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-005 Verify Product Description on Product Page",
+          "uid" : "4347e2cdd9628a6b",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741361736,
+            "stop" : 1720741364118,
+            "duration" : 2382
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-006 Verify Stock Availability on Product Page",
+          "uid" : "cd9941cb18e80db8",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741370208,
+            "stop" : 1720741371884,
+            "duration" : 1676
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-002 Verify Product Name on Product Page and Breadcrumbs",
+          "uid" : "43ced45d9936d297",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741373197,
+            "stop" : 1720741375174,
+            "duration" : 1977
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-010 Verify the opened product breadcrumb path",
+          "uid" : "42a88429ceb7eb1c",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741381128,
+            "stop" : 1720741383368,
+            "duration" : 2240
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-003 Verify Product Price on Product Page",
+          "uid" : "311121c77806664b",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741384514,
+            "stop" : 1720741387421,
+            "duration" : 2907
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-PROD-009 Verify SKU/ID Display",
+          "uid" : "2ad901f74c58f768",
+          "parentUid" : "027df289156b10a5a05d16814af1d109",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741393261,
+            "stop" : 1720741394935,
+            "duration" : 1674
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        } ],
+        "uid" : "027df289156b10a5a05d16814af1d109"
+      }, {
+        "name" : "com.lumatest.test.CartTest",
+        "children" : [ {
+          "name" : "TC-02.03: Verify Add to Cart Functionality",
+          "uid" : "e45d87f632f41b84",
+          "parentUid" : "649b22b054b749f8fd1bcf21c0af7bf4",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741396234,
+            "stop" : 1720741400619,
+            "duration" : 4385
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-02.01: Verify Navigation to Cart",
+          "uid" : "151cf9297cd2f963",
+          "parentUid" : "649b22b054b749f8fd1bcf21c0af7bf4",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741406679,
+            "stop" : 1720741410870,
+            "duration" : 4191
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-02.02: Verify Navigation to Checkout",
+          "uid" : "966116e16008fe8b",
+          "parentUid" : "649b22b054b749f8fd1bcf21c0af7bf4",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741417196,
+            "stop" : 1720741420831,
+            "duration" : 3635
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        } ],
+        "uid" : "649b22b054b749f8fd1bcf21c0af7bf4"
+      }, {
+        "name" : "com.lumatest.test.LoginTest",
+        "children" : [ {
+          "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+          "uid" : "bcef7682c90f5bae",
+          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741421710,
+            "stop" : 1720741424205,
+            "duration" : 2495
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "chrome", "macos" ]
+        }, {
+          "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
+          "uid" : "e06b9081ccb3467d",
+          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741430477,
+            "stop" : 1720741431091,
+            "duration" : 614
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-03.03: Verify Navigation to Customer Login page after click on Sign In link",
+          "uid" : "baad4f3ac58c8255",
+          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741432047,
+            "stop" : 1720741432755,
+            "duration" : 708
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "chrome", "macos" ]
+        }, {
+          "name" : "TC-03.04: Verify Navigation to Account page after login",
+          "uid" : "5f19d7f7a4736f44",
+          "parentUid" : "c5a4b0824e55088609d6f494fcf02ca7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741433940,
+            "stop" : 1720741436420,
+            "duration" : 2480
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "chrome", "macos" ]
+        } ],
+        "uid" : "c5a4b0824e55088609d6f494fcf02ca7"
+      }, {
+        "name" : "com.lumatest.test.SearchTest",
+        "children" : [ {
+          "name" : "TC-04.01: Verify Search Result Navigation",
+          "uid" : "b57b11d5df2431e3",
+          "parentUid" : "916fb5fd49802065273aedd11321dc88",
+          "status" : "passed",
+          "time" : {
+            "start" : 1720741442547,
+            "stop" : 1720741443592,
+            "duration" : 1045
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "https://magento.softwaretestingboard.com", "Driven Backpack", "https://magento.softwaretestingboard.com/driven-backpack.html", "chrome", "macos" ]
+        } ],
+        "uid" : "916fb5fd49802065273aedd11321dc88"
+      } ],
+      "uid" : "b310cc9d14e0148e627d56fa29d15585"
+    } ],
+    "uid" : "9c662463f033c53e65006046669aa11a"
   } ],
   "name" : "suites"
 }

@@ -1,0 +1,262 @@
+{
+  "uid" : "3d36eccdf491237e",
+  "name" : "TC-03.04: Verify Navigation to Account page after login",
+  "fullName" : "com.lumatest.test.LoginTest.testRedirectToHomeAfterLogin",
+  "historyId" : "b1c63cf7f4d4d98cf26c4f10cc9cbf5c",
+  "time" : {
+    "start" : 1720741510620,
+    "stop" : 1720741513515,
+    "duration" : 2895
+  },
+  "description" : "Ensure that Account page opens after clicking on the Create an Account button on Create Account page.",
+  "descriptionHtml" : "<p>Ensure that Account page opens after clicking on the Create an Account button on Create Account page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720741507472,
+      "stop" : 1720741510617,
+      "duration" : 3145
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720741265429,
+      "stop" : 1720741265961,
+      "duration" : 532
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that Account page opens after clicking on the Create an Account button on Create Account page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Sign In",
+      "time" : {
+        "start" : 1720741510621,
+        "stop" : 1720741511419,
+        "duration" : 798
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Type email in Email field",
+      "time" : {
+        "start" : 1720741511419,
+        "stop" : 1720741511505,
+        "duration" : 86
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "hp@gryffindor.hog"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Type password in Password field",
+      "time" : {
+        "start" : 1720741511505,
+        "stop" : 1720741511540,
+        "duration" : 35
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "DeathlyHallows321"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click on Sign In button",
+      "time" : {
+        "start" : 1720741511540,
+        "stop" : 1720741512805,
+        "duration" : 1265
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Check the header message after login",
+      "time" : {
+        "start" : 1720741512805,
+        "stop" : 1720741513515,
+        "duration" : 710
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify header message after logged in",
+      "time" : {
+        "start" : 1720741513515,
+        "stop" : 1720741513515,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720741514330,
+      "stop" : 1720741514330,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720741513516,
+      "stop" : 1720741514330,
+      "duration" : 814
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testRedirectToHomeAfterLogin"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "FirefoxTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1258-792"
+  }, {
+    "name" : "thread",
+    "value" : "7328@fv-az1258-792.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Login"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "Harry"
+  }, {
+    "name" : "arg1",
+    "value" : "Potter"
+  }, {
+    "name" : "arg2",
+    "value" : "hp@gryffindor.hog"
+  }, {
+    "name" : "arg3",
+    "value" : "DeathlyHallows321"
+  }, {
+    "name" : "browser",
+    "value" : "firefox"
+  }, {
+    "name" : "os",
+    "value" : "windows"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/customer/account/",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3d36eccdf491237e.json",
+  "parameterValues" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "firefox", "windows" ]
+}

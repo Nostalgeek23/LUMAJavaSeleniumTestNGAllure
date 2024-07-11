@@ -1,0 +1,361 @@
+{
+  "uid" : "71431b0ebf927587",
+  "name" : "TC-03.02: Verify Navigation to Account page after account creation",
+  "fullName" : "com.lumatest.test.LoginTest.testNavToAccPageByCreateAcc",
+  "historyId" : "e0a1a1ca37a31775b42b65bd3681664d",
+  "time" : {
+    "start" : 1720741386931,
+    "stop" : 1720741389522,
+    "duration" : 2591
+  },
+  "description" : "Ensure that Account page opens after clicking on the Create an Account button on Create Account page.",
+  "descriptionHtml" : "<p>Ensure that Account page opens after clicking on the Create an Account button on Create Account page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720741385868,
+      "stop" : 1720741386931,
+      "duration" : 1063
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720741265429,
+      "stop" : 1720741265961,
+      "duration" : 532
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that Account page opens after clicking on the Create an Account button on Create Account page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Create an Account",
+      "time" : {
+        "start" : 1720741386931,
+        "stop" : 1720741387727,
+        "duration" : 796
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Type first name in First Name field",
+      "time" : {
+        "start" : 1720741387727,
+        "stop" : 1720741387939,
+        "duration" : 212
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "firstName",
+        "value" : "Harry"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Type last name in Last Name field",
+      "time" : {
+        "start" : 1720741387939,
+        "stop" : 1720741387987,
+        "duration" : 48
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "lastName",
+        "value" : "Potter"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Type email in Email field",
+      "time" : {
+        "start" : 1720741387987,
+        "stop" : 1720741388063,
+        "duration" : 76
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "email",
+        "value" : "hp@gryffindor.hog"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Type password in Password field",
+      "time" : {
+        "start" : 1720741388063,
+        "stop" : 1720741388150,
+        "duration" : 87
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "DeathlyHallows321"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Type password in Confirm Password field",
+      "time" : {
+        "start" : 1720741388150,
+        "stop" : 1720741388211,
+        "duration" : 61
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "password",
+        "value" : "DeathlyHallows321"
+      } ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Click on button to login or create account",
+      "time" : {
+        "start" : 1720741388211,
+        "stop" : 1720741389361,
+        "duration" : 1150
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Get current URL",
+        "time" : {
+          "start" : 1720741389312,
+          "stop" : 1720741389340,
+          "duration" : 28
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Get current URL",
+        "time" : {
+          "start" : 1720741389340,
+          "stop" : 1720741389361,
+          "duration" : 21
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Check account created or Email already registered",
+      "time" : {
+        "start" : 1720741389361,
+        "stop" : 1720741389522,
+        "duration" : 161
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Get text from error message if account cannot be created",
+        "time" : {
+          "start" : 1720741389361,
+          "stop" : 1720741389522,
+          "duration" : 161
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      }, {
+        "name" : "Verify email already registered",
+        "time" : {
+          "start" : 1720741389522,
+          "stop" : 1720741389522,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 2,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 12,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720741389524,
+      "stop" : 1720741390647,
+      "duration" : 1123
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720741401313,
+      "stop" : 1720741401313,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testNavToAccPageByCreateAcc"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Windows crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "EdgeTestWindows"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1258-792"
+  }, {
+    "name" : "thread",
+    "value" : "7328@fv-az1258-792.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Login"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "Harry"
+  }, {
+    "name" : "arg1",
+    "value" : "Potter"
+  }, {
+    "name" : "arg2",
+    "value" : "hp@gryffindor.hog"
+  }, {
+    "name" : "arg3",
+    "value" : "DeathlyHallows321"
+  }, {
+    "name" : "browser",
+    "value" : "edge"
+  }, {
+    "name" : "os",
+    "value" : "windows"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/customer/account/",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "71431b0ebf927587.json",
+  "parameterValues" : [ "Harry", "Potter", "hp@gryffindor.hog", "DeathlyHallows321", "edge", "windows" ]
+}

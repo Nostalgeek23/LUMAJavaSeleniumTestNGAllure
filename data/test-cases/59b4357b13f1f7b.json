@@ -1,0 +1,199 @@
+{
+  "uid" : "59b4357b13f1f7b",
+  "name" : "TC-03.01: Verify Navigation to Create Account page after click on create account link",
+  "fullName" : "com.lumatest.test.LoginTest.testNavToCreateAccountPage",
+  "historyId" : "e0c6f63a61cdf98ecec8512d197ac968",
+  "time" : {
+    "start" : 1720741344879,
+    "stop" : 1720741345923,
+    "duration" : 1044
+  },
+  "description" : "Ensure that Create Account page opens after clicking on the Create an Account button on top of the page.",
+  "descriptionHtml" : "<p>Ensure that Create Account page opens after clicking on the Create an Account button on top of the page.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupDriver",
+    "time" : {
+      "start" : 1720741341178,
+      "stop" : 1720741344876,
+      "duration" : 3698
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupWebDriverManager",
+    "time" : {
+      "start" : 1720741204210,
+      "stop" : 1720741204663,
+      "duration" : 453
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "Ensure that Create Account page opens after clicking on the Create an Account button on top of the page.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Click on Create an Account",
+      "time" : {
+        "start" : 1720741344879,
+        "stop" : 1720741345910,
+        "duration" : 1031
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Get current URL",
+      "time" : {
+        "start" : 1720741345910,
+        "stop" : 1720741345923,
+        "duration" : 13
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Verify URL after click on create account",
+      "time" : {
+        "start" : 1720741345923,
+        "stop" : 1720741345923,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 3,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "tearDownClass",
+    "time" : {
+      "start" : 1720741354218,
+      "stop" : 1720741354218,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1720741345924,
+      "stop" : 1720741346791,
+      "duration" : 867
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "testClass",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "testNavToCreateAccountPage"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Ubuntu crossBrowser Test Suite"
+  }, {
+    "name" : "suite",
+    "value" : "FirefoxTestUbuntu"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.lumatest.test.LoginTest"
+  }, {
+    "name" : "host",
+    "value" : "fv-az714-55"
+  }, {
+    "name" : "thread",
+    "value" : "4480@fv-az714-55.TestNG-test-FirefoxTestUbuntu-1(238)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Login"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "firefox"
+  }, {
+    "name" : "os",
+    "value" : "ubuntu"
+  } ],
+  "links" : [ {
+    "name" : "https://magento.softwaretestingboard.com/customer/account/create/",
+    "type" : "custom"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "59b4357b13f1f7b.json",
+  "parameterValues" : [ "firefox", "ubuntu" ]
+}
