@@ -124,6 +124,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Download and install Allure
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install allure
+          allure --version
+
       - name: Download Allure Reports (Ubuntu)
         uses: actions/download-artifact@v2
         with:
@@ -142,9 +148,14 @@ jobs:
           name: allure-report-macos-13
           path: reports/macos
 
+      - name: List Downloaded Reports for Debugging
+        run: |
+          ls -l reports/ubuntu
+          ls -l reports/windows
+          ls -l reports/macos          
+
       - name: Merge Allure Reports
         run: |
-          allure --version
           allure generate reports/ubuntu reports/windows reports/macos --clean -o reports/merged
 
       - name: Deploy Allure Report to GitHub Pages
